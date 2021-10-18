@@ -9,8 +9,8 @@
     <body>
         <h1> Back End Demo</h1>
         <div class="select">
-			<label for='highschools'>High Schools</label>
-			<select name='highschool' id='highschools'>
+			<label for='highschool'>High Schools</label>
+			<select name='highschool' id='highschool'>
 				<option value="Alvirne">Alvirne</option>
 				<option value="Campbell">Campbell</option>
 				<option value="Conval">Conval</option>
@@ -25,21 +25,41 @@
 				<option value="Pelham">Pelham</option>
 				<option value="Salem">Salem</option>
 				<option value="Wilton_Lyndenborough">Wilton/Lyndenborough</option>
+			</select>
 		</div>
 		<div class="input block">
 			<label for="gpa">GPA</label>
-			<input type=number id=gpascore min="0.0" max="15">
+			<input type="number" id="gpa" min="0.0" max="15">
+		</div>
+		<div class="select">
+			<label for="englishclass">English Class</label>
+			<select name='englishclass' id='englishclass'>
+				<option value="English_Foundational">English Foundational</option>
+				<option value="Honors_College_Prep">Honors/College Prep</option>
+				<option value="English_Foundational">AP</option>
+			</select>
 		</div>
 		<div class="input block">
-            <label for="score">Math Score</label>
-            <input type="number" id="mathscore" min="0" max="1000">
-        </div>
-		<div class="input block">
-            <label for="score">English Score</label>
+            <label for="englishscore">English Score</label>
             <input type="number" id="englishscore" min="0" max="1000">
         </div>
+		<div class="select">
+			<label for="mathclass">English Class</label>
+			<select name='mathclass' id='mathclass'>
+				<option value="AlgebraI">Algebra I</option>
+				<option value="AlgebraII_Statistics">Algebra II/Statistics</option>
+				<option value="AlgebraIII">Algebra III</option>
+				<option value="Precalculus_Trigonometry">Precalculus/Trigonometry</option>
+				<option value="Calculus">Calculus</option>
+			</select>
+		</div>
+		<div class="input block">
+            <label for="mathscore">Math Score</label>
+            <input type="number" id="mathscore" min="0" max="1000">
+        </div>
         <div class="output block">
-            <output id="placement"></output>
+            <output id="englishplacement"></output>
+			<output id="mathplacement"></output>
         </div>
     </body>
 </html>
