@@ -9,12 +9,21 @@ import { HighSchoolConfig } from '../config/mmhighschools.js';
 class MultipleMeasures {
     
     // constructor (for the demo date isn't used)
-    constructor(schoolname,gpa,englishclass,mathclass,weighted) {
-		
+    constructor(highschool,englishclass,mathclass,gpa) {
+		this._highschool = highschool;
+		this._gpa = gpa;
+		this._englishclass = englishclass;
+		this._englishscore = englishscore;
+		this._mathclass = mathclass;
+		this._mathscore = mathscore;
     }
 	
-	function calculatePercentage() {
+	calculatePercentage() {
+		const scale = HighSchoolConfig.[highschool].scale;
 		
+		if (scale !== 0) {
+			return this._gpa/scale;
+		}
 	}
     
     // handle the english placement
