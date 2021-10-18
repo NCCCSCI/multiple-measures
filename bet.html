@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Demo</title>
-        <link href="css/main.css" rel="stylesheet">
-        <script type="module" src="backendtesting.js"></script>
+        <link href="css/bet.css" rel="stylesheet">
+        <script type="module" src="betmain.js"></script>
     </head>
     <body>
         <h1> Back End Demo</h1>
@@ -27,10 +27,6 @@
 				<option value="Wilton_Lyndenborough">Wilton/Lyndenborough</option>
 			</select>
 		</div>
-		<div class="input block">
-			<label for="gpa">GPA</label>
-			<input type="number" id="gpa" min="0.0" max="15">
-		</div>
 		<div class="select">
 			<label for="englishclass">English Class</label>
 			<select name='englishclass' id='englishclass'>
@@ -39,10 +35,6 @@
 				<option value="English_Foundational">AP</option>
 			</select>
 		</div>
-		<div class="input block">
-            <label for="englishscore">English Score</label>
-            <input type="number" id="englishscore" min="0" max="1000">
-        </div>
 		<div class="select">
 			<label for="mathclass">English Class</label>
 			<select name='mathclass' id='mathclass'>
@@ -54,9 +46,9 @@
 			</select>
 		</div>
 		<div class="input block">
-            <label for="mathscore">Math Score</label>
-            <input type="number" id="mathscore" min="0" max="1000">
-        </div>
+			<label for="gpa">GPA</label>
+			<input type="number" id="gpa" min="0.0" max="15">
+		</div>
         <div class="output block">
             <output id="englishplacement"></output>
 			<output id="mathplacement"></output>

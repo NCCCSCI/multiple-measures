@@ -3,8 +3,8 @@
 // import the back-end code which performs the placement
 import { MultipleMeasures } from '../modules/multiplemeasures.js';
 
-/* // handles the placement determination for the math input
-function doMathPlacement() {
+// handles the placement determination for the math input
+function doPlacement() {
     
     // event handler - executes when the math input value changes
     function place(e) {
@@ -16,7 +16,7 @@ function doMathPlacement() {
         const score = parseInt(valueStr);
 
         // prepare to evaluate the score
-        const accuPlacer = new AccuPlacer(new Date(), "math", score);
+        const accuPlacer = new MultipleMeasures(new Date(), "math", score);
         
         // use the placement method of the AccuPlacer to get the placement 
         const placement = accuPlacer.placement()
@@ -31,7 +31,10 @@ function doMathPlacement() {
     }
     
     // set up access to the DOM
-    const scoreElement = document.getElementById("score");
+    const highSchoolElement = document.getElementById("highschool");
+	const gpa = document.getElementById("gpa");
+	const englishClassElement = document.getElementById("englishclass");
+	const mathClassElement = document.getElementById("mathclass");
     const placementElement = document.getElementById("placement");
     
     // setup the event listener
@@ -39,4 +42,4 @@ function doMathPlacement() {
 }
 
 // export the function so it can be imported in main.js
-export { doMathPlacement }; */
+export { doPlacement }; */

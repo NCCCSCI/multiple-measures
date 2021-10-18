@@ -9,7 +9,7 @@ import { HighSchoolConfig } from '../config/mmhighschools.js';
 class MultipleMeasures {
     
     // constructor (for the demo date isn't used)
-    constructor(highschool,gpa,englishclass,englishscore,mathclass,mathscore) {
+    constructor(highschool,englishclass,mathclass,gpa) {
 		this._highschool = highschool;
 		this._gpa = gpa;
 		this._englishclass = englishclass;
