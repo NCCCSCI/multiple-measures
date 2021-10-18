@@ -19,7 +19,7 @@ class MultipleMeasures {
     }
 	
 	calculatePercentage() {
-		
+		const scale = HighSchoolConfig.[highschool].scale;
 	}
     
     // handle the english placement
