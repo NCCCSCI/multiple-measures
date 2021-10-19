@@ -1,5 +1,5 @@
 import { HighSchoolConfig } from '../config/mmhighschools.js';
-export function populateHighSchoolSelector() {
+function populateHighSchoolSelector() {
     const highSchool = document.getElementById("highSchool");
     const names = Object.keys(HighSchoolConfig);
     for (const n of names) {
@@ -10,7 +10,7 @@ export function populateHighSchoolSelector() {
     }
 }
 
-export function boundYearGraduated() {
+function boundYearGraduated() {
     const yearGraduated = document.getElementById("yearGraduated");
     const now = new Date();
     yearGraduated.setAttribute("min", now.getFullYear() - 20);
@@ -18,7 +18,7 @@ export function boundYearGraduated() {
     yearGraduated.value = now.getFullYear();
 }
 
-export function boundGPA() {
+function boundGPA() {
     const cumulativeGPA = document.getElementById("cumulativeGPA");
     let min = 10;
     let max = 0;
@@ -29,4 +29,10 @@ export function boundGPA() {
     }
     cumulativeGPA.setAttribute("min", min);
     cumulativeGPA.setAttribute("max", max);
+}
+
+export function domSetup() {
+    populateHighSchoolSelector();
+    boundYearGraduated();
+    boundGPA();
 }
