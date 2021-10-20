@@ -11,6 +11,7 @@ class AccuPlacer {
         this.date = date;
         this.testTaken = testTaken;
         this.score = score;
+
     }
     
     // handle the placement
