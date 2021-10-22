@@ -1,0 +1,17 @@
+body {
+	font-family: "Arial", sans-serif;
+	margin: 30px;
+}
+h2 {
+text-transform: uppercase;
+border-bottom: 1px solid #000;
+}
+@media(min-width:400px) {
+dl div * {
+	display: inline-block;
+}
+}
+dl div dt {
+	width: 14rem;
+	color: #777;
+}
