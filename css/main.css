@@ -1,3 +1,52 @@
+body {
+    padding: 60px;
+    background-color: lightblue;
+}
+
+header {
+    padding: 15px;
+    background-color: #FEFEFE;
+        box-shadow:  3px 3px 3px 3px rgba(0,0,0,0.3);
+
+}
+
+.logo {
+    float: left;
+    padding-right: 30px;
+
+}
+
 h1 {
-    color: red;
+    color: #0B367B;
+}
+
+.accordion {
+    margin-top: 15px;
+    box-shadow:  5px 5px 5px 5px rgba(0,0,0,0.3);
+}
+
+.accordion-button {
+    text-transform: uppercase;
+    background-color: #E7F1FF;
+    border: 1px solid #8F8F8F;
+}
+
+.student-creds {
+    padding-top: 20px;
+}
+
+.see-advising {
+    padding-top: 20px;
+}
+
+#input-id-label {
+    padding-left: 50px;
+}
+
+input, select {
+    margin-left: 10px;
+}
+
+.input-block {
+    padding: 10px 0px;
 }
