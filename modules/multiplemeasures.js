@@ -38,7 +38,7 @@ class MultipleMeasures {
         // "undefined" means the .find failed
         if (englishplacement !== "undefined") {
             // return the value of the property (the placement)
-            return Config[this._englishclass][placement];
+            return EnglishConfig[this._englishclass][placement];
         }
         
         // arguably unnecessary, but good for completeness
@@ -57,7 +57,7 @@ class MultipleMeasures {
         // "undefined" means the .find failed
         if (mathplacement !== "undefined") {
             // return the value of the property (the placement)
-            return Config[this._mathclass][placement];
+            return MathConfig[this._mathclass][placement];
         }
         
         // arguably unnecessary, but good for completeness
