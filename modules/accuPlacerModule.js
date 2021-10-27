@@ -1,7 +1,7 @@
 // back-end
 
 // bring in the configuration (note the naming conventions)
-import { Config } from '../config/accuPlacer.js';
+import { Config } from '../config/accuPlacerConfig.js';
 
 // create the class
 class AccuPlacer {

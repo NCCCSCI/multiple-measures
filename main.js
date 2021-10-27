@@ -5,7 +5,7 @@
  */
 
 // import the front-end code to handle math placement for the demonstration
-import { doMathPlacement } from "./ui/mathPlacement.js";
+import { doMathPlacement } from "./ui/mathPlacementUI.js";
 
 // call the front-end
 doMathPlacement();

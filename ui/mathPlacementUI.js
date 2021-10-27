@@ -1,7 +1,7 @@
 // front-end
 
 // import the back-end code which performs the placement
-import { AccuPlacer } from '../modules/accuPlacer.js';
+import { AccuPlacer } from '../modules/accuPlacerModule.js';
 
 // handles the placement determination for the math input
 function doMathPlacement() {
