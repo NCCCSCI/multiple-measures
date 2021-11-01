@@ -22,4 +22,4 @@ const EnglishPlacementNonNative = {
     }
 
 }
-export {nglishPlacementNonNative};
+export {EnglishPlacementNonNative};
