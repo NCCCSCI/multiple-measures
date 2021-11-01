@@ -1,0 +1,149 @@
+//nested properties
+//upper level Math Courses (Use it only if tested 3rd part: Advanced)     
+const UpperLevelMathPlacement = {
+    //ALgrebra & Functions is nested inside Algebra QR stats (score needed At least )
+    //Score 276 was included inside "Greater than 276 range" in the development of this js because score 276 is missing on it.(needs to be revised)
+    0: {
+        0: "CTP",
+        237: "QR/Stats w/Co-Req or **CTP**",
+        250: "QR/Stats w/Co-Req or **CTP**",
+        263: "Gateway Courses w/Co-Req",
+        276: "Gateway Courses w/Co-Req"
+    },
+
+    237: {
+        0: "CTP",
+        237: "Gateway Courses w/Co-Req",
+        250: "Gateway Courses w/Co-Req",
+        263: "Gateway Courses w/Co-Req",
+        276: "Gateway Courses w/Co-Req"
+    },
+
+    250: {
+        0: "Gateway Courses w/Co-Req",
+        237: "MATH110N",
+        250: "MATH120N",
+        263: "MATH120N",
+        276: "MATH120N"
+
+    },
+
+    263: {
+        0: "See Math Chair",
+        237: "MATH110N",
+        250: "MATH120N",
+        263: "MATH210N",
+        276: "MATH210N"
+
+    },
+
+    276: {
+        0: "See Math Chair",
+        237: "MATH120N",
+        250: "MATH210N",
+        263: "MATH210N",
+        276: "MATH210N"
+
+    }
+
+}
+const MathPlacement = {
+    //ALgrebra & Functions is nested inside Algebra QR stats (minimum score required )
+    //Score 276 was included inside "Greater than 276 range" in the development of this js because score 276 is missing on it.(needs to be revised)
+    0: {
+        0: "CTP",
+        237: "QR/Stats w/Co-Req or **CTP**",
+        250: "QR/Stats w/Co-Req or **CTP**",
+        263: "Gateway Courses w/Co-Req",
+        276: "Gateway Courses w/Co-Req"
+    },
+
+    237: {
+        0: "CTP",
+        237: "Gateway Courses w/Co-Req",
+        250: "Gateway Courses w/Co-Req",
+        263: "Gateway Courses w/Co-Req",
+        276: "Gateway Courses w/Co-Req"
+    },
+
+    250: {
+        0: "Gateway Courses w/Co-Req",
+        237: "QR/Stats or MATH110N w/ Co-Req",
+        250: "QR/Stats or MATH110N w/ Co-Req",
+        263: "QR/Stats or MATH110N w/ Co-Req",
+        276: "Gateway Courses"
+
+    },
+
+    263: {
+        0: "See Math Chair",
+        237: "Gateway Courses",
+        250: "Gateway Courses",
+        263: "Gateway Courses",
+        276: "Gateway Courses"
+
+    },
+
+    276: {
+        0: "See Math Chair",
+        237: "Gateway Courses",
+        250: "Gateway Courses",
+        263: "Gateway Courses",
+        276: "Gateway Courses"
+
+    }
+
+}
+
+
+//Writeplacer is nested inside Writing Conventions (minimum score required)
+//Native speakers only
+
+const EnglishPlacementNative = {
+    0: {
+        0: "Refer to Adult Leaming Center CTP Coordinator at NCC",
+        2: "ENGL090 College Transition Program(CTP)",
+        4: "Refer to English Program Coordinator"
+    },
+
+    237: {
+        0: "Refer to English Program Coordinator",
+        3: "ENGL101N w/Co-Req",
+        5: "Refer to English Program Coordinator"
+    },
+
+    250: {
+        5: "ENGL101N"
+    },
+    263: {
+        5: "ENGL 101N",
+        6: "ENGL101N or ENGL110N**"
+    }
+
+}
+
+
+//Writeplacer is nested inside Writing Conventions (minimum score required)
+//Non native speakers only
+const EnglishPlacementNonNative = {
+    0: {
+        0: "Refer to Adult Leaming Center CTP Coordinator at NCC",
+        2: "ENGL090 College Transition Program (CTP), ESOL 086N *: Academic Writing for English Language Learners II",
+        4: "ESOL 088N*: Academic Writing for English Language Learners III"
+    },
+
+    237: {
+        0: "ENGL090 College Transition Program (CTP), ESOL 086N*: Academic Writing for English Language Learners II",
+        3: "ENGL101N w/ESOL Co-Req Please note: When Writeplacer is 3: ESOL088N * is strongly suggested OR Writeplacer is 4: ESOL096N * is strongly suggested.",
+        5: "ENGL1O1N w/ESOL Co-Req"
+    },
+
+    250: {
+        5: "ENGL101N"
+    },
+    263: {
+        5: "ENGL 101N",
+        6: "ENGL101N or ENGL110N**"
+    }
+
+}
