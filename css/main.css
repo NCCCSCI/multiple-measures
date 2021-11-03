@@ -50,3 +50,9 @@ input, select {
 .input-block {
     padding: 10px 0px;
 }
+.gpa-scale {
+    visibility: hidden;
+}
+.gpa-scale:hover {
+    display: block;
+}

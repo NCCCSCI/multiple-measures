@@ -26,6 +26,7 @@
                     <div class="see-advising">
                         <p>If the student is a transfer student or a non-native English speaker, contact the <a href="https://nashuacc.edu/student-services/advising-center" title="NCC Advising Home">NCC Advising Center</a>.</p>
                         <p>If student is in ESOL, proceed to <a href="#sat">SAT</a>.</p>
+                        <p>If student has HiSET or GED, proceed to <a href="#sat">SAT</a>.</p>
                     </div>
                 </div>
             </div>
@@ -38,25 +39,32 @@
                     <div id="multiMeasures" class="accordion-collapse collapse show" aria-labelledby="multiMeasuresHeading" data-bs-parent="#pageAccordion">
                         <div class="accordion-body">
                             <div class="input-block"> <!-- High School / GED Input -->
-                                <label for="input-mm-1">Name of High School / GED</label>
+                                <label for="input-mm-1">Name of High School</label>
                                 <select class="input-mm-1" name="input-mm-1" id="input-mm-1">
-                                    <option value="[Select a Score Range]">[Select a High School or GED]</option>
-                                    <option value="GED">GED</option>
-                                    <option value="Alvirne">Alvirne</option>
-                                    <option value="Campbell">Campbell</option>
-                                    <option value="Conval">Conval</option>
-                                    <option value="Hollis_Brookline">Hollis/Brookline</option>
-                                    <option value="Londonderry">Londonderry</option>
-                                    <option value="Manchester_District">Manchester District</option>
-                                    <option value="Mascenic">Mascenic</option>
-                                    <option value="Merrimack">Merrimack</option>
-                                    <option value="Milford">Milford</option>
-                                    <option value="Nashua_North">Nashua North</option>
-                                    <option value="Nashua_South">Nashua South</option>
-                                    <option value="Pelham">Pelham</option>
-                                    <option value="Salem">Salem</option>
-                                    <option value="Wilton_Lyndenborough">Wilton/Lyndenborough</option>
+                                    <option value="[Select a Score Range]">[Select a High School]</option>
+                                    <option value="Alvirne" id="Alvirne">Alvirne</option>
+                                    <option value="Campbell" id="Campbell">Campbell</option>
+                                    <option value="ConVal" id="ConVal">ConVal</option>
+                                    <option value="Hollis_Brookline" id="Hollis_Brookline">Hollis/Brookline</option>
+                                    <option value="Londonderry" id="Londonderry">Londonderry</option>
+                                    <option value="Manchester_District" id="Manchester_District">Manchester District</option>
+                                    <option value="Mascenic" id="Mascenic">Mascenic</option>
+                                    <option value="Merrimack" id="Merrimack">Merrimack</option>
+                                    <option value="Milford" id="Milford">Milford</option>
+                                    <option value="Nashua_North" id="Nashua_North">Nashua North</option>
+                                    <option value="Nashua_South" id="Nashua_South">Nashua South</option>
+                                    <option value="Pelham" id="Pelham">Pelham</option>
+                                    <option value="Salem" id="Salem">Salem</option>
+                                    <option value="Wilton_Lyndenborough" id="Wilton_Lyndenborough">Wilton/Lyndenborough</option>
+                                    <option value="Other" id="other">Other</option>
+                                    out of 100
                                 </select>
+                            </div>
+                            <div class="gpa-scale">
+                                <div class="input-block">
+                                    <label for="input-mm-1-gpa">Please enter your GPA out of 100.</label>
+                                    <input name="number" id="number-gpa" type="number" value="0" step="1" min="0" max="100">
+                                </div>
                             </div>
                             <div class="input-block"> <!-- Year Graduated -->
                                 <label for="input-mm-2">Year Graduated</label>
