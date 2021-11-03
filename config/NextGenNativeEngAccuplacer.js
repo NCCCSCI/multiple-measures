@@ -10,7 +10,7 @@ const EnglishPlacementNative = {
 
     237: {
         0: "Refer to English Program Coordinator",
-        3: "ENGL101N w/Co-Req Workshop",
+        3: "ENGL101N w/Co-Requisite Workshop",
         5: "Refer to English Program Coordinator"
     },
 
