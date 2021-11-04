@@ -1,26 +1,8 @@
-body {
-    padding: 60px;
-    background-color: lightblue;
+:root {
+    font-size: 15px;
 }
 
-header {
-    padding: 15px;
-    background-color: #FEFEFE;
-        box-shadow:  3px 3px 3px 3px rgba(0,0,0,0.3);
-
-}
-
-.logo {
-    float: left;
-    padding-right: 30px;
-
-}
-
-h1 {
-    color: #0B367B;
-}
-
-.accordion {
+.accordion, .eval-box {
     margin-top: 15px;
     box-shadow:  5px 5px 5px 5px rgba(0,0,0,0.3);
 }
@@ -31,12 +13,67 @@ h1 {
     border: 1px solid #8F8F8F;
 }
 
-.student-creds {
-    padding-top: 20px;
+body {
+    padding: 60px;
+    background-color: lightblue;
 }
 
-.see-advising {
-    padding-top: 20px;
+.button {
+    padding: 5px;
+    border: 2px solid #999;
+    border-radius: 3px;
+    font-size: 1.3rem;
+}
+
+.eval-box {
+    display: block;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+#eval-btn {
+    margin: 25px;
+}
+
+.eval-button, .print-button {
+    text-align: center;
+}
+
+.gpa-popup-show {
+    display: block;
+    padding-left: 3vw;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h5 {
+    text-align: center;
+}
+
+header {
+    padding: 15px;
+    background-color: #FEFEFE;
+    box-shadow:  3px 3px 3px 3px rgba(0,0,0,0.3);
+    height: 75px;
+}
+
+.help {
+    color: gray;
+}
+
+.hidden {
+    display: none;
+}
+
+.hs-name-show {
+    display: inline;
+}
+
+.input-block {
+    padding: 10px 0px;
 }
 
 #input-id-label {
@@ -47,12 +84,47 @@ input, select {
     margin-left: 10px;
 }
 
-.input-block {
-    padding: 10px 0px;
+.page-heading-logo-div {
+    float: left;
+    padding-right: 30px;
+    border: 1px dashed red;
+    margin: 0px;
+    width: 212px;
 }
-.gpa-scale {
-    visibility: hidden;
+
+.page-heading-logo, .page-heading-logo-div, .page-heading-title {
+    height: 100%;
 }
-.gpa-scale:hover {
-    display: block;
+
+.page-heading-title {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    border: 1px dashed black;
+    margin: 0px;
+    color: #0B367B;
+}
+
+.page-heading-title-div {
+    float: right;
+    width: calc(100% - 212px);
+    height: 100%;
+    line-height: 100%;
+}
+
+.score-input::before {
+    content: "*";
+    color: gray;
+}
+
+.see-advising {
+    padding-top: 20px;
+}
+
+.student-creds {
+    padding-top: 20px;
+}
+
+.student-id, .student-name {
+    display: inline;
 }
