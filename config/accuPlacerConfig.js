@@ -14,6 +14,6 @@ const Config = {
         0: "advisor",
         200: "ENGL099N"
     }
-}
+};
 
 export { Config };

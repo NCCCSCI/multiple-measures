@@ -2,20 +2,15 @@
 <html lang="en-US">
     <head>
         <meta charset="utf-8">
-        <title>Multiple Measures Application</title>
+        <title>Multiple Measures Form</title>
         <link rel="icon" type="image/png" href="images/ncc-color-logo.png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         <link href="css/main.css" rel="stylesheet">
         <link href="css/mobile.css" rel="stylesheet" media="screen and (max-width:575px)">
-        <link href="css/responsive-header.css" rel="stylesheet" media="screen and (max-width:790px)">
         <link href="css/tablet.css" rel="stylesheet" media="screen and (min-width:576px)">
         <link href="css/laptop-desktop.css" rel="stylesheet" media="screen and (min-width:1199px)">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-        <!-- <script type="module" src="main.js" defer></script> -->
-        <script src="ui/gpaOtherOption.js" defer></script>
-        <script src="ui/evaluateBtn.js" defer></script>
+        <script type="module" src="main.js" defer></script>
     </head>
 
     <body>
@@ -24,7 +19,7 @@
                 <img src="images/ncc-full-color-logo.png" class="page-heading-logo" alt="NCC Logo">
             </div>
             <div class="page-heading-title-div">
-                <h1 class="page-heading-title">Multiple Measures Application</h1>
+                <h1 class="page-heading-title">Multiple Measures Form</h1>
             </div>
         </header>
 
@@ -146,29 +141,38 @@
                                 <label for="input-sat-1">Date</label>
                                 <input type="text" class="input-sat-1" name="input-sat-1" id="input-sat-1" placeholder="MM/DD/YYYY">
                             </div>
-                            <div class="input-block"> <!-- SAT Math Score -->
-                                <label for="input-sat-2" class="score-input">SAT Math Score</label>
-                                <select class="input-sat-2" name="input-sat-2" id="input-sat-2">
-                                    <option value="[Select a Score Range]">[Select a Score Range]</option>
-                                    <option value="100-199">100-199</option>
-                                    <option value="200-299">200-299</option>
-                                </select>
+                            <div class="score-input-div">
+                                <div class="input-block score-input"> <!-- SAT Math Score -->
+                                    <label for="input-sat-2">SAT Math Score</label>
+                                    <select class="input-sat-2" name="input-sat-2" id="input-sat-2">
+                                        <option value="[Select a Score Range]">[Select a Score Range]</option>
+                                        <option value="100-199">100-199</option>
+                                        <option value="200-299">200-299</option>
+                                    </select>
+                                </div>
+                                <button type="button" id="add-another-1">Add Another</button> <!-- "Add Another" Button -->
                             </div>
-                            <div class="input-block"> <!-- SAT Critical Reading and Writing Score -->
-                                <label for="input-sat-3" class="score-input">SAT Critical Reading and Writing Score</label>
-                                <select class="input-sat-3" name="input-sat-3" id="input-sat-3">
-                                    <option value="[Select a Score Range]">[Select a Score Range]</option>
-                                    <option value="100-199">100-199</option>
-                                    <option value="200-299">200-299</option>
-                                </select>
+                            <div class="score-input-div">
+                                <div class="input-block score-input"> <!-- SAT Critical Reading and Writing Score -->
+                                    <label for="input-sat-3">SAT Critical Reading and Writing Score</label>
+                                    <select class="input-sat-3" name="input-sat-3" id="input-sat-3">
+                                        <option value="[Select a Score Range]">[Select a Score Range]</option>
+                                        <option value="100-199">100-199</option>
+                                        <option value="200-299">200-299</option>
+                                    </select>
+                                </div>
+                                <button type="button" id="add-another-2">Add Another</button> <!-- "Add Another" Button -->
                             </div>
-                            <div class="input-block"> <!-- SAT Composite Score -->
-                                <label for="input-sat-4" class="score-input">SAT Composite Score</label>
-                                <select class="input-sat-4" name="input-sat-4" id="input-sat-4">
-                                    <option value="[Select a Score Range]">[Select a Score Range]</option>
-                                    <option value="100-199">100-199</option>
-                                    <option value="200-299">200-299</option>
-                                </select>
+                            <div class="score-input-div">
+                                <div class="input-block score-input"> <!-- SAT Composite Score -->
+                                    <label for="input-sat-4">SAT Composite Score</label>
+                                    <select class="input-sat-4" name="input-sat-4" id="input-sat-4">
+                                        <option value="[Select a Score Range]">[Select a Score Range]</option>
+                                        <option value="100-199">100-199</option>
+                                        <option value="200-299">200-299</option>
+                                    </select>
+                                </div>
+                                <button type="button" id="add-another-3">Add Another</button> <!-- "Add Another" Button -->
                             </div>
                         </div>
                     </div>
@@ -188,45 +192,60 @@
                                 <label><input name="input-acc-1" type="radio" class="input-acc-1" id="input-acc-1-yes" value="Yes">Yes</label>
                                 <label><input name="input-acc-1" type="radio" class="input-acc-1" id="input-acc-1-no" value="No">No</label>
                             </div>
-                            <div class="input-block"> <!-- English Score: WRTG -->
-                                <label for="input-acc-2" class="score-input">English Score: WRTG</label>
-                                <select class="input-acc-2" name="input-acc-2" id="input-acc-2">
-                                    <option value="[Select a Score Range]">[Select a Score Range]</option>
-                                    <option value="100-199">100-199</option>
-                                    <option value="200-299">200-299</option>
-                                </select>
+                            <div class="score-input-div">
+                                <div class="input-block score-input"> <!-- English Score: WRTG -->
+                                    <label for="input-acc-2">English Score: WRTG</label>
+                                    <select class="input-acc-2" name="input-acc-2" id="input-acc-2">
+                                        <option value="[Select a Score Range]">[Select a Score Range]</option>
+                                        <option value="100-199">100-199</option>
+                                        <option value="200-299">200-299</option>
+                                    </select>
+                                </div>
+                                <button type="button" id="add-another-4">Add Another</button> <!-- "Add Another" Button -->
                             </div>
-                            <div class="input-block"> <!-- English Score: ESSY -->
-                                <label for="input-acc-3" class="score-input">English Score: ESSY</label>
-                                <select class="input-acc-3" name="input-acc-3" id="input-acc-3">
-                                    <option value="[Select a Score Range]">[Select a Score Range]</option>
-                                    <option value="100-199">100-199</option>
-                                    <option value="200-299">200-299</option>
-                                </select>
+                            <div class="score-input-div">
+                                <div class="input-block score-input"> <!-- English Score: ESSY -->
+                                    <label for="input-acc-3">English Score: ESSY</label>
+                                    <select class="input-acc-3" name="input-acc-3" id="input-acc-3">
+                                        <option value="[Select a Score Range]">[Select a Score Range]</option>
+                                        <option value="100-199">100-199</option>
+                                        <option value="200-299">200-299</option>
+                                    </select>
+                                </div>
+                                <button type="button" id="add-another-5">Add Another</button> <!-- "Add Another" Button -->
                             </div>
-                            <div class="input-block"> <!-- Math Score: ARNG -->
-                                <label for="input-acc-4" class="score-input">Math Score: ARNG</label>
-                                <select class="input-acc-4" name="input-acc-4" id="input-acc-4">
-                                    <option value="[Select a Score Range]">[Select a Score Range]</option>
-                                    <option value="100-199">100-199</option>
-                                    <option value="200-299">200-299</option>
-                                </select>
+                            <div class="score-input-div">
+                                <div class="input-block score-input"> <!-- Math Score: ARNG -->
+                                    <label for="input-acc-4">Math Score: ARNG</label>
+                                    <select class="input-acc-4" name="input-acc-4" id="input-acc-4">
+                                        <option value="[Select a Score Range]">[Select a Score Range]</option>
+                                        <option value="100-199">100-199</option>
+                                        <option value="200-299">200-299</option>
+                                    </select>
+                                </div>
+                                <button type="button" id="add-another-6">Add Another</button> <!-- "Add Another" Button -->
                             </div>
-                            <div class="input-block"> <!-- Math Score: QAS -->
-                                <label for="input-acc-5" class="score-input">Math Score: QAS</label>
-                                <select class="input-acc-5" name="input-acc-5" id="input-acc-5">
-                                    <option value="[Select a Score Range]">[Select a Score Range]</option>
-                                    <option value="100-199">100-199</option>
-                                    <option value="200-299">200-299</option>
-                                </select>
+                            <div class="score-input-div">
+                                <div class="input-block score-input"> <!-- Math Score: QAS -->
+                                    <label for="input-acc-5">Math Score: QAS</label>
+                                    <select class="input-acc-5" name="input-acc-5" id="input-acc-5">
+                                        <option value="[Select a Score Range]">[Select a Score Range]</option>
+                                        <option value="100-199">100-199</option>
+                                        <option value="200-299">200-299</option>
+                                    </select>
+                                </div>
+                                <button type="button" id="add-another-7">Add Another</button> <!-- "Add Another" Button -->
                             </div>
-                            <div class="input-block"> <!-- Math Score: AAF -->
-                                <label for="input-acc-6" class="score-input">Math Score: AAF</label>
-                                <select class="input-acc-6" name="input-acc-6" id="input-acc-6">
-                                    <option value="[Select a Score Range]">[Select a Score Range]</option>
-                                    <option value="100-199">100-199</option>
-                                    <option value="200-299">200-299</option>
-                                </select>
+                            <div class="score-input-div">
+                                <div class="input-block score-input" id="p"> <!-- Math Score: AAF -->
+                                    <label for="input-acc-6">Math Score: AAF</label>
+                                    <select class="input-acc-6" name="input-acc-6" id="input-acc-6">
+                                        <option value="[Select a Score Range]">[Select a Score Range]</option>
+                                        <option value="100-199">100-199</option>
+                                        <option value="200-299">200-299</option>
+                                    </select>
+                                </div>
+                                <button type="button" id="add-another-8">Add Another</button> <!-- "Add Another" Button -->
                             </div>
                         </div>
                     </div>
@@ -276,12 +295,6 @@
 
 <!--
 Things to consider:
-    WHOLE PAGE / GENERAL
-    - 'add another' button under scores
-
     MULTIPLE MEASURES
     - Keep Year - 3 year Math & 5 year English limit
-
-    NEXT WEEK 11/10/21
-    - figure out imports
 -->

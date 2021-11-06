@@ -18,11 +18,11 @@ body {
     background-color: lightblue;
 }
 
-.button {
+.button, button[id^="add-another-"] {
     padding: 5px;
     border: 2px solid #999;
     border-radius: 3px;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .eval-box {
@@ -87,7 +87,6 @@ input, select {
 .page-heading-logo-div {
     float: left;
     padding-right: 30px;
-    border: 1px dashed red;
     margin: 0px;
     width: 212px;
 }
@@ -100,9 +99,9 @@ input, select {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
-    border: 1px dashed black;
     margin: 0px;
     color: #0B367B;
+    font-size: 2.9vw;
 }
 
 .page-heading-title-div {
@@ -112,7 +111,7 @@ input, select {
     line-height: 100%;
 }
 
-.score-input::before {
+.score-input > label::before {
     content: "*";
     color: gray;
 }
