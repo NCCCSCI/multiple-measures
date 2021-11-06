@@ -8,16 +8,16 @@
 /*
  // math placement import
  import { doMathPlacement } from "./ui/mathPlacementUI.js";
- doMathPlacement(); // call the front-end
+ doMathPlacement(); // call doMathPlacement script
  */
 
 // eval box import
 import { evalBox } from "./ui/evalBox.js";
-evalBox(); // call the front-end
+evalBox(); // call evalBox script
 
 // hs other import
 import { hsOther } from "./ui/hsOther.js";
-hsOther(); // call the front-end
+hsOther(); // call hsOther script
 
 import { addAnotherBtn } from "./ui/addAnotherBtn.js";
-addAnotherBtn(); // call the front-end
+addAnotherBtn(); // call addAnotherBtn script
