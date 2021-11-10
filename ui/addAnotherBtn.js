@@ -53,7 +53,7 @@ function addAnotherBtn() {
                     itm.parentNode.insertBefore(cln, itm); // insert new clone right above button
 
                     totalAddThreshold--;
-                    console.log(totalAddThreshold);
+                    console.log("totalAddThreshold: " + totalAddThreshold + " (" + totalAddThreshold + " remaining)");
                     itm.textContent = "Add Another Score: " + totalAddThreshold + " Remaining";
                     if (totalAddThreshold === 0) {
                         itm.setAttribute('class', 'hidden'); // hide "add another" button after threshold is hit
@@ -63,7 +63,6 @@ function addAnotherBtn() {
             }); // close event listener
 
             buttonClickAddThreshold++;
-            console.log(buttonClickAddThreshold);
         } // close buttonClickAddThreshold loop
 
 

@@ -18,10 +18,11 @@ function evalBox() {
         item.addEventListener("input", function (evt) {
             let evalBox = document.getElementById("eval-box");
             let evalBoxStatus = evalBox.getAttribute('class');
+            console.log("evalBoxStatus: " + evalBoxStatus);
 
-            if (evalBoxStatus === 'eval-box') {
-                evalBox.setAttribute('class', 'eval-box hidden');
-            }
+            /*if (evalBoxStatus === 'eval-box') {
+             evalBox.setAttribute('class', 'eval-box hidden');
+             }*/
         });
     });
 }
