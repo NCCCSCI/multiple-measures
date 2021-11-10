@@ -7,7 +7,6 @@
 
 const MathConfig = {
     Calculus: {
-		0: "*****SOME CLASS*****",
 		.5: "MATH210 - Calculus I"
 	},
 	Precalculus_Trigonometry: {
