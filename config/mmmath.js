@@ -6,24 +6,25 @@
 // minimum threshold for scores
 
 const MathConfig = {
-    AlgebraI: { 
-		0: "Need Math AccuPlacer",
-		.625: "Gateway Courses with Co-Req",
-		.75: "MATH103N-MATH106N, MATH110N with Co-Req",
-    },
-	AlgebraII_Statistics: {
-        0: "MATH Gateway Courses",
-		.75: "MATH120N",
-    },
-	AlgebraIII: {
-		.5: "MATH120N",
+    Calculus: {
+		0: "*****SOME CLASS*****",
+		.5: "MATH210 - Calculus I"
 	},
 	Precalculus_Trigonometry: {
-		.0: "MATH120N",
-		.75: "MATH210N"
+		0: "MATH120 - PreCalculus",
+		.75: "MATH210 - Calculus"
 	},
-	Calculus: {
-		.5: "MATH210N"
+	AlgebraIII: {
+		.5: "MATH120 - PreCalculus"
+	},
+	AlgebraII_Statistics: {
+		0: "MATH110 / MATH106 / MATH103",
+		.75: "MATH120 - PreCalculus"
+	},
+	AlgebraI: {
+		0: "Needs to Take Math AccuPlacer"
+		.635: "MATH110 / MATH106 / MATH 103 with Co-Requisite",
+		.75: "MATH110 / MATH106 / MATH103"
 	}
 }
 

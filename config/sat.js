@@ -5,19 +5,19 @@
 
 // minimum threshold for scores
 const SATConfig = {
-    English: {
-		0: "Need English AccuPlacer",
-		400: "****SOME VALUE ****",
-		470: "ENGL101N, ENGL101N w/ CoReq",
+    Critical_Reading_and_Writing: {
+		0: "Needs to Take English AccuPlacer",
+		400: "ENGL101 with Co-Requisite Workshop",
+		470: "ENGL101N"
     },
-    Honors_College_Prep: {
-        0: "Need Math AccuPlacer",
-		460: "MATH103-106 w/ Co-Req or CTP",
-		500: "MATH103-106, MATH100 w/ Co-Req",
-		530: "MATH Gateway Courses",
-		570: "MATH120N",
-		630: "MATH210N"
+    Mathematics: {
+        0: "CTP (MATH090)",
+		460: "MATH103 with Co-Requisite, MATH106 with Co-Requisite",
+		500: "MATH103, MATH106, or MATH100 with Co-Requisite",
+		530: "MATH110",
+		570: "MATH120",
+		630: "MATH210"
     }
 }
 
-export { EnglishConfig };
+export { SATConfig };

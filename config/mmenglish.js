@@ -5,16 +5,19 @@
 
 // minimum threshold for scores
 const EnglishConfig = {
-    English_Foundational: {
-        .5: "Needs English Accuplacer",
+	English_Foundational_Fundamental: {
+        0: "Needs to Take English Accuplacer",
+		.5: "ENGL101N with Co-Requisite Workshop",
 		.813: "ENGL101N",
     },
-    Honors_College_Prep: {
-        .5: "Needs English AccuPlacer",
+    Honors_or_College_Prep: {
+        0: "Needs to Take English AccuPlacer",
+		.5: "ENGL101N with Co-Requisite Workshop",
 		.75: "ENGL101N",
     },
 	AP: {
-		.5: "Needs English AccuPlacer",
+		0: "Needs to Take English AccuPlacer",
+		.5: "ENGL101N with Co-Requisite Workshop",
 		.625: "ENGL101N",
 	}
 }
