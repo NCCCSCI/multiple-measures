@@ -44,7 +44,7 @@ body {
     text-align: center;
 }
 
-.gpa-popup-show {
+.gpa-popup-show, .math-popup-show {
     display: block;
     padding-left: 3vw;
 }

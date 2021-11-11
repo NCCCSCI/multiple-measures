@@ -6,8 +6,8 @@ function hsOther() {
     let hsNamePopup = document.getElementById("hs-name");
 
 
-// gpa popup box function
-    document.getElementById("input-mm-1").addEventListener('input', function (evt) {
+// gpa other popup box function
+    hsOptionSelect.addEventListener('input', function (evt) {
         let hsOptionSelectValue = hsOptionSelect.value;
 
         if (hsOptionSelectValue === 'Other') {
@@ -19,6 +19,7 @@ function hsOther() {
             hsNamePopup.setAttribute('class', 'hidden');
         }
     });
+    
 }
 
 // export the function so it can be imported in main.js

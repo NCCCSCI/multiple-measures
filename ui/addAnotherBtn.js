@@ -3,8 +3,6 @@ function addAnotherBtn() {
     let alladdAnotherBtns = document.querySelectorAll("button[id^='add-another-']");
     let allScoreInputs = document.querySelectorAll(".score-input > select");
 
-
-
     // makes the event listener work for each input
     alladdAnotherBtns.forEach(item => {
         let itm = item; // button
@@ -27,7 +25,7 @@ function addAnotherBtn() {
         // while loop that describes how many new clones can be added per button click
         if (buttonClickAddThreshold < 1) {
 
-            // event listener
+            // click event listener
             item.addEventListener("click", function (evt) {
                 if (totalAddThreshold > 0) {
 
@@ -40,12 +38,14 @@ function addAnotherBtn() {
 
                     // if statement that works based on whether this is the first clone or not, and updates the descendants' attributes
                     if (clnChildIdText.includes("_") === false) {
-                        let clnChildNewId = clnChildId + "_clone_" + ++cloneIndex;
+                        ++cloneIndex;
+                        let clnChildNewId = clnChildId + "_clone_" + cloneIndex;
                         cln.lastElementChild.setAttribute('id', clnChildNewId);
                         cln.firstElementChild.setAttribute('for', clnChildNewId);
                     } else {
                         let originalChildId = itm.parentNode.firstElementChild.lastElementChild.id; // id of first input div's input element
-                        let clnChildNewId = originalChildId + "_clone_" + ++cloneIndex;
+                        ++cloneIndex;
+                        let clnChildNewId = originalChildId + "_clone_" + cloneIndex;
                         cln.lastElementChild.setAttribute('id', clnChildNewId);
                         cln.firstElementChild.setAttribute('for', clnChildNewId);
                     }
@@ -64,7 +64,6 @@ function addAnotherBtn() {
 
             buttonClickAddThreshold++;
         } // close buttonClickAddThreshold loop
-
 
     }); // close forEach
 
