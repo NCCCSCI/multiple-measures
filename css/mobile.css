@@ -8,8 +8,15 @@
 }
 
 body {
-    padding: 30px;
+    padding: 20px;
     background-color: #CFD6FC;
+}
+
+header {
+    padding: 10px;
+    background-color: #FEFEFE;
+    box-shadow:  3px 3px 3px 3px rgba(0,0,0,0.3);
+    height: 60px;
 }
 
 #input-id-label {
@@ -18,6 +25,49 @@ body {
 
 #input-name-label {
     padding-bottom: 2vh;
+}
+
+.input-block > label {
+    padding-bottom: 1vh;
+    border: 0px dashed black;
+}
+
+.page-heading-logo {
+    display: none;
+}
+
+.page-heading-logo-div {
+    width: 42px;
+    margin-right: 10px;
+    border: 0px dashed black;
+}
+
+.page-heading-logo-small {
+    display: inline;
+    float: left;
+    margin: 0px;
+    width: 42px;
+    border: 0px dashed red;
+}
+
+.page-heading-logo-small, .page-heading-logo-div, .page-heading-title {
+    height: auto;
+}
+
+.page-heading-title {
+    margin: 0px;
+    color: #0B367B;
+    font-size: 5vw;
+    border: 0px dashed red;
+    vertical-align: middle;
+}
+
+.page-heading-title-div {
+    float: right;
+    width: calc(100% - 52px);
+    height: 100%;
+    line-height: 37px;
+    border: 0px dashed black;
 }
 
 .student-id {

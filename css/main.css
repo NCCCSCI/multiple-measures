@@ -90,9 +90,13 @@ input, select {
 
 .page-heading-logo-div {
     float: left;
-    padding-right: 30px;
+    margin-right: 30px;
     margin: 0px;
     width: 212px;
+}
+
+.page-heading-logo-small {
+    display: none;
 }
 
 .page-heading-logo, .page-heading-logo-div, .page-heading-title {
