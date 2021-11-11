@@ -1,0 +1,20 @@
+#test-results {
+    display: table;
+}
+#test-results div {
+    color: #080;
+    display: table-row;
+}
+#test-results div::before {
+    content: "\002714";
+}
+#test-results div * {
+    display: table-cell;
+    padding: 0 15px;
+}
+#test-results div.fail::before {
+    content: "\002717";
+}
+#test-results div.fail {
+    color: #f00;
+}
