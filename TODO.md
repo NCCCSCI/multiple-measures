@@ -12,3 +12,5 @@
 * connect date to all clones instead of just first (low-priority; don't get a headache over it)
 
 * connect ui to modules
+  
+* print page
