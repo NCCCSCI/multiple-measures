@@ -9,7 +9,7 @@ function testAccuPlacerConfig() {
     // this is the test code
     // it should only test one thing/function
     const keys = Object.keys(EnglishConfig);
-    const result = keys.includes("English_Foundational_Fundamental") && keys.includes("Honors_or_College_Prep" && keys.includes("AP");
+    const result = keys.includes("English_Foundational_Fundamental") && keys.includes("Honors_or_College_Prep") && keys.includes("AP");
     // return a boolean - true means the test passed, false means the test failed
     return result;
 }
