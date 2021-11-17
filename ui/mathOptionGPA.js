@@ -19,7 +19,8 @@ function mathOptionGPA() {
             if ((gpaOptionSelectValue === "1.0-1.9" && mathOptionSelectValue === "Calculus") || "AlgebraIII") {
                 mathPopup.setAttribute("class", "math-popup-show");
                 // pre-calc, algebra ii - <3.0 -> places them into MATH 120 (no prompt)
-            } else if ((gpaOptionSelectValue === "2.0-2.9" && mathOptionSelectValue === "Precalculus_Trigonometry") || "AlgebraII_Statistics") {
+            } else if ((gpaOptionSelectValue === "1.0-1.9" && mathOptionSelectValue === "Precalculus_Trigonometry") || "AlgebraII_Statistics") {
+                mathPopup.setAttribute("class", "hidden");
                 console.log("Place into MATH 120");
             } else {
                 mathPopup.setAttribute("class", "hidden");
