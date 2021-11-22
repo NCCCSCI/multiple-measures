@@ -6,27 +6,37 @@ function mathOptionGPA() {
     let algebraIIOption = document.getElementById("AlgebraII_Statistics");
     let preCalcOption = document.getElementById("Precalculus_Trigonometry");
     let mathPopup = document.getElementById("math-popup");
-    // let hsNamePopup = document.getElementById("hs-name");
+    let gpaOptionSelectValue;
+    let mathOptionSelectValue;
 
     // gpa other popup box function
     gpaOptionSelect.addEventListener("input", function (evt) {
-        let gpaOptionSelectValue = gpaOptionSelect.value;
-
-        mathOptionSelect.addEventListener("input", function (evt) {
-            let mathOptionSelectValue = mathOptionSelect.value;
-            
-            // calculus, algebra iii - <2.0 -> prompt "select previous class"
-            if ((gpaOptionSelectValue === "1.0-1.9" && mathOptionSelectValue === "Calculus") || "AlgebraIII") {
-                mathPopup.setAttribute("class", "math-popup-show");
-                // pre-calc, algebra ii - <3.0 -> places them into MATH 120 (no prompt)
-            } else if ((gpaOptionSelectValue === "2.0-2.9" && mathOptionSelectValue === "Precalculus_Trigonometry") || "AlgebraII_Statistics") {
-                console.log("Place into MATH 120");
-            } else {
-                mathPopup.setAttribute("class", "hidden");
-            }
-        });
+        gpaOptionSelectValue = gpaOptionSelect.value;
     });
+
+    mathOptionSelect.addEventListener("input", function (evt) {
+        gpaOptionSelectValue = gpaOptionSelect.value;
+        mathOptionSelectValue = mathOptionSelect.value;
+        // calculus, algebra iii - <2.0 -> prompt "select previous class"
+        showHidePopup();
+    });
+
+    function showHidePopup() {
+        if (gpaOptionSelectValue === "1.0-1.9" && mathOptionSelectValue === "Calculus" || "AlgebraIII") {
+            mathPopup.setAttribute("class", "math-popup-show");
+            // pre-calc, algebra ii - <3.0 -> places them into MATH 120 (no prompt)
+        } else if ((gpaOptionSelectValue === "1.0-1.9") && (mathOptionSelectValue === "Precalculus_Trigonometry" || "AlgebraII_Statistics")) {
+            mathPopup.setAttribute("class", "hidden");
+            console.log("Place into MATH 120");
+        } else {
+            mathPopup.setAttribute("class", "hidden");
+        }
+    }
+
+
 }
 
 // export the function so it can be imported in main.js
-export { mathOptionGPA };
+export {
+    mathOptionGPA
+};
