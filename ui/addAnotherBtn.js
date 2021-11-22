@@ -23,9 +23,7 @@ function addAnotherBtn() {
         itm.textContent = "Add Another Score: " + totalAddThreshold + " Remaining";
 
         // while loop that describes how many new clones can be added per button click
-        if (buttonClickAddThreshold < 1) {
-
-            // click event listener
+        if (buttonClickAddThreshold < 1) { // click event listener
             item.addEventListener("click", function (evt) {
                 if (totalAddThreshold > 0) {
 
@@ -34,23 +32,22 @@ function addAnotherBtn() {
                     let cln = bottomInput.cloneNode(true); // make clone
 
                     let clnChildId = cln.lastElementChild.id; // id of bottom input div's input element
-                    let clnChildIdText = String(clnChildId); // turns id of bottom input div's input element into string
+                    let clnChildIdText = String(clnChildId);
+                    // turns id of bottom input div's input element into string
 
                     // if statement that works based on whether this is the first clone or not, and updates the descendants' attributes
                     if (clnChildIdText.includes("_") === false) {
-                        ++cloneIndex;
+                        ++ cloneIndex;
                         let clnChildNewId = clnChildId + "_clone_" + cloneIndex;
                         cln.lastElementChild.setAttribute('id', clnChildNewId);
                         cln.firstElementChild.setAttribute('for', clnChildNewId);
                     } else {
                         let originalChildId = itm.parentNode.firstElementChild.lastElementChild.id; // id of first input div's input element
-                        ++cloneIndex;
+                        ++ cloneIndex;
                         let clnChildNewId = originalChildId + "_clone_" + cloneIndex;
                         cln.lastElementChild.setAttribute('id', clnChildNewId);
                         cln.firstElementChild.setAttribute('for', clnChildNewId);
-                    }
-
-                    itm.parentNode.insertBefore(cln, itm); // insert new clone right above button
+                    } itm.parentNode.insertBefore(cln, itm); // insert new clone right above button
 
                     totalAddThreshold--;
                     console.log("totalAddThreshold: " + totalAddThreshold + " (" + totalAddThreshold + " remaining)");
@@ -70,4 +67,6 @@ function addAnotherBtn() {
 }
 
 // export the function so it can be imported in main.js
-export { addAnotherBtn };
+export {
+    addAnotherBtn
+};

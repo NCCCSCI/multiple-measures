@@ -3,7 +3,7 @@ function evalBox() {
     let evalBtn = document.getElementById("eval-btn");
     let allInputs = document.querySelectorAll(".accordion > input, select");
 
-// evaluate button / evaluation box popup function
+    // evaluate button / evaluation box popup function
     evalBtn.addEventListener("click", function (evt) {
         let evalBox = document.getElementById("eval-box");
         let evalBoxStatus = evalBox.getAttribute('class');
@@ -13,7 +13,7 @@ function evalBox() {
         }
     });
 
-// when any of the inputs change, hide the box again
+    // when any of the inputs change, hide the box again
     allInputs.forEach(item => {
         item.addEventListener("input", function (evt) {
             let evalBox = document.getElementById("eval-box");
@@ -28,4 +28,6 @@ function evalBox() {
 }
 
 // export the function so it can be imported in main.js
-export { evalBox };
+export {
+    evalBox
+};
