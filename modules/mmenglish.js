@@ -2,7 +2,7 @@
 
 // bring in the configuration (note the naming conventions)
 import { EnglishConfig } from '../config/mmenglish.js';
-import { GPA } from 'gpa.js';
+import { GPA } from '../modules/gpa.js';
 
 // create the class
 class MultipleMeasuresEnglish {
