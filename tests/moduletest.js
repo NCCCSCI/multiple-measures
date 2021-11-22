@@ -1,7 +1,7 @@
 // front-end
 
 // import the back-end code which performs the placement
-import { MultipleMeasuresEnglish } from '../modules/accuPlacerModule.js';
+import { MultipleMeasuresEnglish } from '../modules/mmenglish.js';
 
 
 let gobttn = document.getElementById("gobttn");
