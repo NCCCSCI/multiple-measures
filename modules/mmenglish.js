@@ -21,7 +21,7 @@ class MultipleMeasuresEnglish {
         const thresholds = Object.keys(EnglishConfig[this._englishClass]).reverse();
         
         // find the first threshold the score is greater than
-        const placement = thresholds.find(threshold => threshold < this._gpaPercentage));
+        const placement = thresholds.find(threshold => threshold < this._gpaPercentage);
         
         // "undefined" means the .find failed
         if (placement !== "undefined") {
