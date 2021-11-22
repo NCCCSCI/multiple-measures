@@ -14,7 +14,6 @@ class MultipleMeasuresEnglish {
 		this._englishClass = englishClass;
     }
 	
-
     // handle the english placement
     englishplacement() {
         // get all the thresholds - properties of the configuration

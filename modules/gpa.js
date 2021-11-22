@@ -10,7 +10,7 @@ class GPA {
     constructor(schoolName,score,weighted) {
 		this._schoolName = schoolName;
 		this._score = score;
-		this._weighted = score;
+		this._weighted = weighted;
     }
 	
 	getScale(schoolName, weighted) {

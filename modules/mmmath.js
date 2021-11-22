@@ -13,7 +13,6 @@ class MultipleMeasuresMath {
 		this._gpaPercentage = this._gpa.calculateGPAPercentage();
 		this._mathClass = mathClass;
     }
-	
 
     // handle the english placement
     mathplacement() {
