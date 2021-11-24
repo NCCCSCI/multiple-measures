@@ -1,9 +1,7 @@
-// back-end
+// module is not comparing anything
+// it's just retrieving the correct scale based on whether
+// or not it was weighted
 
-// this is the configuration - where the scores are mapped to courses
-// a similar approach can be used for much of the config data
-
-// minimum threshold for scores
 const HighSchoolConfig = {
     Alvirne: {
         Scale: 4.3,

@@ -1,27 +1,32 @@
 // back-end
 
-// bring in the configuration (note the naming conventions)
+// bring in the configuration to calculate gpa percentage and generate
+// english placement
 import { MathConfig } from '../config/mmmath.js';
-import { GPA } from 'gpa.js';
+import { GPA } from '../modules/gpa.js';
 
 // create the class
 class MultipleMeasuresMath {
     
-    // constructor (for the demo date isn't used)
+    // constructor
+     // we are assuming that by the time it gets here, the web app has
+    // determined that the future student graduated within the correct
+    // time frame, so no adte is taken into consideration
     constructor(highSchool, score, weighted, mathClass) {
-		this._gpa = gpa(highSchool, score, weighted);
+        // create a new GPA object
+		this._gpa = new GPA(highSchool, score, weighted);
+        // calculate gpa percentage using gpa object that was created
 		this._gpaPercentage = this._gpa.calculateGPAPercentage();
 		this._mathClass = mathClass;
     }
 
-    // handle the english placement
+    // handle the math placement
     mathplacement() {
         // get all the thresholds - properties of the configuration
-        // test.taken is a property of the Config object
         const thresholds = Object.keys(MathConfig[this._mathClass]).reverse();
         
         // find the first threshold the score is greater than
-        const placement = thresholds.find(threshold => threshold < this._gpaPercentage));
+        const placement = thresholds.find(threshold => threshold < this._gpaPercentage);
         
         // "undefined" means the .find failed
         if (placement !== "undefined") {
