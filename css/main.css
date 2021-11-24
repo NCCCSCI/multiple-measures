@@ -2,9 +2,10 @@
     font-size: 15px;
 }
 
-.accordion, .eval-box {
+.accordion,
+.eval-box {
     margin-top: 15px;
-    box-shadow:  5px 5px 5px 5px rgba(0,0,0,0.3);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .accordion-button {
@@ -14,16 +15,18 @@
 }
 
 body {
-    padding: 60px;
+    padding: 4vw;
     background-color: lightblue;
 }
 
-.button, button[id^="add-another-"] {
+.button,
+button[id^="add-another-"] {
     padding: 5px;
     border: 2px solid #999;
     border-radius: 3px;
     font-size: 0.9rem;
 }
+
 
 /*button[id^="add-another-"] {
     display: inline;
@@ -40,11 +43,13 @@ body {
     margin: 25px;
 }
 
-.eval-button, .print-button {
+.eval-button,
+.print-button {
     text-align: center;
 }
 
-.gpa-popup-show, .math-popup-show {
+.gpa-popup-show,
+.math-popup-show {
     display: block;
     padding-left: 3vw;
 }
@@ -58,10 +63,8 @@ h5 {
 }
 
 header {
-    padding: 15px;
     background-color: #FEFEFE;
-    box-shadow:  3px 3px 3px 3px rgba(0,0,0,0.3);
-    height: 75px;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 .help {
@@ -84,42 +87,16 @@ header {
     padding-left: 50px;
 }
 
-input, select {
+input,
+select {
     margin-left: 10px;
 }
 
-.page-heading-logo-div {
-    float: left;
-    margin-right: 30px;
-    margin: 0px;
-    width: 212px;
+#page-heading-logo {
+    padding-right: 1vw;
 }
 
-.page-heading-logo-small {
-    display: none;
-}
-
-.page-heading-logo, .page-heading-logo-div, .page-heading-title {
-    height: 100%;
-}
-
-.page-heading-title {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: normal;
-    margin: 0px;
-    color: #0B367B;
-    font-size: 2.9vw;
-}
-
-.page-heading-title-div {
-    float: right;
-    width: calc(100% - 212px);
-    height: 100%;
-    line-height: 100%;
-}
-
-.score-input > label::before {
+.score-input>label::before {
     content: "*";
     color: gray;
 }
@@ -132,6 +109,7 @@ input, select {
     padding-top: 20px;
 }
 
-.student-id, .student-name {
+.student-id,
+.student-name {
     display: inline;
 }
