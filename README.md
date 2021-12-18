@@ -20,7 +20,7 @@ NCC Multiple Measures Placement Tool
   1. You may use a local stack such as bitnami [WAMP](https://bitnami.com/stack/wamp/installer), [MAMP](https://bitnami.com/stack/mamp/installer) or [XAMPP](https://www.apachefriends.org/index.html) as well  
 
 * [Tests](test.html "Test harness") - manual test interface
-* Deployment - runs directly from a [BitBucket page] (https://multiple-measures.bitbucket.io/)
+* Deployment - runs directly from a [BitBucket page](https://multiple-measures.bitbucket.io/)
 
 ## Contribution guidelines 
 
