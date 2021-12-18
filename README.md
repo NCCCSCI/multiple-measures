@@ -11,10 +11,13 @@ NCC Multiple Measures Placement Tool
 
 * Clone `git clone https://CCSNH@bitbucket.org/multiple-measures/multiple-measures.bitbucket.io.git`
 * Tool uses JavaScript [modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules "MDN JavaScript modules")
-* Must be run with a local server
-  1. ![NetBeans Run](docs/images/run.png "Click the Run button")
-  1. ![localhost](docs/images/url.png "URL")
-  1. You may use a local stack such as bitnami [WAMP](https://bitnami.com/stack/wamp/installer), [MAMP](https://bitnami.com/stack/mamp/installer) or [XAMPP](https://www.apachefriends.org/index.html) as well
+* Must be run with a local server  
+
+  1. ![NetBeans Run](docs/images/run.png "Click the Run button")  
+
+  1. ![localhost](docs/images/url.png "URL")  
+
+  1. You may use a local stack such as bitnami [WAMP](https://bitnami.com/stack/wamp/installer), [MAMP](https://bitnami.com/stack/mamp/installer) or [XAMPP](https://www.apachefriends.org/index.html) as well  
 * [Tests](test.html "Test harness") - manual test interface
 * Deployment - runs directly from a [BitBucket page] (https://multiple-measures.bitbucket.io/)
 
