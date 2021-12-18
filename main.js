@@ -12,12 +12,16 @@
  */
 
 // eval box import
-import { evalBox } from "./ui/evalBox.js";
-evalBox(); // call evalBox script
+import {evalBox} from "./ui/evalBox.js";
+evalBox();
+// call evalBox script
 
 // hs other import
-import { hsOther } from "./ui/hsOther.js";
+import {hsOther} from "./ui/hsOther.js";
 hsOther(); // call hsOther script
 
-import { addAnotherBtn } from "./ui/addAnotherBtn.js";
+import {mathOptionGPA} from "./ui/mathOptionGPA.js";
+mathOptionGPA(); // call mathOptionGPA script
+
+import {addAnotherBtn} from "./ui/addAnotherBtn.js";
 addAnotherBtn(); // call addAnotherBtn script
