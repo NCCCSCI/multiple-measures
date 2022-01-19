@@ -12,7 +12,7 @@ const tests = [
         fn: pass},
     {name: "a test that will fail",
         fn: fail},
-    {name: "test config has all 5 math classes",
+    {name: "test that we are testing!",
         fn: testAccuPlacerConfig}
 ];
 

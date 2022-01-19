@@ -1,15 +1,21 @@
 // back-end
 
-// bring in the configuration (note the naming conventions)
+// bring in the configuration to calculate gpa percentage and generate
+// english placement
 import { EnglishConfig } from '../config/mmenglish.js';
 import { GPA } from '../modules/gpa.js';
 
 // create the class
 class MultipleMeasuresEnglish {
     
-    // constructor (for the demo date isn't used)
+    // constructor
+    // we are assuming that by the time it gets here, the web app has
+    // determined that the future student graduated within the correct
+    // time frame, so no adte is taken into consideration
     constructor(highSchool, score, weighted, englishClass) {
-		this._gpa = gpa(highSchool, score, weighted);
+        // create new GPA object
+		this._gpa = new GPA(highSchool, score, weighted);
+        // get gpa percentage with gpa object just created
 		this._gpaPercentage = this._gpa.calculateGPAPercentage();
 		this._englishClass = englishClass;
     }
@@ -17,7 +23,7 @@ class MultipleMeasuresEnglish {
     // handle the english placement
     englishplacement() {
         // get all the thresholds - properties of the configuration
-        // test.taken is a property of the Config object
+        // reverse the order
         const thresholds = Object.keys(EnglishConfig[this._englishClass]).reverse();
         
         // find the first threshold the score is greater than
