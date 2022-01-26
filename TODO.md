@@ -14,3 +14,28 @@
 * connect ui to modules **[not started]**
   
 * print page **[not started]**
+
+#### January 19, 2022
+##### notes from fall 2021 (haven't figured these out yet)
+
+* Nav buttons to bring to another topic
+
+* input group ( Refer to getBootStrap.com )
+
+* Read-Only - PDF ( Mailto: )
+
+* ‘Share/ View Printable’?
+
+* Use “hidden” feature on single page for scrolling through options
+
+* “See Advisor” section with link to NCC website/Advisors page
+
+* If statement to determine scores.
+
+* Form Controls - Horizontal form
+
+* GED - added to “SEE ADVISOR” or “HS GPA”
+
+* Scope Creep?
+
+* year graduated > 5 years —> Nav from 2 topics to 3rd for accu-placer ("did you take SAT?")
