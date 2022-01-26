@@ -32,3 +32,9 @@ NCC Multiple Measures Placement Tool
 ## Who do I talk to? 
 
 * [NCC Computer Science](https://nashuacc.edu/contact-us/faculty-staff)
+
+## Contributors
+
+* Jose Rueda - Back End
+* Arianna Bikombe - Front End
+* 
