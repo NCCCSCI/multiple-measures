@@ -20,9 +20,9 @@
 
 * Nav buttons to bring to another topic
 
-* input group ( Refer to getBootStrap.com )
+* input group (Refer to getBootStrap.com)
 
-* Read-Only - PDF ( Mailto: )
+* Read-Only - PDF (Mailto:)
 
 * ‘Share/ View Printable’?
 
