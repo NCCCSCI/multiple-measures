@@ -30,7 +30,7 @@
 
 * “See Advisor” section with link to NCC website/Advisors page
 
-* If statement to determine scores.
+* If statement to determine scores
 
 * Form Controls - Horizontal form
 
