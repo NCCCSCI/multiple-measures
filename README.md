@@ -37,4 +37,4 @@ NCC Multiple Measures Placement Tool
 
 * Jose Rueda - Back End
 * Arianna Bikombe - Front End
-* 
+* Nichole Francoeur - Middle/ Combing 
