@@ -4,6 +4,7 @@ function hsOther() {
     let otherOption = document.getElementById("Other");
     let gpaBlockPopup = document.getElementById("gpa-popup");
     let hsNamePopup = document.getElementById("hs-name");
+    let gpaInputBlock = document.getElementById("input-mm-3-block");
 
 
     // gpa other popup box function
@@ -13,10 +14,12 @@ function hsOther() {
         if (hsOptionSelectValue === 'Other') {
             gpaBlockPopup.setAttribute('class', 'gpa-popup-show');
             hsNamePopup.setAttribute('class', 'hs-name-show');
+            gpaInputBlock.classList.add('hidden');
 
         } else {
             gpaBlockPopup.setAttribute('class', 'hidden');
             hsNamePopup.setAttribute('class', 'hidden');
+            gpaInputBlock.classList.remove('hidden');
         }
     });
 
