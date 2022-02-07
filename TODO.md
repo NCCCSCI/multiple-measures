@@ -36,6 +36,6 @@
 
 * GED - added to “SEE ADVISOR” or “HS GPA”
 
-* Scope Creep?
-
 * year graduated > 5 years —> Nav from 2 topics to 3rd for accu-placer ("did you take SAT?")
+
+* validation for inputs - red asterisk and label explaining what's wrong
