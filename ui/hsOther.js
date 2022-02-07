@@ -13,10 +13,12 @@ function hsOther() {
         if (hsOptionSelectValue === 'Other') {
             gpaBlockPopup.setAttribute('class', 'gpa-popup-show');
             hsNamePopup.setAttribute('class', 'hs-name-show');
+            gpaInputBlock.classList.add('hidden');
 
         } else {
             gpaBlockPopup.setAttribute('class', 'hidden');
             hsNamePopup.setAttribute('class', 'hidden');
+            gpaInputBlock.classList.remove('hidden');
         }
     });
 
