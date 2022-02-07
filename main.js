@@ -22,6 +22,3 @@ hsOther(); // call hsOther script
 
 import {mathOptionGPA} from "./ui/mathOptionGPA.js";
 mathOptionGPA(); // call mathOptionGPA script
-
-import {addAnotherBtn} from "./ui/addAnotherBtn.js";
-addAnotherBtn(); // call addAnotherBtn script
