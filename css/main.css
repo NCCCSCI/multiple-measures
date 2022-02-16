@@ -96,7 +96,7 @@ select {
     padding-right: 1vw;
 }
 
-.score-input>label::before {
+.score-input>label::before, #unofficial-disclaimer::before {
     content: "*";
     color: gray;
 }
@@ -112,4 +112,9 @@ select {
 .student-id,
 .student-name {
     display: inline;
+}
+
+#unofficial-disclaimer {
+    color: gray;
+    text-align: center;
 }
