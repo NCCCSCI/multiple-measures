@@ -6,11 +6,12 @@
 * * validate email for sharing / printing
 
 #### user friendly **[almost done]**
-* finalize responsiveness **[working on]**
+* finalize responsiveness **[working on: Nichole / Arianna]**
 * transfer / non-native speaker - add if they have taken any college credits in the past **[done]**
 * disclaimer that this is not an official document **[done]**
 * validation for inputs - red asterisk and label explaining what's wrong
 * "dont know your gpa?" checkbox -> send you to SAT
+* SAT "taken" radio - button click event handler takes user to Accuplacer **[working on: Nichole]**
 
 #### logic
 * year  graduated high school - switch years for math and english
@@ -27,4 +28,3 @@
 	* or have them input the title of the course they took if not listed (like high school dropdown - ANOTHER POPUP ARE WE EXCITE
 	* high schools change the titles of their courses- this would make it so we don't have to update the courses for each high school
 * figure out why (mathOptionGPA.js ln 19) doesn't work
-* SAT "taken" radio - same as Accuplacer
