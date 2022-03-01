@@ -19,7 +19,7 @@ class MultipleMeasures {
     }
 	
 	calculatePercentage() {
-		const scale = HighSchoolConfig.[highschool].scale;
+		const scale = HighSchoolConfig[highschool].scale;
 		
 		if (scale !== 0) {
 			return this._gpa/scale;
