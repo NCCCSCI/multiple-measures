@@ -15,8 +15,8 @@
 
 #### logic
 * gpa- if left blank what happens? is it optional **[done]**
-* SAT Composite Score
 	* is the high school course info important to know if student doesn't have gpa or can it be skipped
+* SAT Composite Score
 * year graduated high school - switch years for math and english **[working on]**
 	* if between 3-5 years ago, only english can be evaluated
 	* if graduated >5 years ago, skip to SAT? talk to advising **[working on: Arianna]**
