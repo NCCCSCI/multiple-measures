@@ -11,6 +11,7 @@
  doMathPlacement(); // call doMathPlacement script
  */
 
+
 // eval box import
 import {evalBox} from "./ui/evalBox.js";
 evalBox();
@@ -22,3 +23,6 @@ hsOther(); // call hsOther script
 
 import {mathOptionGPA} from "./ui/mathOptionGPA.js";
 mathOptionGPA(); // call mathOptionGPA script
+
+import {test} from "./controls/hsGpa.js"
+test();

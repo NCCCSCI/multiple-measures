@@ -42,4 +42,4 @@ function doPlacement() {
 }
 
 // export the function so it can be imported in main.js
-export { doPlacement }; */
+export { doPlacement }; 
