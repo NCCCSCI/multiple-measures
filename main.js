@@ -24,5 +24,10 @@ hsOther(); // call hsOther script
 import {mathOptionGPA} from "./ui/mathOptionGPA.js";
 mathOptionGPA(); // call mathOptionGPA script
 
+<<<<<<< HEAD
 import {test} from "./controls/hsGpa.js"
 test();
+=======
+import {gradMoreThanFive} from "./ui/gradMoreThanFive.js";
+gradMoreThanFive(); // call gradMoreThanFive script
+>>>>>>> 88a8ea86224af76114b245aaabc56d3057eb61a6

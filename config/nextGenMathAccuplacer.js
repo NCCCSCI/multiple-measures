@@ -1,5 +1,5 @@
 const MathPlacement = {
-    //Algrebra & Functions is nested inside Algebra QR stats (minimum score required )
+    //Arithmetic is nested inside QR Algebra stats (minimum score required )
 
     0: {
         0: "CTP",
