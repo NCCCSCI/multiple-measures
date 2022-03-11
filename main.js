@@ -11,6 +11,14 @@
  doMathPlacement(); // call doMathPlacement script
  */
 
+// CONTROLS JAVASCRIPT
+
+import {test} from "./controls/hsGpa.js";
+test();
+
+
+
+// /UI JAVASCRIPT
 
 // eval box import
 import {evalBox} from "./ui/evalBox.js";
@@ -21,11 +29,10 @@ evalBox();
 import {hsOther} from "./ui/hsOther.js";
 hsOther(); // call hsOther script
 
+// math option gpa import
 import {mathOptionGPA} from "./ui/mathOptionGPA.js";
 mathOptionGPA(); // call mathOptionGPA script
 
-import {test} from "./controls/hsGpa.js";
-test();
-
+// date select import
 import {dates} from "./ui/dates.js";
 dates(); // call dates script

@@ -1,13 +1,18 @@
-function dates() { // let engEvalClassName = "only-eval-eng";
+function dates() {
+    // VARIABLE DECLARATIONS
+    // multiple measures
     let dateOptionsMM = document.querySelector(".mm > .date");
-    let satToAccRedirect = document.querySelector(".sat > .date");
-    let dateOptionsAcc = document.querySelector(".acc > .date");
     let mathMMBlock = document.querySelector(".math-mm");
-    let mathAccBlocks = document.querySelectorAll(".math-acc");
     let mathCoursePopup = document.getElementById("math-eval-popup");
+    // SAT
+    let satToAccRedirect = document.querySelector(".sat > .date");
     let accCollapse = document.getElementById('accuplacer');
-	let satHelpPopup = document.getElementById("sat-help-popup");
+    let satToAccCollapse;
+    let satHelpPopup = document.getElementById("sat-help-popup");
     let satHelpNotTakenPopup = document.getElementById("sat-help-not-taken-popup");
+    // accuplacer
+    let dateOptionsAcc = document.querySelector(".acc > .date");
+    let mathAccBlocks = document.querySelectorAll(".math-acc");
 	let accHelpPopup = document.getElementById("acc-help-popup");
     let accHelpNotTakenPopup = document.getElementById("acc-help-not-taken-popup");
 	let accHelp45Popup = document.getElementById("acc-help-4-5-popup");
@@ -67,27 +72,26 @@ function dates() { // let engEvalClassName = "only-eval-eng";
 
     // SAT >5 years or not taken -- redirect
     satToAccRedirect.addEventListener('input', function (evt) {
-        let bsCollapse = new bootstrap.Collapse(accCollapse, {
-            toggle: true
-        });
         switch (satToAccRedirect.value) {
 			case "Not_Taken": satHelpPopup.classList.add("hidden");
                 satHelpNotTakenPopup.classList.remove("hidden");
-                bsCollapse();
+                satToAccCollapse = new bootstrap.Collapse(accCollapse, {
+                    toggle: true
+                });
+                satToAccCollapse();
                 break;
             case "More_Than_5_Years_Ago": satHelpPopup.classList.remove("hidden");
                 satHelpNotTakenPopup.classList.add("hidden");
-                bsCollapse();
+                satToAccCollapse = new bootstrap.Collapse(accCollapse, {
+                    toggle: true
+                });
+                satToAccCollapse();
                 break;
             default: satHelpPopup.classList.add("hidden");
                 satHelpNotTakenPopup.classList.add("hidden");
                 break;
         }
     });
-
-    // accuplacer not-taken
-    // #hide-acc
-    // acc not taken is hide acc and display that not taken
 
 }
 

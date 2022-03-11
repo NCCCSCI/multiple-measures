@@ -8,8 +8,7 @@
 * transfer / non-native speaker - add if they have taken any college credits in the past **[done]**
 * disclaimer that this is not an official document **[done]**
 * "dont know your gpa?" checkbox -> send you to SAT **[done]**
-* finalize responsiveness **[working on: Nichole / Arianna]**
-* SAT "taken" radio - button click event handler takes user to Accuplacer **[working on: Nichole]**
+* finalize responsiveness **[working on]**
 * validation for inputs - red asterisk and label explaining what's wrong
 
 #### logic

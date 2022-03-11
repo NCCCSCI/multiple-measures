@@ -19,12 +19,12 @@ function doMathPlacement() {
         const accuPlacer = new AccuPlacer(new Date(), "math", score);
         
         // use the placement method of the AccuPlacer to get the placement 
-        const placement = accuPlacer.placement()
+        const placement = accuPlacer.placement();
         
         // if a placement isn't found
-        if (placement === "undefined") {
+        /* if (placement === "undefined") {
             placement = "unknown"; // advisor
-        }
+        } */
         
         // update the display
         placementElement.textContent = placement;
