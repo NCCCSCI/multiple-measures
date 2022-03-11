@@ -24,7 +24,8 @@ hsOther(); // call hsOther script
 import {mathOptionGPA} from "./ui/mathOptionGPA.js";
 mathOptionGPA(); // call mathOptionGPA script
 
-import {test} from "./controls/hsGpa.js"
+import {test} from "./controls/hsGpa.js";
 test();
-import {gradMoreThanFive} from "./ui/gradMoreThanFive.js";
-gradMoreThanFive(); // call gradMoreThanFive script
+
+import {dates} from "./ui/dates.js";
+dates(); // call dates script

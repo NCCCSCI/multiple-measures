@@ -96,6 +96,11 @@ select {
     padding-right: 1vw;
 }
 
+.sat-help-popup:not(.hidden), .acc-help-popup:not(.hidden) {
+    display: inline;
+    padding-left: 10px;
+}
+
 .score-input>label::before, #unofficial-disclaimer::before {
     content: "*";
     color: gray;
