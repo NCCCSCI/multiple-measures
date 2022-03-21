@@ -36,3 +36,7 @@ mathOptionGPA(); // call mathOptionGPA script
 // date select import
 import {dates} from "./ui/dates.js";
 dates(); // call dates script
+
+// mathCourseSelect import
+import {mathCourseSelect} from "./ui/mathCourseSelect.js";
+mathCourseSelect(); // call mathCourseSelect script
