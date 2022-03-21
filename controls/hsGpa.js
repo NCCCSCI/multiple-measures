@@ -4,7 +4,7 @@ import { HighSchoolConfig } from '../config/mmhighschools.js';
 // importing highschool gpa class GPA from gps.js
 import { GPA } from '../modules/gpa.js'
 
-/*
+
 //function that gets the highschool name and checks it against the gpa scale
 function highSchool() {
 
@@ -28,57 +28,10 @@ function highSchool() {
     const math =
     document.getElementById("input-mm-6").value.trim();
 
-    let hs = hsName, hsYear, GPA, english, math; 
-
-}
-*/
-function sat(){
-
-
-    // get date input 
-    const satDate =
-    document.getElementById("input-sat-2").value.trim();
-
-    // get sat math score input 
-    const satMath =
-    document.getElementById("input-sat-3").value.trim();
-
-    // get sat reading and writing input 
-    const satReading =
-    document.getElementById("input-sat-4").value.trim();
-
-    // get sat composite input 
-    const satComposite =
-    document.getElementById("input-sat-5").value.trim();
-
-    return satComposite;
 }
 
-function accuplacer(){
 
-     // get WRTG input 
-     const wrtg =
-     document.getElementById("input-acc-2").value.trim(); 
 
-      // get ESSY input 
-    const essy =
-    document.getElementById("input-acc-3").value.trim(); 
-
-     // get ARNG input 
-     const arng =
-     document.getElementById("input-acc-4").value.trim(); 
-
-      // get QAS input 
-    const qas =
-    document.getElementById("input-acc-5").value.trim(); 
-
-     // get AAF input 
-     const aaf =
-     document.getElementById("input-acc-6").value.trim(); 
-
-    return essy;
-
-}
 
 
 //function to test eval button
