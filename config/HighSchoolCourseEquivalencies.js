@@ -1,6 +1,6 @@
 // this is the configuration - where the courses taken on the left(High School) is equivalent to the course on the right(College).
 // a similar approach can be used for much of the config data
-
+//Trigonometry and Precalculus equivalent value (NCC) are together inside Precalculus_Trigonometry variable.
 const HSCourseEqConfig = {
     Merrimack: {
         'Algebra I': "AlgebraI",
