@@ -29,10 +29,6 @@ evalBox();
 import {hsOther} from "./ui/hsOther.js";
 hsOther(); // call hsOther script
 
-// math option gpa import
-import {mathOptionGPA} from "./ui/mathOptionGPA.js";
-mathOptionGPA(); // call mathOptionGPA script
-
 // date select import
 import {dates} from "./ui/dates.js";
 dates(); // call dates script
