@@ -13,7 +13,7 @@
 
 // CONTROLS JAVASCRIPT
 
-import {test} from "./controls/satScore.js";
+import {test} from "./controls/hsGpa.js";
 test();
 
 

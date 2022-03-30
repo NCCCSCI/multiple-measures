@@ -21,7 +21,7 @@ function sat(){
 
     if (mathPlacement !== "undefined") {
         // return math placement
-        console.log(SATConfig.Mathematics[mathPlacement]);
+        return (SATConfig.Mathematics[mathPlacement]);
     }
 
    if (readingPlacement !== "undefined") {
@@ -32,8 +32,6 @@ function sat(){
     //null if nothings found
     return null; 
 }
-
-
 
 //function to test eval button
 function clickhandler () {
