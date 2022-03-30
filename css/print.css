@@ -1,0 +1,34 @@
+@page {
+	size: letter;
+	margin: 0.5in;
+}
+
+a, body, button, :active {
+	color: black;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	background: none;
+}
+
+body *, .accordion, .eval-box {
+	box-shadow: none;
+}
+
+.accordion-item, .accordion-button, input, select {
+	border: 0px solid white;
+}
+
+input, select {
+	font-weight: bold;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.no-print {
+	display: none;
+}

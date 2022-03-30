@@ -36,3 +36,7 @@ dates(); // call dates script
 // mathCourseSelect import
 import {mathCourseSelect} from "./ui/mathCourseSelect.js";
 mathCourseSelect(); // call mathCourseSelect script
+
+// print import
+import {print} from "./ui/print.js";
+print(); // call print script

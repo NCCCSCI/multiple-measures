@@ -11,6 +11,7 @@
         <link href="css/mobile.css" rel="stylesheet" media="screen and (max-width:575px)">
         <link href="css/tablet.css" rel="stylesheet" media="screen and (min-width:576px)">
         <link href="css/laptop-desktop.css" rel="stylesheet" media="screen and (min-width:1199px)">
+        <link href="css/print.css" rel="stylesheet" media="print">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer></script>
         <script type="module" src="main.js" defer></script>
     </head>
@@ -40,7 +41,7 @@
                         <label for="input-id" id="input-id-label">Student ID</label>
                         <input type="text" class="input-id" name="input-id" id="input-id" placeholder="Optional">
                     </div>
-                    <div class="see-advising">
+                    <div class="see-advising no-print">
                         <p>If the student is a transfer student, non-native English speaker, or have taken college credits, contact the
                             <a href="https://nashuacc.edu/student-services/advising-center" title="NCC Advising Home">NCC Advising Center</a>.</p>
                         <p>If student is in ESOL, proceed to
@@ -62,7 +63,7 @@
                     </h2>
                     <div id="multi-measures" class="accordion-collapse collapse show" aria-labelledby="multi-measures-heading" data-bs-parent="#page-accordion">
                         <div class="accordion-body">
-                            <p>If student does not know their GPA or graduated from high school more than 5 years ago, proceed to
+                            <p class="no-print">If student does not know their GPA or graduated from high school more than 5 years ago, proceed to
                                 <a href="#sat" data-bs-toggle="collapse" data-bs-target="#sat">SAT</a>.</p>
                             <div
                                 class="input-block ">
@@ -323,7 +324,7 @@
                 class="eval-button-box" id="eval-button-box">
                 <!-- Evaluate Button and Evaluation Box -->
                 <div
-                    class="eval-button">
+                    class="eval-button no-print">
                     <!-- Evaluate Button -->
                     <button class="button btn btn-light" id="eval-btn">Evaluate</button>
                 </div>
@@ -352,7 +353,7 @@
                         <h6 id="unofficial-disclaimer">Disclaimer: This is an unofficial document for reference purposes only.</h6>
                     </div>
                     <div
-                        class="print-button">
+                        class="print-button no-print">
                         <!-- Print Button -->
                         <button type="button" class="button btn btn-light" id="print-btn">Print</button>
                     </div>
