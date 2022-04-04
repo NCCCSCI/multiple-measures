@@ -15,3 +15,6 @@ dl div dt {
 	width: 14rem;
 	color: #777;
 }
+#mainContent {
+    overflow: auto;
+}

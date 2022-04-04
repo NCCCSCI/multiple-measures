@@ -1,3 +1,5 @@
+//index.html edited:
+(some js and added labels to recognize variable names automaticall, couldnt find out how to hide default values yet)
 <!DOCTYPE html>
 <html lang="en-US">
 
@@ -11,9 +13,50 @@
         <link href="css/mobile.css" rel="stylesheet" media="screen and (max-width:575px)">
         <link href="css/tablet.css" rel="stylesheet" media="screen and (min-width:576px)">
         <link href="css/laptop-desktop.css" rel="stylesheet" media="screen and (min-width:1199px)">
-        <link href="css/print.css" rel="stylesheet" media="print">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer></script>
         <script type="module" src="main.js" defer></script>
+
+        <script>
+            function printDiv(divName) {
+             //alert('s');
+             var printContents = '<div id="print-content"><form><table width="100%"><tbody>';
+              var inputs, index;
+            
+            // inputs = document.getElementsByTagName('input');
+            inputs = document.querySelectorAll('input,select');
+            for (index = 0; index < inputs.length - 1; ++index) {
+            // console.log (inputs[index].id+"-label"); Testing
+               var fieldName = document.getElementById(inputs[index].id+"-label").textContent;
+               var fieldValue = inputs[index].value;
+               //Testing different ways to get rid of default values or undefined
+             /*   if(inputs[index].value != ""){
+               
+            } */
+              
+              printContents +='<tr><td><label>'+fieldName+'</label></td>';
+              printContents +='<td>'+fieldValue+'</td></tr>';}
+            
+            
+            /* var z = 20; // if you had more labels remeber to change this value 
+           inputs = document.getElementsByTagName('textarea');
+            for (index = 0; index < inputs.length; ++index) {
+            
+               //var fieldName = inputs[index].name;
+                var fieldName = document.getElementsByTagName('label')[z].textContent;
+               var fieldValue = inputs[index].value;
+            
+              printContents +='<tr><td colspan="2"><label> :'+fieldName+'</label><br>'+fieldValue+'</td></tr>';
+            ++z;
+            }*/
+            
+               printContents +='</tbody></table>';
+            
+             w=window.open();
+             w.document.write(printContents);
+             w.print();
+             w.close();
+            }
+            </script>
     </head>
 
     <body>
@@ -34,14 +77,14 @@
                 <!-- Student Name and ID, Intro Links -->
                 <div class="input-block">
                     <div class="student-name">
-                        <label for="input-name" id="input-name-label">Full Name</label>
+                        <label for="input-name" id="input-name-label">Name</label>
                         <input type="text" class="input-name" name="input-name" id="input-name" placeholder="Optional">
                     </div>
                     <div class="student-id">
                         <label for="input-id" id="input-id-label">Student ID</label>
                         <input type="text" class="input-id" name="input-id" id="input-id" placeholder="Optional">
                     </div>
-                    <div class="see-advising no-print">
+                    <div class="see-advising">
                         <p>If the student is a transfer student, non-native English speaker, or have taken college credits, contact the
                             <a href="https://nashuacc.edu/student-services/advising-center" title="NCC Advising Home">NCC Advising Center</a>.</p>
                         <p>If student is in ESOL, proceed to
@@ -63,14 +106,14 @@
                     </h2>
                     <div id="multi-measures" class="accordion-collapse collapse show" aria-labelledby="multi-measures-heading" data-bs-parent="#page-accordion">
                         <div class="accordion-body">
-                            <p class="no-print">If student does not know their GPA or graduated from high school more than 5 years ago, proceed to
+                            <p>If student does not know their GPA or graduated from high school more than 5 years ago, proceed to
                                 <a href="#sat" data-bs-toggle="collapse" data-bs-target="#sat">SAT</a>.</p>
                             <div
                                 class="input-block ">
                                 <!-- High School Input -->
-                                <label for="input-mm-2"> Name of High School</label>
+                                <label for="input-mm-2" id="input-mm-2-label">Name of High School</label>
                                 <select class="input-mm-2" name="input-mm-2" id="input-mm-2">
-                                    <option value="Select">[Select a High School]</option>
+                                    <option value="Select_High_School">[Select a High School]</option>
                                     <option value="Alvirne" id="Alvirne">Alvirne</option>
                                     <option value="Campbell" id="Campbell">Campbell</option>
                                     <option value="ConVal" id="ConVal">ConVal</option>
@@ -85,34 +128,35 @@
                                     <option value="Pelham" id="Pelham">Pelham</option>
                                     <option value="Salem" id="Salem">Salem</option>
                                     <option value="Wilton_Lyndenborough" id="Wilton_Lyndenborough">Wilton/Lyndenborough</option>
-                                    <!-- <option value="Other" id="Other">Other</option> -->
+                                    <option value="Other" id="Other">Other</option>
                                 </select>
                             </div>
-                            <!-- <div
+                            <div
                                 class="hidden" id="gpa-popup">
-                                Other (High School Name / GPA) Pop Up Box
+                                <!-- Other (High School Name / GPA) Pop Up Box -->
                                 <div class="input-block">
-                                    <label for="hs-name">Please type in your High School Name.
+                                    <label for="hs-name" id="hs-name-label">Please type in your High School Name.
                                     </label>
                                     <input name="hs-name" type="text" class="hidden" id="hs-name" placeholder="Name of High School">
                                 </div>
                                 <div
                                     class="input-block">
-                                    GPA Numerator
-                                    <label for="input-mm-2-gpa-num">Please enter your GPA.</label>
+                                    <!-- GPA Numerator -->
+                                    <label for="input-mm-2-gpa-num" id="input-mm-2-gpa-num-label">Please enter your GPA.</label>
                                     <input
                                     name="input-mm-2-gpa-num" id="input-mm-2-gpa-num" type="number" value="0.0" step="0.1" min="0.0" max="100.0">
-                                    GPA Denominator
+                                    <!-- GPA Denominator -->
                                     <span>out of</span>
+                                    <label for="input-mm-2-gpa-den" id="input-mm-2-gpa-den-label"></label>
                                     <input name="input-mm-2-gpa-den" id="input-mm-2-gpa-den" type="number" value="0.0" step="0.1" min="0.0" max="100.0">
                                 </div>
-                            </div> -->
+                            </div>
                             <div
                                 class="input-block mm">
                                 <!-- Year Graduated -->
-                                <label for="input-mm-3">Year Graduated</label>
+                                <label for="input-mm-3" id="input-mm-3-label">Year Graduated</label>
                                 <select class="date input-mm-3" name="input-mm-3" id="input-mm-3">
-                                    <option value="Select">[Select a Year]</option>
+                                    <option value="Select_Grad_Year">[Select a Year]</option>
                                     <option value="3_or_Fewer_Years_Ago">3 or Fewer Years Ago</option>
                                     <option value="4-5_Years_Ago" class="only-eval-eng-mm">4-5 Years Ago</option>
                                 </select>
@@ -120,9 +164,9 @@
                             <div
                                 class="input-block" id="input-mm-4-block">
                                 <!-- Cumulative GPA -->
-                                <label for="input-mm-4">Cumulative GPA</label>
+                                <label for="input-mm-4" id="input-mm-4-label">Cumulative GPA</label>
                                 <select class="input-mm-4" name="input-mm-4" id="input-mm-4">
-                                    <option value="Select">[Select a GPA]</option>
+                                    <option value="Select_GPA">[Select a GPA]</option>
                                     <option value="1.0-1.9">1.0-1.9</option>
                                     <option value="2.0-2.9">2.0-2.9</option>
                                     <option value="3.0-3.9">3.0-3.9</option>
@@ -132,9 +176,9 @@
                             <div
                                 class="input-block">
                                 <!-- Last English Course Taken -->
-                                <label for="input-mm-5">Highest English Course Passed</label>
+                                <label for="input-mm-5" id="input-mm-5-label">Highest English Course Passed</label>
                                 <select class="input-mm-5" name="input-mm-5" id="input-mm-5">
-                                    <option value="Select">[Select a Course]</option>
+                                    <option value="Select_Eng_Course">[Select a Course]</option>
                                     <option value="English_Foundational">English Foundational</option>
                                     <option value="Honors_College_Prep">Honors/College Prep</option>
                                     <option value="English_Foundational">AP</option>
@@ -143,9 +187,9 @@
                             <div
                                 class="input-block math-mm">
                                 <!-- Last Math Course Taken -->
-                                <label for="input-mm-6">Highest Math Course Taken: C or Better</label>
+                                <label for="input-mm-6" id="input-mm-6-label">Highest Math Course Taken: C or Better</label>
                                 <select class="input-mm-6" name="input-mm-6" id="input-mm-6">
-                                    <option value="Select">[Select a Course]</option>
+                                    <option value="Select_Math_Course">[Select a Course]</option>
                                     <!-- <option value="AlgebraI" id="AlgebraI">Algebra I</option>
                                     <option value="AlgebraII_Statistics" id="AlgebraII_Statistics">Algebra II/Statistics</option>
                                     <option value="AlgebraIII" id="AlgebraIII">Algebra III</option>
@@ -174,16 +218,16 @@
                     </h2>
                     <div id="sat" class="accordion-collapse collapse" aria-labelledby="sat-heading" data-bs-parent="#page-accordion">
                         <div class="accordion-body">
-                            <div class="help no-print">
+                            <div class="help">
                                 <p id="score-input-help">*For each score input, please input your best score.</p>
                             </div>
                             <div
                                 class="input-block sat">
                                 <!-- Date -->
                                 <!-- SAT is >5 years for everything -->
-                                <label for="input-sat-1">Date Taken</label>
+                                <label for="input-sat-1" id="input-sat-1-label">Date Taken</label>
                                 <select class="date input-sat-1" name="input-sat-1" id="input-sat-1">
-                                    <option value="Select">[Select a Year]</option>
+                                    <option value="Select_SAT_Year">[Select a Year]</option>
                                     <option value="Not_Taken" class="acc-redirect">Not Taken</option>
                                     <option value="5_or_Fewer_Years_Ago">5 or Fewer Years Ago</option>
                                     <option value="More_Than_5_Years_Ago" class="acc-redirect">More Than 5 Years Ago</option>
@@ -194,9 +238,9 @@
                             <div
                                 class="input-block score-input">
                                 <!-- SAT Math Score -->
-                                <label for="input-sat-2">SAT Math Score</label>
+                                <label for="input-sat-2" id="input-sat-2-label">SAT Math Score</label>
                                 <select class="input-sat-2" name="input-sat-2" id="input-sat-2">
-                                    <option value="Select">[Select a Score Range]</option>
+                                    <option value="Select_SAT_Math_Score_Range">[Select a Score Range]</option>
                                     <option value="458_or_lower">458 or Lower</option>
                                     <option value="459-499">459-499</option>
                                     <option value="500-529">500-529</option>
@@ -208,9 +252,9 @@
                             <div
                                 class="input-block score-input">
                                 <!-- SAT Critical Reading and Writing Score -->
-                                <label for="input-sat-3">SAT Critical Reading and Writing Score</label>
+                                <label for="input-sat-3" id="input-sat-3-label">SAT Critical Reading and Writing Score</label>
                                 <select class="input-sat-3" name="input-sat-3" id="input-sat-3">
-                                    <option value="Select">[Select a Score Range]</option>
+                                    <option value="Select_SAT_Eng_Score_Range">[Select a Score Range]</option>
                                     <option value="400_or_lower">400 or Lower</option>
                                     <option value="401-469">401-469</option>
                                     <option value="470_or_higher">470 or Higher</option>
@@ -228,16 +272,16 @@
                     </h2>
                     <div id="accuplacer" class="accordion-collapse collapse" aria-labelledby="accuplacer-heading" data-bs-parent="#page-accordion">
                         <div class="accordion-body">
-                            <div class="help no-print">
+                            <div class="help">
                                 <p id="score-input-help">*For each score input, please input your best score.</p>
                             </div>
                             <div
                                 class="input-block acc">
                                 <!-- Date -->
                                 <!-- AccuPlacer is 3 for math, 5 for eng -->
-                                <label for="input-acc-1">Date Taken</label>
+                                <label for="input-acc-1" id="input-acc-1-label">Date Taken</label>
                                 <select class="date input-acc-1" name="input-acc-1" id="input-acc-1">
-                                    <option value="Select">[Select a Year]</option>
+                                    <option value="Select_Acc_Year">[Select a Year]</option>
                                     <option value="Not_Taken">Not Taken</option>
                                     <option value="3_or_Fewer_Years_Ago">3 or Fewer Years Ago</option>
                                     <option value="4-5_Years_Ago">4-5 Years Ago</option>
@@ -251,10 +295,10 @@
                             </div>
                             <div
                                 class="input-block score-input">
-                                <!-- English Score: Writing Conventions (WRTG) -->
-                                <label for="input-acc-2">English Score: WRTG</label>
+                                <!-- English Score: WRTG -->
+                                <label for="input-acc-2" id="input-acc-2-label">English Score: WRTG</label>
                                 <select class="input-acc-2" name="input-acc-2" id="input-acc-2">
-                                    <option value="Select">[Select a Score Range]</option>
+                                    <option value="Select_Acc_WRTG_Score_Range">[Select a Score Range]</option>
                                     <option value="236_or_lower">236 or Lower</option>
                                     <option value="237-249">237-249</option>
                                     <option value="250-262">250-262</option>
@@ -263,10 +307,10 @@
                             </div>
                             <div
                                 class="input-block score-input">
-                                <!-- English Score: Writeplacer (ESSY) -->
-                                <label for="input-acc-3">English Score: ESSY</label>
+                                <!-- English Score: ESSY -->
+                                <label for="input-acc-3" id="input-acc-3-label">English Score: ESSY</label>
                                 <select class="input-acc-3" name="input-acc-3" id="input-acc-3">
-                                    <option value="Select">[Select a Score Range]</option>
+                                    <option value="Select_Acc_ESSY_Score_Range">[Select a Score Range]</option>
                                     <option value="0">0</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -278,10 +322,10 @@
                             </div>
                             <div
                                 class="input-block score-input math-acc">
-                                <!-- Math Score: Arithmetic (ARNG) -->
-                                <label for="input-acc-4">Math Score: ARNG</label>
+                                <!-- Math Score: ARNG -->
+                                <label for="input-acc-4" id="input-acc-4-label">Math Score: ARNG</label>
                                 <select class="input-acc-4" name="input-acc-4" id="input-acc-4">
-                                    <option value="Select">[Select a Score Range]</option>
+                                    <option value="Select_Acc_ARNG_Score_Range">[Select a Score Range]</option>
                                     <option value="236_or_lower">236 or Lower</option>
                                     <option value="237-249">237-249</option>
                                     <option value="250-262">250-262</option>
@@ -291,10 +335,10 @@
                             </div>
                             <div
                                 class="input-block score-input math-acc">
-                                <!-- Math Score: QR-Algebra-Stats (QAS) -->
-                                <label for="input-acc-5">Math Score: QAS</label>
+                                <!-- Math Score: QAS -->
+                                <label for="input-acc-5" id="input-acc-5-label">Math Score: QAS</label>
                                 <select class="input-acc-5" name="input-acc-5" id="input-acc-5">
-                                    <option value="Select">[Select a Score Range]</option>
+                                    <option value="[Select a Score Range]">[Select a Score Range]</option>
                                     <option value="236_or_lower">236 or Lower</option>
                                     <option value="237-249">237-249</option>
                                     <option value="250-262">250-262</option>
@@ -304,10 +348,10 @@
                             </div>
                             <div
                                 class="input-block score-input math-acc">
-                                <!-- Math Score: Advanced Algebra & Functions (AAF) -->
-                                <label for="input-acc-6">Math Score: AAF</label>
+                                <!-- Math Score: AAF -->
+                                <label for="input-acc-6" id="input-acc-6-label">Math Score: AAF</label>
                                 <select class="input-acc-6" name="input-acc-6" id="input-acc-6">
-                                    <option value="Select">[Select a Score Range]</option>
+                                    <option value="Select_Acc_AAF_Score_Range">[Select a Score Range]</option>
                                     <option value="236_or_lower">236 or Lower</option>
                                     <option value="237-249">237-249</option>
                                     <option value="250-262">250-262</option>
@@ -324,7 +368,7 @@
                 class="eval-button-box" id="eval-button-box">
                 <!-- Evaluate Button and Evaluation Box -->
                 <div
-                    class="eval-button no-print">
+                    class="eval-button">
                     <!-- Evaluate Button -->
                     <button class="button btn btn-light" id="eval-btn">Evaluate</button>
                 </div>
@@ -353,9 +397,9 @@
                         <h6 id="unofficial-disclaimer">Disclaimer: This is an unofficial document for reference purposes only.</h6>
                     </div>
                     <div
-                        class="print-button no-print">
+                        class="print-button">
                         <!-- Print Button -->
-                        <button type="button" class="button btn btn-light" id="print-btn">Print</button>
+                        <button type="button" class="button btn btn-light" id="print-btn" onclick="printDiv('print-table')" value="print a div!">Print</button>
                     </div>
                 </div>
             </div>

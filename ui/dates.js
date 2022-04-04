@@ -22,11 +22,11 @@ function dates() {
     // hide math course dropdown or accuplacer math score inputs if date is 4,5 years ago
     dateOptionsMM.addEventListener('input', function (evt) {
         if (dateOptionsMM.value === "4-5_Years_Ago") {
-            mathMMBlock.classList.toggle("hidden");
-            mathCoursePopup.classList.toggle("hidden");
+            mathMMBlock.classList.add("hidden");
+            mathCoursePopup.classList.remove("hidden");
         } else {
-            mathMMBlock.classList.toggle("hidden");
-            mathCoursePopup.classList.toggle("hidden");
+            mathMMBlock.classList.remove("hidden");
+            mathCoursePopup.classList.add("hidden");
         }
     });
 

@@ -30,8 +30,8 @@ evalBox();
 // call evalBox script
 
 // hs other import
-import {hsOther} from "./ui/hsOther.js";
-hsOther(); // call hsOther script
+/* import {hsOther} from "./ui/hsOther.js";
+hsOther(); */ // call hsOther script
 
 // date select import
 import {dates} from "./ui/dates.js";
@@ -40,3 +40,7 @@ dates(); // call dates script
 // mathCourseSelect import
 import {mathCourseSelect} from "./ui/mathCourseSelect.js";
 mathCourseSelect(); // call mathCourseSelect script
+
+// print import
+import {print} from "./ui/print.js";
+print(); // call print script
