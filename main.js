@@ -26,8 +26,8 @@ evalBox();
 // call evalBox script
 
 // hs other import
-import {hsOther} from "./ui/hsOther.js";
-hsOther(); // call hsOther script
+/* import {hsOther} from "./ui/hsOther.js";
+hsOther(); */ // call hsOther script
 
 // date select import
 import {dates} from "./ui/dates.js";

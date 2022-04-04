@@ -3,7 +3,7 @@
 	margin: 0.5in;
 }
 
-a, body, button, :active {
+a, body, button, .accordion-button:not(.collapsed) {
 	color: black;
 }
 
@@ -15,11 +15,11 @@ body {
 	background: none;
 }
 
-body *, .accordion, .eval-box {
+body *, .accordion, .eval-box, .accordion-button:not(.collapsed) {
 	box-shadow: none;
 }
 
-.accordion-item, .accordion-button, input, select {
+.accordion-item, .accordion-button, input, select, .accordion-button:not(.collapsed) {
 	border: 0px solid white;
 }
 
@@ -31,4 +31,12 @@ input, select {
 
 .no-print {
 	display: none;
+}
+
+.accordion-button {
+	padding-left: 0;
+}
+
+.eval-box {
+	page-break-inside: avoid;
 }

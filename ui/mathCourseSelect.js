@@ -14,7 +14,7 @@ function mathCourseSelect() {
     hsSelect.addEventListener('input', function (evt) {
         mathSelect.innerHTML = '';
         let selectOption = document.createElement("option");
-        selectOption.value = "Select_Math_Course";
+        selectOption.value = "Select";
         selectOption.textContent = '[Select a Course]';
         mathSelect.appendChild(selectOption);
         for (const hs in HSCourseEqConfig) { // loop through top level of HSCourseEqConfig object
