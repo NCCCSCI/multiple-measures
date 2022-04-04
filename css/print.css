@@ -28,7 +28,6 @@ h1 {
 }
 
 .input-block {
-	display: inline;
 	padding-left: 20px;
 }
 
@@ -36,6 +35,6 @@ h1 {
 	font-weight: bold;
 }
 
-.student-creds * {
+.input-block, .student-creds * {
 	display: inline;
 }
