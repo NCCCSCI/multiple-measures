@@ -13,9 +13,6 @@
 
 // CONTROLS JAVASCRIPT
 
-import {test} from "./controls/satScore.js";
-test();
-
 import {test} from "./controls/accScore.js";
 test();
 
