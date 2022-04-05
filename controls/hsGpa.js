@@ -4,6 +4,10 @@ import { HighSchoolConfig } from '../config/mmhighschools.js';
 // importing highschool gpa class GPA from gps.js
 import { GPA } from '../modules/gpa.js'
 
+// importing storage config
+import { storageConfig  } from '../config/global.js';
+
+
 
 //function that gets the highschool name and checks it against the gpa scale
 function highSchool() {
@@ -11,23 +15,23 @@ function highSchool() {
     // grabbing all inputs from html
     const hsName =
     document.getElementById('input-mm-2').value.trim();
-    console.log(hsName);
-    
+    localStorage.setItem(storageConfig.name.hsName, hsName);
+    console.log (storageConfig.name.hsName);    
     const hsYear = 
     document.getElementById("input-mm-3").value.trim();
-    console.log(hsYear);
+    
 
     const GPA =
     document.getElementById("input-mm-4").value.trim();
-    console.log(GPA);
+    
 
     const english =
     document.getElementById("input-mm-5").value.trim();
-    console.log(english);
+    
 
     const math =
     document.getElementById("input-mm-6").value.trim();
-    console.log(math);
+    
 
     /*
     // getting the sat thresholds

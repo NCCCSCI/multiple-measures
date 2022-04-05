@@ -2,7 +2,7 @@
 import { EnglishPlacementNative} from '../config/NextGenNativeEngAccuplacer.js';
 
 // bring in the configuration for accuplacer math
-//import { EnglishPlacementNative} from '../config/NextGenNativeMathAccuplacer.js';
+import { MathPlacement} from '../config/nextGenMathAccuplacer.js';
 
 function accuplacer()
 {
@@ -16,36 +16,41 @@ function accuplacer()
 
   const arng =
   document.getElementById("input-acc-4").value.trim(); 
+  const arngRange = arng.split(/[_-]/);
 
-  const qas =
-  document.getElementById("input-acc-5").value.trim(); 
+  const qas = 
+  document.getElementById("input-acc-5").value.trim();
+  const qasRange = qas.split(/[_-]/);
 
   const aaf =
   document.getElementById("input-acc-6").value.trim(); 
 
-  console.log (wrtgPlacement);
-
-  // grabbing the writing thresholds
+  // grabbing the thresholds
   const thresholdWrtg = Object.keys(EnglishPlacementNative).reverse();
-  //const thresholdEssy = Object.keys(EnglishPlacementNative).reverse();
+  const thresholdQas = Object.keys(MathPlacement).reverse();
     
-
   // finding the first threshold score
   const wrtgPlacement = thresholdWrtg.find(thresholdWrtg => wrtg > thresholdWrtg); 
-  //const essyPlacement = thresholdEssy.find(thresholdEssy => essy > thresholdEssy);
-    
+  const qasPlacement = thresholdQas.find(thresholdQas => qasRange[0] >= thresholdQas);
    
-
   if (wrtgPlacement !== "undefined") {
-    // return wrtgplacement
-    return (EnglishPlacementNative [wrtgPlacement][essy]);
+    // return writing placement
+    console.log (EnglishPlacementNative [wrtgPlacement][essy]);
   }
+
+  if (qasPlacement !== "undefined") {
+    // return math placement
+    console.log (MathPlacement [qasPlacement][arngRange[0]]);
+    const thresholdArng = Object.keys(MathPlacement [qasPlacement]).reverse();
+    const arngPlacement = thresholdArng.find(thresholdArng => arngRange[0] >= thresholdArng);;
+    console.log (MathPlacement [qasPlacement] [arngPlacement]);
+  }
+
+  console.log(MathPlacement);
 
   //null if nothings found
   return null; 
 }
-
-
 
 
 //function to test eval button
