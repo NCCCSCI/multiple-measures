@@ -13,7 +13,11 @@
 
 // CONTROLS JAVASCRIPT
 
+<<<<<<< HEAD
 import {test} from "./controls/hsGpa.js";
+=======
+import {test} from "./controls/accScore.js";
+>>>>>>> 085fdfbcd71fde56fd10d75ef04ef2c58c5a3c0a
 test();
 
 

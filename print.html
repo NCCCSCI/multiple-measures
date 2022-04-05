@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Multiple Measures Form</title>
+        <link rel="icon" type="image/png" href="images/ncc-color-logo.png">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/mobile.css" rel="stylesheet" media="screen and (max-width:575px)">
+        <link href="css/tablet.css" rel="stylesheet" media="screen and (min-width:576px)">
+        <link href="css/laptop-desktop.css" rel="stylesheet" media="screen and (min-width:1199px)">
+        <link href="css/print.css" rel="stylesheet">
+        <script type="module" src="main.js" defer></script>
+        <script type="module" src="ui/print.js" defer></script>
+    </head>
+	
+    <body>
+        <header>
+            <div>
+                <img src="images/ncc-full-color-logo.png" alt="" height="30" id="page-heading-logo">
+                Multiple Measures Form
+            </div>
+        </header>
+
+        <main>
+            <div
+                class="student-creds">
+                <!-- Student Name and ID, Intro Links -->
+                <div class="input-block">
+                    <div class="student-name">
+                        <label for="input-name" id="input-name-label">Full Name</label>
+                        <p class="input-name" id="input-name">Arianna Bikombe</p>
+                    </div>
+                    <div class="student-id">
+                        <label for="input-id" id="input-id-label">Student ID</label>
+                        <p class="input-id" id="input-id">123456789</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="multi-measures">
+                    <h1>Multiple Measures</h1>
+                    <div
+                        class="input-block">
+                        <!-- High School Input -->
+                        <label for="input-mm-2">
+                            Name of High School</label>
+                        <p class="input-mm-2" id="input-mm-2"></p>
+                    </div>
+                    <div class="input-block">
+                        <label for="input-mm-3">Year Graduated</label>
+                        <p class="date input-mm-3" id="input-mm-3"></p>
+                    </div>
+                    <div class="input-block">
+                        <label for="input-mm-4">Cumulative GPA</label>
+                        <p class="input-mm-4" id="input-mm-4"></p>
+                    </div>
+                    <div class="input-block">
+                        <label for="input-mm-5">Highest English Course Passed</label>
+                        <p class="input-mm-5" id="input-mm-5"></p>
+                    </div>
+                    <div class="input-block">
+                        <label for="input-mm-6">Highest Math Course Taken: C or Better</label>
+                        <p class="input-mm-6" id="input-mm-6"></p>
+                    </div>
+                </div>
+
+
+                <div id="sat">
+                    <h1>SAT</h1>
+                    <div class="input-block">
+                        <label for="input-sat-1">Date Taken</label>
+                        <p class="input-sat-1" id="input-sat-1"></p>
+                    </div>
+                    <div class="input-block">
+                        <label for="input-sat-2">SAT Math Score</label>
+                        <p class="input-sat-2" id="input-sat-2"></p>
+                    </div>
+                    <div class="input-block">
+                        <label for="input-sat-3">SAT Critical Reading and Writing Score</label>
+                        <p class="input-sat-3" id="input-sat-3"></p>
+                    </div>
+                </div>
+                <div id="accuplacer">
+                    <h1>Accuplacer</h1>
+                    <div class="input-block">
+                        <label for="input-acc-1">Date Taken</label>
+                        <p class="input-acc-1" id="input-acc-1"></p>
+                    </div>
+                    <div class="input-block">
+                        <label for="input-acc-2">English Score: WRTG</label>
+                        <p class="input-acc-2" id="input-acc-2"></p>
+                    </div>
+                    <div class="input-block">
+                        <label for="input-acc-3">English Score: ESSY</label>
+                        <p class="input-acc-3" id="input-acc-3"></p>
+                    </div>
+                    <div class="input-block">
+                        <label for="input-acc-4">Math Score: ARNG</label>
+                        <p class="input-acc-4" id="input-acc-4"></p>
+                    </div>
+                    <div class="input-block">
+                        <label for="input-acc-5">Math Score: QAS</label>
+                        <p class="input-acc-5" id="input-acc-5"></p>
+                    </div>
+                    <div class="input-block">
+                        <label for="input-acc-6">Math Score: AAF</label>
+                        <p class="input-acc-6" id="input-acc-6"></p>
+                    </div>
+                </div>
+                <div class="eval-box" id="eval-box">
+                    <div class="based-on">
+                        <h5>Based on</h5>
+                        <!-- max of 2 scores -->
+                        <div id="scores">
+                            <output id="score"></output>
+                            <!-- Score Name 1: Score Range -->
+                        </div>
+                    </div>
+                    <div class="qualifying-courses">
+                        <h5>Student may qualify for:</h5>
+                        <div id="courses">
+                            <output id="-evaluated-eng-course"></output>
+                            <!-- Qualifying English Course -->
+                            <output id="-evaluated-math-course"></output>
+                            <!-- Qualifying Math Course -->
+                        </div>
+                    </div>
+                    <div>
+                        <h6 id="unofficial-disclaimer">Disclaimer: This is an unofficial document for reference purposes only.</h6>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

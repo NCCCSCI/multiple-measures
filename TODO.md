@@ -1,6 +1,6 @@
 # TODO
 
-#### print **[not started]**
+#### print **[almost done]**
 * Read-Only - PDF
 
 #### user friendly **[almost done]**
@@ -8,7 +8,6 @@
 * disclaimer that this is not an official document **[done]**
 * "dont know your gpa?" checkbox -> send you to SAT **[done]**
 * finalize responsiveness **[working on]**
-* validation for inputs - red asterisk and label explaining what's wrong
 
 #### logic
 * gpa- if left blank skip to SAT **[done]**

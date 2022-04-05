@@ -3,40 +3,38 @@
 	margin: 0.5in;
 }
 
-a, body, button, .accordion-button:not(.collapsed) {
-	color: black;
-}
-
 a {
 	text-decoration: none;
+}
+
+a, body {
+	color: black;
 }
 
 body {
 	background: none;
 }
 
-body *, .accordion, .eval-box, .accordion-button:not(.collapsed) {
+body *, .eval-box {
 	box-shadow: none;
-}
-
-.accordion-item, .accordion-button, input, select, .accordion-button:not(.collapsed) {
-	border: 0px solid white;
-}
-
-input, select {
-	font-weight: bold;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-}
-
-.no-print {
-	display: none;
-}
-
-.accordion-button {
-	padding-left: 0;
 }
 
 .eval-box {
 	page-break-inside: avoid;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+.input-block {
+	padding-left: 20px;
+}
+
+.input-block p {
+	font-weight: bold;
+}
+
+.input-block, .student-creds * {
+	display: inline;
 }
