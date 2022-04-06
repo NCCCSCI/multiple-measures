@@ -37,3 +37,7 @@ dates(); // call dates script
 // mathCourseSelect import
 import {mathCourseSelect} from "./ui/mathCourseSelect.js";
 mathCourseSelect(); // call mathCourseSelect script
+
+// scoreRanges import
+import {scoreRanges} from "./ui/scoreRanges.js";
+scoreRanges(); // call scoreRanges script
