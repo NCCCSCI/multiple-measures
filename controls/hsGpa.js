@@ -8,56 +8,31 @@ import { GPA } from '../modules/gpa.js'
 import { storageConfig  } from '../config/global.js';
 
 
-
-//function that gets the highschool name and checks it against the gpa scale
+//function that gets the highschool inputs
 function highSchool() {
 
-    // grabbing all inputs from html
+    // grabbing all inputs from html and stores them into local storage
     const hsName =
     document.getElementById('input-mm-2').value.trim();
     localStorage.setItem(storageConfig.name.hsName, hsName);
-    console.log (storageConfig.name.hsName);    
+      
     const hsYear = 
     document.getElementById("input-mm-3").value.trim();
-    
+    localStorage.setItem(storageConfig.name.hsYear, hsYear);
 
     const GPA =
     document.getElementById("input-mm-4").value.trim();
+    localStorage.setItem(storageConfig.name.GPA, Gpa);
     
-
-    const english =
+    const hsEnglish =
     document.getElementById("input-mm-5").value.trim();
-    
+    localStorage.setItem(storageConfig.name.hsEnglish, hsEnglish);
 
-    const math =
+    const hsMath =
     document.getElementById("input-mm-6").value.trim();
-    
-
-    /*
-    // getting the sat thresholds
-    const thresholdHsName = Object.keys(HighSchoolConfig);
-    console.log(thresholdHsName);
-
-    
-    const thresholdHsYear = Object.keys().reverse();
-    const thresholdGPA = Object.keys().reverse();
-    const thresholdhsEnglish = Object.keys().reverse();
-    const thresholdHsMath = Object.keys().reverse();
-    */
-
-
-
-
-
-
-
-
+    localStorage.setItem(storageConfig.name.hsMath, hsMath);
 
 }
-
-
-
-
 
 //function to test eval button
 function clickhandler () {
