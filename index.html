@@ -67,7 +67,8 @@
                             <div
                                 class="input-block ">
                                 <!-- High School Input -->
-                                <label for="input-mm-2"> Name of High School</label>
+                                <label for="input-mm-2">
+                                    Name of High School</label>
                                 <select class="input-mm-2" name="input-mm-2" id="input-mm-2">
                                     <option value="Select">[Select a High School]</option>
                                     <option value="Alvirne" id="Alvirne">Alvirne</option>
@@ -88,24 +89,24 @@
                                 </select>
                             </div>
                             <!-- <div
-                                class="hidden" id="gpa-popup">
-                                Other (High School Name / GPA) Pop Up Box
-                                <div class="input-block">
-                                    <label for="hs-name">Please type in your High School Name.
-                                    </label>
-                                    <input name="hs-name" type="text" class="hidden" id="hs-name" placeholder="Name of High School">
-                                </div>
-                                <div
-                                    class="input-block">
-                                    GPA Numerator
-                                    <label for="input-mm-2-gpa-num">Please enter your GPA.</label>
-                                    <input
-                                    name="input-mm-2-gpa-num" id="input-mm-2-gpa-num" type="number" value="0.0" step="0.1" min="0.0" max="100.0">
-                                    GPA Denominator
-                                    <span>out of</span>
-                                    <input name="input-mm-2-gpa-den" id="input-mm-2-gpa-den" type="number" value="0.0" step="0.1" min="0.0" max="100.0">
-                                </div>
-                            </div> -->
+                                                                                                                    class="hidden" id="gpa-popup">
+                                                                                                                    Other (High School Name / GPA) Pop Up Box
+                                                                                                                    <div class="input-block">
+                                                                                                                        <label for="hs-name">Please type in your High School Name.
+                                                                                                                        </label>
+                                                                                                                        <input name="hs-name" type="text" class="hidden" id="hs-name" placeholder="Name of High School">
+                                                                                                                    </div>
+                                                                                                                    <div
+                                                                                                                        class="input-block">
+                                                                                                                        GPA Numerator
+                                                                                                                        <label for="input-mm-2-gpa-num">Please enter your GPA.</label>
+                                                                                                                        <input
+                                                                                                                        name="input-mm-2-gpa-num" id="input-mm-2-gpa-num" type="number" value="0.0" step="0.1" min="0.0" max="100.0">
+                                                                                                                        GPA Denominator
+                                                                                                                        <span>out of</span>
+                                                                                                                        <input name="input-mm-2-gpa-den" id="input-mm-2-gpa-den" type="number" value="0.0" step="0.1" min="0.0" max="100.0">
+                                                                                                                    </div>
+                                                                                                                </div> -->
                             <div
                                 class="input-block mm">
                                 <!-- Year Graduated -->
@@ -120,13 +121,23 @@
                                 class="input-block" id="input-mm-4-block">
                                 <!-- Cumulative GPA -->
                                 <label for="input-mm-4">Cumulative GPA</label>
-                                <select class="input-mm-4" name="input-mm-4" id="input-mm-4">
-                                    <option value="Select">[Select a GPA]</option>
-                                    <option value="1.0-1.9">1.0-1.9</option>
-                                    <option value="2.0-2.9">2.0-2.9</option>
-                                    <option value="3.0-3.9">3.0-3.9</option>
-                                    <option value="4.0-4.9">4.0-4.9</option>
-                                </select>
+                                <div
+                                    class="input-block" id="input-mm-4-rb-block">
+                                    <!-- Cumulative GPA -->
+                                    <div>
+                                        <label for="input-mm-4-rb">Unweighted</label>
+                                        <input type="radio" class="input-mm-4-rb" name="input-mm-4-rb" id="input-mm-4-rb-un" value="Scale">
+                                    </div>
+                                    <div>
+                                        <label for="input-mm-4-rb">Weighted</label>
+                                        <input type="radio" class="input-mm-4-rb" name="input-mm-4-rb" id="input-mm-4-rb-w" value="WScale">
+                                    </div>
+                                </div>
+                                <input type="number" min="0" max="100" step="0.1" class="input-mm-4" name="input-mm-4" id="input-mm-4">
+                                <div class="scale">
+                                    <p>out of</p>
+                                    <output id="gpaScale"></output>
+                                </div>
                             </div>
                             <div
                                 class="input-block">
@@ -147,8 +158,7 @@
                                     <option value="Select">[Select a Course]</option>
                                 </select>
                             </div>
-                            <div
-                                class="hidden input-block" id="math-eval-popup">
+                            <div class="hidden input-block" id="math-eval-popup">
                                 <span>High School Math Course will not be evaluated.</span>
                             </div>
                             <div
@@ -171,11 +181,10 @@
                             <div class="help no-print">
                                 <p id="score-input-help">*For each score input, please input your best score.</p>
                             </div>
-                            <div
-                                class="input-block sat">
+                            <div class="input-block sat">
                                 <!-- Date -->
                                 <!-- SAT is >5 years for everything -->
-                                <label for="input-sat-1">Date Taken</label>
+                                    <label for="input-sat-1"> Date Taken</label>
                                 <select class="date input-sat-1" name="input-sat-1" id="input-sat-1">
                                     <option value="Select">[Select a Year]</option>
                                     <option value="Not_Taken" class="acc-redirect">Not Taken</option>
@@ -189,15 +198,13 @@
                                 class="input-block score-input">
                                 <!-- SAT Math Score -->
                                 <label for="input-sat-2">SAT Math Score</label>
-                                <select class="input-sat-2" name="input-sat-2" id="input-sat-2">
-                                </select>
+                                <select class="input-sat-2" name="input-sat-2" id="input-sat-2"></select>
                             </div>
                             <div
                                 class="input-block score-input">
                                 <!-- SAT Critical Reading and Writing Score -->
                                 <label for="input-sat-3">SAT Critical Reading and Writing Score</label>
-                                <select class="input-sat-3" name="input-sat-3" id="input-sat-3">
-                                </select>
+                                <select class="input-sat-3" name="input-sat-3" id="input-sat-3"></select>
                             </div>
                         </div>
                     </div>
@@ -214,11 +221,10 @@
                             <div class="help no-print">
                                 <p id="score-input-help">*For each score input, please input your best score.</p>
                             </div>
-                            <div
-                                class="input-block acc">
+                            <div class="input-block acc">
                                 <!-- Date -->
                                 <!-- AccuPlacer is 3 for math, 5 for eng -->
-                                <label for="input-acc-1">Date Taken</label>
+                                    <label for="input-acc-1"> Date Taken</label>
                                 <select class="date input-acc-1" name="input-acc-1" id="input-acc-1">
                                     <option value="Select">[Select a Year]</option>
                                     <option value="Not_Taken">Not Taken</option>
@@ -227,45 +233,42 @@
                                     <option value="More_Than_5_Years_Ago">More Than 5 Years Ago</option>
                                 </select>
                                 <p class="acc-help-popup hidden" id="acc-help-popup">Scores are too outdated; contact the
-                                    <a href="https://nashuacc.edu/student-services/advising-center" title="NCC Advising Home">NCC Advising Center</a> to schedule your AccuPlacer.</p>
+                                    <a href="https://nashuacc.edu/student-services/advising-center" title="NCC Advising Home">NCC Advising Center</a>
+                                    to schedule your AccuPlacer.</p>
                                 <p class="acc-help-popup hidden" id="acc-help-not-taken-popup">Contact the
-                                    <a href="https://nashuacc.edu/student-services/advising-center" title="NCC Advising Home">NCC Advising Center</a> to schedule your AccuPlacer.</p>
-                                    <p class="acc-help-popup hidden" id="acc-help-4-5-popup">AccuPlacer Math Scores will not be evaluated.</p>
+                                    <a href="https://nashuacc.edu/student-services/advising-center" title="NCC Advising Home">NCC Advising Center</a>
+                                    to schedule your AccuPlacer.</p>
+                                <p class="acc-help-popup hidden" id="acc-help-4-5-popup">AccuPlacer Math Scores will not be evaluated.</p>
                             </div>
                             <div
                                 class="input-block score-input">
                                 <!-- English Score: Writing Conventions (WRTG) -->
                                 <label for="input-acc-2">English Score: WRTG</label>
-                                <select class="input-acc-2" name="input-acc-2" id="input-acc-2">
-                                </select>
+                                <select class="input-acc-2" name="input-acc-2" id="input-acc-2"></select>
                             </div>
                             <div
                                 class="input-block score-input">
                                 <!-- English Score: Writeplacer (ESSY) -->
                                 <label for="input-acc-3">English Score: ESSY</label>
-                                <select class="input-acc-3" name="input-acc-3" id="input-acc-3">
-                                </select>
+                                <select class="input-acc-3" name="input-acc-3" id="input-acc-3"></select>
                             </div>
                             <div
                                 class="input-block score-input math-acc">
                                 <!-- Math Score: Arithmetic (ARNG) -->
                                 <label for="input-acc-4">Math Score: ARNG</label>
-                                <select class="input-acc-4" name="input-acc-4" id="input-acc-4">
-                                </select>
+                                <select class="input-acc-4" name="input-acc-4" id="input-acc-4"></select>
                             </div>
                             <div
                                 class="input-block score-input math-acc">
                                 <!-- Math Score: QR-Algebra-Stats (QAS) -->
                                 <label for="input-acc-5">Math Score: QAS</label>
-                                <select class="input-acc-5" name="input-acc-5" id="input-acc-5">
-                                </select>
+                                <select class="input-acc-5" name="input-acc-5" id="input-acc-5"></select>
                             </div>
                             <div
                                 class="input-block score-input math-acc">
                                 <!-- Math Score: Advanced Algebra & Functions (AAF) -->
                                 <label for="input-acc-6">Math Score: AAF</label>
-                                <select class="input-acc-6" name="input-acc-6" id="input-acc-6">
-                                </select>
+                                <select class="input-acc-6" name="input-acc-6" id="input-acc-6"></select>
                             </div>
                         </div>
                     </div>
@@ -307,7 +310,9 @@
                     <div
                         class="print-button no-print">
                         <!-- Print Button -->
-                        <a href="print.html" target="_blank"><button type="button" class="button btn btn-light" id="print-btn">Print</button></a>
+                        <a href="print.html" target="_blank">
+                            <button type="button" class="button btn btn-light" id="print-btn">Print</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -315,14 +320,14 @@
         </main>
 
         <!-- CONNECT SCORE ID TO MATHPLACEMENT.JS
-                                                <div class="input block">
-                                                    <label for="score">Score</label>
-                                                    <input type="number" id="score" min="0" max="1000">
-                                                </div>
-                                                <div class="output block">
-                                                    <output id="placement"></output>
-                                                </div>
-                                                -->
+                                                                        <div class="input block">
+                                                                            <label for="score">Score</label>
+                                                                            <input type="number" id="score" min="0" max="1000">
+                                                                        </div>
+                                                                        <div class="output block">
+                                                                            <output id="placement"></output>
+                                                                        </div>
+                                                                        -->
 
         <!-- <a href="demo/demo.html">Go to demo</a> -->
     </body>

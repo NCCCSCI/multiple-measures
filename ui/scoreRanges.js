@@ -252,10 +252,7 @@ function scoreRanges() { // variable declaration
                 }
             }
         }
-
     }
-
-
 }
 
 /* 

@@ -28,9 +28,17 @@ button[id^="add-another-"] {
 }
 
 
-/*button[id^="add-another-"] {
+#input-mm-4-rb-block, #input-mm-4-rb-block div, #input-mm-4-block * {
     display: inline;
-}*/
+}
+
+#input-mm-4-block .scale {
+    padding: 0 10px;
+}
+
+#input-mm-4-rb-block div {
+    padding-left: 15px;
+}
 
 .eval-box {
     display: block;

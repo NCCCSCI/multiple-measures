@@ -34,10 +34,14 @@ hsOther(); // call hsOther script */
 import {dates} from "./ui/dates.js";
 dates(); // call dates script
 
-// mathCourseSelect import
-import {mathCourseSelect} from "./ui/mathCourseSelect.js";
-mathCourseSelect(); // call mathCourseSelect script
+// hsSelect import
+import {hsSelect} from "./ui/hsSelect.js";
+hsSelect(); // call hsSelect script
 
 // scoreRanges import
 import {scoreRanges} from "./ui/scoreRanges.js";
 scoreRanges(); // call scoreRanges script
+
+// gpaInput import
+import {gpaInput} from "./ui/gpaInput.js";
+gpaInput(); // call gpaInput script
