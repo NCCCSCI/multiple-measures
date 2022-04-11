@@ -45,7 +45,3 @@ hsSelect(); // call hsSelect script
 // scoreRanges import
 import {scoreRanges} from "./ui/scoreRanges.js";
 scoreRanges(); // call scoreRanges script
-
-// gpaInput import
-import {gpaInput} from "./ui/gpaInput.js";
-gpaInput(); // call gpaInput script
