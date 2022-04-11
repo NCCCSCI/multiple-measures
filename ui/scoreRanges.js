@@ -1,3 +1,5 @@
+// populates score ranges in html with config files' thresholds 
+
 import {
     SATConfig
 } from "../config/sat.js";

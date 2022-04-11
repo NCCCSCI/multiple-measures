@@ -1,3 +1,5 @@
+// opens evaluation box on "evaluate" button click
+
 function evalBox() {
 
     let evalBtn = document.getElementById("eval-btn");

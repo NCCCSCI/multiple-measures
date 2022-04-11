@@ -1,4 +1,5 @@
-// HighSchoolCourseEquivalencies import
+// populates multiple measures math course dropdown and gpa scale based on high school selection
+
 import {
     HSCourseEqConfig
 } from "../config/HighSchoolCourseEquivalencies.js";
@@ -42,12 +43,10 @@ function hsSelect() {
                         radioButton.addEventListener('click', function (evt) {
                             if (radioButton.value === "Scale") {
                                 if (scaleType === radioButton.value) {
-                                    console.log(scaleType + ': ' + HighSchoolConfig[hs][scaleType]);
                                     gpaScaleOutput.textContent = HighSchoolConfig[hs][scaleType];
                                 }
                             } else {
                                 if (scaleType === radioButton.value) {
-                                    console.log(scaleType + ': ' + HighSchoolConfig[hs][scaleType]);
                                     gpaScaleOutput.textContent = HighSchoolConfig[hs][scaleType];
                                 }
                             }

@@ -1,3 +1,5 @@
+// toggles help popups and redirects user depending on how long ago user chooses in year graduated (multiple measures) and date taken (SAT, accuplacer)
+
 function dates() {
     // VARIABLE DECLARATIONS
     // multiple measures
