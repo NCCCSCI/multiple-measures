@@ -102,7 +102,7 @@ function accuplacer()
 
 //function to test eval button
 function clickhandler () {
-  console.log(accuplacer());
+  accuplacer();
 }
 
 //function to get button and alert when clicked

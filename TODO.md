@@ -30,9 +30,8 @@
 * Run accessibility and Lighthouse (Chrome)
 * Code cleanup
 * Branding - use the NCC palette
-	* Logo is blue and some sort of sage green
-	* And white
-	* Sharper logo https://drive.google.com/file/d/1d94_gaBqS5s8a3uX_J2prtfitXUuhARH/view?usp=sharing
+	* Logo is blue and some sort of sage green and white **[done]**
+	* Sharper logo https://drive.google.com/file/d/1d94_gaBqS5s8a3uX_J2prtfitXUuhARH/view?usp=sharing **[done]**
  
  
 

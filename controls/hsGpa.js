@@ -23,6 +23,7 @@ function highSchool() {
     const GPA =
     document.getElementById("input-mm-4").value.trim();
     localStorage.setItem(storageConfig.name.GPA, GPA);
+    console.log(GPA);
     
     const hsEnglish =
     document.getElementById("input-mm-5").value.trim();
@@ -36,7 +37,7 @@ function highSchool() {
 
 //function to test eval button
 function clickhandler () {
-    console.log(highSchool());
+    highSchool();
 }
 
 //function to get button and alert when clicked
