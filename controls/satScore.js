@@ -48,12 +48,12 @@ function clickhandler () {
 }
 
 //function to get button and alert when clicked
-function test() {
+function test3() {
       document.getElementById("eval-btn").addEventListener("click", clickhandler); 
       
     }
 
 export {
-    test
+    test3
 }
 

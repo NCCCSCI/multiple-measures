@@ -10,8 +10,32 @@ import { UpperLevelMathPlacement } from '../config/UpperLevelMathPlacement.js';
 // importing storage config
 import { storageConfig  } from '../config/global.js';
 
+
 function accuplacer()
 {
+  
+  //student information input
+  const stName =
+  document.getElementById("input-name").value.trim();
+  if (stName !== null) {
+  localStorage.setItem(storageConfig.name.stName, stName);}
+  const stID =
+  document.getElementById("input-id").value.trim();
+  if(stID !== null){
+  localStorage.setItem(storageConfig.name.stID,stID);}
+
+  const accuDate =
+  document.getElementById("input-acc-1").value.trim(); 
+  localStorage.setItem(storageConfig.name.accuDate, accuDate);
+
+  const satDate =
+  document.getElementById("input-sat-1").value.trim(); 
+  localStorage.setItem(storageConfig.name.satDate, satDate);
+
+  const hsYear =
+  document.getElementById("input-mm-3").value.trim(); 
+  localStorage.setItem(storageConfig.name.hsYear, hsYear);
+
   // grabbing all accuplacer inputs and storing them into local storage
   const wrtg =
   document.getElementById("input-acc-2").value.trim(); 

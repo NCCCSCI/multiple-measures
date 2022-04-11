@@ -4,6 +4,8 @@ const PREFIX = 'NCC_MM_';
 
 const storageConfig = {
    name: {
+        stName: PREFIX + 'stName',
+        stID: PREFIX + 'stID',
 
        // highschool section inputs
        hsName: PREFIX + 'hsName', 
@@ -13,6 +15,7 @@ const storageConfig = {
        hsMath: PREFIX + 'hsMath', 
 
        //accuplacer section inputs
+       accuDate: PREFIX + 'accuDate', 
        wrtg: PREFIX + 'wrtg', 
        essy: PREFIX + 'essy', 
        arng: PREFIX + 'arng', 
@@ -29,6 +32,7 @@ const storageConfig = {
        aafRange: PREFIX + 'aafRange', 
 
        // SAT section inputs
+       satDate:PREFIX + 'satDate', 
        satMath: PREFIX + 'satMath',  
        satReading: PREFIX + 'satReading', 
        thresholdMath: PREFIX + 'thresholdMath', 

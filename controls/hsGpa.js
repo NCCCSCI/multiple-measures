@@ -15,14 +15,14 @@ function highSchool() {
     const hsName =
     document.getElementById('input-mm-2').value.trim();
     localStorage.setItem(storageConfig.name.hsName, hsName);
-      
+      console.log(hsName);
     const hsYear = 
     document.getElementById("input-mm-3").value.trim();
     localStorage.setItem(storageConfig.name.hsYear, hsYear);
 
     const GPA =
     document.getElementById("input-mm-4").value.trim();
-    localStorage.setItem(storageConfig.name.GPA, Gpa);
+    localStorage.setItem(storageConfig.name.GPA, GPA);
     
     const hsEnglish =
     document.getElementById("input-mm-5").value.trim();
@@ -40,10 +40,10 @@ function clickhandler () {
 }
 
 //function to get button and alert when clicked
-function test() {
+function test2() {
       document.getElementById("eval-btn").addEventListener("click", clickhandler); 
     }
 
 export {
-    test
+    test2
 }

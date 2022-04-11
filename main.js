@@ -17,7 +17,11 @@ import {test} from "./controls/accScore.js";
 test();
 
 
+import {test2} from "./controls/hsGpa.js";
+test2();
 
+import {test3} from "./controls/satScore.js";
+test3();
 
 // /UI JAVASCRIPT
 

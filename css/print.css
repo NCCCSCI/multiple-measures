@@ -38,3 +38,6 @@ h1 {
 .input-block, .student-creds * {
 	display: inline;
 }
+label{
+	display: none;
+}
