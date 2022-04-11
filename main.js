@@ -34,7 +34,3 @@ hsSelect(); // call hsSelect script
 // scoreRanges import
 import {scoreRanges} from "./ui/scoreRanges.js";
 scoreRanges(); // call scoreRanges script
-
-/* // hs other import
-import {hsOther} from "./archive/hsOther.js";
-hsOther(); // call hsOther script */
