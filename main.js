@@ -4,13 +4,6 @@
  *  - https://github.com/mdn/js-examples/tree/master/modules
  */
 
-
-/*
- // math placement import
- import { doMathPlacement } from "./ui/mathPlacementUI.js";
- doMathPlacement(); // call doMathPlacement script
- */
-
 // CONTROLS JAVASCRIPT
 
 import {test} from "./controls/accScore.js";
