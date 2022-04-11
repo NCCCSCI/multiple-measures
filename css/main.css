@@ -2,6 +2,11 @@
     font-size: 15px;
 }
 
+a {
+    color: #4D665C;
+    
+}
+
 .accordion,
 .eval-box {
     margin-top: 15px;
@@ -16,7 +21,7 @@
 
 body {
     padding: 4vw;
-    background-color: rgb(209, 240, 245);
+    background-color: #AECFF9;
 }
 
 .button,
