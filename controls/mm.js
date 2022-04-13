@@ -7,19 +7,28 @@ import { HighSchoolConfig } from '../config/mmhighschools.js';
 // importing storage config
 import { storageConfig  } from '../config/global.js';
 
+
 function clearStorage2() {
     for (let k in storageConfig.name)
     {
         localStorage.removeItem(k);
-
     }
 }
 
 //function that gets the highschool inputs
 function highSchool() {
 
-
     // grabbing all inputs from html and stores them into local storage
+    const stName =
+    document.getElementById("input-name").value.trim();
+    if (stName !== null) {
+    localStorage.setItem(storageConfig.name.stName, stName);}
+    
+    const stID =
+    document.getElementById("input-id").value.trim();
+    if(stID !== null){
+    localStorage.setItem(storageConfig.name.stID,stID);}
+
     const hsName =
     document.getElementById('input-mm-2').value.trim();
     localStorage.setItem(storageConfig.name.hsName, hsName);
@@ -45,7 +54,7 @@ function highSchool() {
 
 //function to test eval button
 function clickhandler () {
-    highSchool();
+   console.log(highSchool());
 }
 
 //function to get button and alert when clicked
@@ -54,5 +63,6 @@ function test2() {
     }
 
 export {
-    test2, clearStorage2
+    test2,clearStorage2
 }
+

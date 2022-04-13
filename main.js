@@ -6,15 +6,15 @@
 
 // CONTROLS JAVASCRIPT
 
-import {test} from "./controls/accScore.js";
+import {test, clearStorage} from "./controls/accScore.js";
 test();
 clearStorage();
 
-import {test2, clearStorage} from "./controls/hsGpa.js";
+import {test2, clearStorage2} from "./controls/mm.js";
 test2();
 clearStorage2();
 
-import {test3} from "./controls/satScore.js";
+import {test3, clearStorage3} from "./controls/satScore.js";
 test3();
 clearStorage3();
 

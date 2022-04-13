@@ -4,6 +4,7 @@ import { SATConfig } from '../config/sat.js';
 // importing storage config
 import { storageConfig  } from '../config/global.js';
 
+
 function clearStorage3() {
     for (let k in storageConfig.name)
     {
@@ -14,6 +15,9 @@ function clearStorage3() {
 
 function sat(){
 
+    const satDate =
+    document.getElementById("input-sat-1").value.trim(); 
+    localStorage.setItem(storageConfig.name.satDate, satDate);
 
     // get sat math score input 
     const satMath =
