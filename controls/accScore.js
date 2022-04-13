@@ -10,13 +10,20 @@ import { UpperLevelMathPlacement } from '../config/UpperLevelMathPlacement.js';
 // importing storage config
 import { storageConfig  } from '../config/global.js';
 
+function clearStorage() {
+  for (let k in storageConfig.name)
+  {
+      localStorage.removeItem(k);
+
+  }
+}
 
 function accuplacer()
 {
   
   // clearing local storeage before storing items
   localStorage.clear(storageConfig);
-  
+
   //student information input
   const stName =
   document.getElementById("input-name").value.trim();
@@ -115,5 +122,5 @@ function test() {
   }
 
 export {
-  test
+  test, clearStorage
 }

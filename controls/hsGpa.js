@@ -7,21 +7,17 @@ import { HighSchoolConfig } from '../config/mmhighschools.js';
 // importing storage config
 import { storageConfig  } from '../config/global.js';
 
-function clearStorage() {
+function clearStorage2() {
     for (let k in storageConfig.name)
     {
         localStorage.removeItem(k);
 
     }
-
-
 }
 
 //function that gets the highschool inputs
 function highSchool() {
 
-    // clearing local storeage before storing items
-    //localStorage.removeItem(storageConfig);
 
     // grabbing all inputs from html and stores them into local storage
     const hsName =
@@ -49,12 +45,7 @@ function highSchool() {
 
 //function to test eval button
 function clickhandler () {
-<<<<<<< HEAD
-    console.log(highSchool());
-
-=======
     highSchool();
->>>>>>> 7e4251a970f657cb820d9a9e8a9a332b91e5c7da
 }
 
 //function to get button and alert when clicked
@@ -63,5 +54,5 @@ function test2() {
     }
 
 export {
-    test2, clearStorage
+    test2, clearStorage2
 }

@@ -8,13 +8,15 @@
 
 import {test} from "./controls/accScore.js";
 test();
+clearStorage();
 
 import {test2, clearStorage} from "./controls/hsGpa.js";
 test2();
-clearStorage();
+clearStorage2();
 
 import {test3} from "./controls/satScore.js";
 test3();
+clearStorage3();
 
 // /UI JAVASCRIPT
 

@@ -4,11 +4,17 @@ import { SATConfig } from '../config/sat.js';
 // importing storage config
 import { storageConfig  } from '../config/global.js';
 
+function clearStorage3() {
+    for (let k in storageConfig.name)
+    {
+        localStorage.removeItem(k);
+
+    }
+}
+
 function sat(){
 
-    // clearing local storeage before storing items
-    localStorage.clear(storageConfig);
-    
+
     // get sat math score input 
     const satMath =
     document.getElementById("input-sat-2").value.trim();
@@ -47,7 +53,7 @@ function sat(){
 
 //function to test eval button
 function clickhandler () {
-    console.log(sat());
+    sat();
 }
 
 //function to get button and alert when clicked
@@ -57,6 +63,6 @@ function test3() {
     }
 
 export {
-    test3
+    test3, clearStorage3
 }
 
