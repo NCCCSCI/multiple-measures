@@ -6,6 +6,9 @@ import { storageConfig  } from '../config/global.js';
 
 function sat(){
 
+    // clearing local storeage before storing items
+    localStorage.clear(storageConfig);
+    
     // get sat math score input 
     const satMath =
     document.getElementById("input-sat-2").value.trim();

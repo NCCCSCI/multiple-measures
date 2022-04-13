@@ -14,6 +14,9 @@ import { storageConfig  } from '../config/global.js';
 function accuplacer()
 {
   
+  // clearing local storeage before storing items
+  localStorage.clear(storageConfig);
+  
   //student information input
   const stName =
   document.getElementById("input-name").value.trim();

@@ -2,20 +2,32 @@
 import { HighSchoolConfig } from '../config/mmhighschools.js';
 
 // importing highschool gpa class GPA from gps.js
-import { GPA } from '../modules/gpa.js'
+//import { GPA } from '../modules/gpa.js'
 
 // importing storage config
 import { storageConfig  } from '../config/global.js';
 
+function clearStorage() {
+    for (let k in storageConfig.name)
+    {
+        localStorage.removeItem(k);
+
+    }
+
+
+}
 
 //function that gets the highschool inputs
 function highSchool() {
+
+    // clearing local storeage before storing items
+    //localStorage.removeItem(storageConfig);
 
     // grabbing all inputs from html and stores them into local storage
     const hsName =
     document.getElementById('input-mm-2').value.trim();
     localStorage.setItem(storageConfig.name.hsName, hsName);
-      console.log(hsName);
+
     const hsYear = 
     document.getElementById("input-mm-3").value.trim();
     localStorage.setItem(storageConfig.name.hsYear, hsYear);
@@ -37,6 +49,7 @@ function highSchool() {
 //function to test eval button
 function clickhandler () {
     console.log(highSchool());
+
 }
 
 //function to get button and alert when clicked
@@ -45,5 +58,5 @@ function test2() {
     }
 
 export {
-    test2
+    test2, clearStorage
 }

@@ -45,9 +45,9 @@
 * how do we know whether weighted or unweighted GPA is used? **[working on: ask advising]**
 	* we could just make them put it in, or otherwise skip to SAT
 * can we get rid of the Other option? Please?
-Clear localStorage on load
-* Consider reacting to on change, rather than Evaluate button
-* Consider real-time display update
+* Clear localStorage on load 
+* Consider reacting to on change, rather than Evaluate button **[leave alone]**
+* Consider real-time display update **[leave alone**]
 * Testing
 	* Create a spreadsheet for all inputs
 	* Handle empty data submissions

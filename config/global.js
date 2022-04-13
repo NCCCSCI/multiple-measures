@@ -38,7 +38,7 @@ const storageConfig = {
        thresholdMath: PREFIX + 'thresholdMath', 
        thresholdReading: PREFIX + 'thresholdReading', 
        mathPlacement: PREFIX + 'mathPlacement', 
-       readingPlacement: PREFIX + 'readingPlacement', 
+       readingPlacement: PREFIX + 'readingPlacement',
 
 
       
