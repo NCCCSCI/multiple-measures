@@ -1,6 +1,6 @@
 function mathOptionGPA() {
-    let mathOptionSelect = document.getElementById("input-mm-5");
-    let gpaOptionSelect = document.getElementById("input-mm-3");
+    let mathOptionSelect = document.getElementById("mm-eng");
+    let gpaOptionSelect = document.getElementById("mm-date");
     let calculusOption = document.getElementById("Calculus");
     let algebraIIIOption = document.getElementById("AlgebraIII");
     let algebraIIOption = document.getElementById("AlgebraII_Statistics");

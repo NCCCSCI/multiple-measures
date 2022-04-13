@@ -67,9 +67,9 @@
                             <div
                                 class="input-block ">
                                 <!-- High School Input -->
-                                <label for="input-mm-2">
+                                <label for="mm-hsname">
                                     Name of High School</label>
-                                <select class="input-mm-2" name="input-mm-2" id="input-mm-2">
+                                <select class="mm-hsname" name="mm-hsname" id="mm-hsname">
                                     <option value="Select">[Select a High School]</option>
                                     <option value="Alvirne" id="Alvirne">Alvirne</option>
                                     <option value="Campbell" id="Campbell">Campbell</option>
@@ -90,30 +90,30 @@
                             <div
                                 class="input-block mm">
                                 <!-- Year Graduated -->
-                                <label for="input-mm-3">Year Graduated</label>
-                                <select class="date input-mm-3" name="input-mm-3" id="input-mm-3">
+                                <label for="mm-date">Year Graduated</label>
+                                <select class="date mm-date" name="mm-date" id="mm-date">
                                     <option value="Select">[Select a Year]</option>
                                     <option value="3_or_Fewer_Years_Ago">3 or Fewer Years Ago</option>
                                     <option value="4-5_Years_Ago" class="only-eval-eng-mm">4-5 Years Ago</option>
                                 </select>
                             </div>
                             <div
-                                class="input-block" id="input-mm-4-block">
+                                class="input-block" id="mm-gpa-block">
                                 <!-- Cumulative GPA -->
-                                <label for="input-mm-4">Cumulative GPA</label>
+                                <label for="mm-gpa">Cumulative GPA</label>
                                 <div
-                                    class="input-block" id="input-mm-4-rb-block">
+                                    class="input-block" id="mm-gpa-rb-block">
                                     <!-- Cumulative GPA -->
                                     <div>
-                                        <label for="input-mm-4-rb">Unweighted</label>
-                                        <input type="radio" class="input-mm-4-rb" name="input-mm-4-rb" id="input-mm-4-rb-un" value="Scale">
+                                        <label for="mm-gpa-rb">Unweighted</label>
+                                        <input type="radio" class="mm-gpa-rb" name="mm-gpa-rb" id="mm-gpa-rb-un" value="Scale">
                                     </div>
                                     <div>
-                                        <label for="input-mm-4-rb">Weighted</label>
-                                        <input type="radio" class="input-mm-4-rb" name="input-mm-4-rb" id="input-mm-4-rb-w" value="WScale">
+                                        <label for="mm-gpa-rb">Weighted</label>
+                                        <input type="radio" class="mm-gpa-rb" name="mm-gpa-rb" id="mm-gpa-rb-w" value="WScale">
                                     </div>
                                 </div>
-                                <input type="number" min="0" max="100" step="0.1" class="input-mm-4" name="input-mm-4" id="input-mm-4">
+                                <input type="number" min="0" max="100" step="0.1" class="mm-gpa" name="mm-gpa" id="mm-gpa">
                                 <div class="scale">
                                     <p>out of</p>
                                     <output id="gpaScale"></output>
@@ -122,8 +122,8 @@
                             <div
                                 class="input-block">
                                 <!-- Last English Course Taken -->
-                                <label for="input-mm-5">Highest English Course Passed</label>
-                                <select class="input-mm-5" name="input-mm-5" id="input-mm-5">
+                                <label for="mm-eng">Highest English Course Passed</label>
+                                <select class="mm-eng" name="mm-eng" id="mm-eng">
                                     <option value="Select">[Select a Course]</option>
                                     <option value="English_Foundational">English Foundational</option>
                                     <option value="Honors_College_Prep">Honors/College Prep</option>
@@ -133,8 +133,8 @@
                             <div
                                 class="input-block math-mm">
                                 <!-- Last Math Course Taken -->
-                                <label for="input-mm-6">Highest Math Course Taken: C or Better</label>
-                                <select class="input-mm-6" name="input-mm-6" id="input-mm-6">
+                                <label for="mm-math">Highest Math Course Taken: C or Better</label>
+                                <select class="mm-math" name="mm-math" id="mm-math">
                                     <option value="Select">[Select a Course]</option>
                                 </select>
                             </div>
@@ -164,8 +164,8 @@
                             <div class="input-block sat">
                                 <!-- Date -->
                                 <!-- SAT is >5 years for everything -->
-                                    <label for="input-sat-1"> Date Taken</label>
-                                <select class="date input-sat-1" name="input-sat-1" id="input-sat-1">
+                                    <label for="sat-date"> Date Taken</label>
+                                <select class="date sat-date" name="sat-date" id="sat-date">
                                     <option value="Select">[Select a Year]</option>
                                     <option value="Not_Taken" class="acc-redirect">Not Taken</option>
                                     <option value="5_or_Fewer_Years_Ago">5 or Fewer Years Ago</option>
@@ -177,14 +177,14 @@
                             <div
                                 class="input-block score-input">
                                 <!-- SAT Math Score -->
-                                <label for="input-sat-2">SAT Math Score</label>
-                                <select class="input-sat-2" name="input-sat-2" id="input-sat-2"></select>
+                                <label for="sat-math">SAT Math Score</label>
+                                <select class="sat-math" name="sat-math" id="sat-math"></select>
                             </div>
                             <div
                                 class="input-block score-input">
                                 <!-- SAT Critical Reading and Writing Score -->
-                                <label for="input-sat-3">SAT Critical Reading and Writing Score</label>
-                                <select class="input-sat-3" name="input-sat-3" id="input-sat-3"></select>
+                                <label for="sat-eng">SAT Critical Reading and Writing Score</label>
+                                <select class="sat-eng" name="sat-eng" id="sat-eng"></select>
                             </div>
                         </div>
                     </div>
@@ -204,8 +204,8 @@
                             <div class="input-block acc">
                                 <!-- Date -->
                                 <!-- AccuPlacer is 3 for math, 5 for eng -->
-                                    <label for="input-acc-1"> Date Taken</label>
-                                <select class="date input-acc-1" name="input-acc-1" id="input-acc-1">
+                                    <label for="acc-date"> Date Taken</label>
+                                <select class="date acc-date" name="acc-date" id="acc-date">
                                     <option value="Select">[Select a Year]</option>
                                     <option value="Not_Taken">Not Taken</option>
                                     <option value="3_or_Fewer_Years_Ago">3 or Fewer Years Ago</option>
@@ -223,32 +223,32 @@
                             <div
                                 class="input-block score-input">
                                 <!-- English Score: Writing Conventions (WRTG) -->
-                                <label for="input-acc-2">English Score: WRTG</label>
-                                <select class="input-acc-2" name="input-acc-2" id="input-acc-2"></select>
+                                <label for="acc-wrtg">English Score: WRTG</label>
+                                <select class="acc-wrtg" name="acc-wrtg" id="acc-wrtg"></select>
                             </div>
                             <div
                                 class="input-block score-input">
                                 <!-- English Score: Writeplacer (ESSY) -->
-                                <label for="input-acc-3">English Score: ESSY</label>
-                                <select class="input-acc-3" name="input-acc-3" id="input-acc-3"></select>
+                                <label for="acc-essy">English Score: ESSY</label>
+                                <select class="acc-essy" name="acc-essy" id="acc-essy"></select>
                             </div>
                             <div
                                 class="input-block score-input math-acc">
                                 <!-- Math Score: Arithmetic (ARNG) -->
-                                <label for="input-acc-4">Math Score: ARNG</label>
-                                <select class="input-acc-4" name="input-acc-4" id="input-acc-4"></select>
+                                <label for="acc-arng">Math Score: ARNG</label>
+                                <select class="acc-arng" name="acc-arng" id="acc-arng"></select>
                             </div>
                             <div
                                 class="input-block score-input math-acc">
                                 <!-- Math Score: QR-Algebra-Stats (QAS) -->
-                                <label for="input-acc-5">Math Score: QAS</label>
-                                <select class="input-acc-5" name="input-acc-5" id="input-acc-5"></select>
+                                <label for="acc-qas">Math Score: QAS</label>
+                                <select class="acc-qas" name="acc-qas" id="acc-qas"></select>
                             </div>
                             <div
                                 class="input-block score-input math-acc">
                                 <!-- Math Score: Advanced Algebra & Functions (AAF) -->
-                                <label for="input-acc-6">Math Score: AAF</label>
-                                <select class="input-acc-6" name="input-acc-6" id="input-acc-6"></select>
+                                <label for="acc-aaf">Math Score: AAF</label>
+                                <select class="acc-aaf" name="acc-aaf" id="acc-aaf"></select>
                             </div>
                         </div>
                     </div>

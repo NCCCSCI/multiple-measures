@@ -30,24 +30,24 @@ function highSchool() {
     localStorage.setItem(storageConfig.name.stID,stID);}
 
     const hsName =
-    document.getElementById('input-mm-2').value.trim();
+    document.getElementById('mm-hsname').value.trim();
     localStorage.setItem(storageConfig.name.hsName, hsName);
 
     const hsYear = 
-    document.getElementById("input-mm-3").value.trim();
+    document.getElementById("mm-date").value.trim();
     localStorage.setItem(storageConfig.name.hsYear, hsYear);
 
     const GPA =
-    document.getElementById("input-mm-4").value.trim();
+    document.getElementById("mm-gpa").value.trim();
     localStorage.setItem(storageConfig.name.GPA, GPA);
     console.log(GPA);
     
     const hsEnglish =
-    document.getElementById("input-mm-5").value.trim();
+    document.getElementById("mm-eng").value.trim();
     localStorage.setItem(storageConfig.name.hsEnglish, hsEnglish);
 
     const hsMath =
-    document.getElementById("input-mm-6").value.trim();
+    document.getElementById("mm-math").value.trim();
     localStorage.setItem(storageConfig.name.hsMath, hsMath);
 
 }

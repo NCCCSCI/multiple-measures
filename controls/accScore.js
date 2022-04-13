@@ -23,31 +23,31 @@ function accuplacer()
 {
   // grabbing all accuplacer inputs and storing them into local storage
   const accuDate =
-  document.getElementById("input-acc-1").value.trim(); 
+  document.getElementById("acc-date").value.trim(); 
   localStorage.setItem(storageConfig.name.accuDate, accuDate);
 
   const wrtg =
-  document.getElementById("input-acc-2").value.trim(); 
+  document.getElementById("acc-wrtg").value.trim(); 
   localStorage.setItem(storageConfig.name.wrtg, wrtg);
 
   const essy =
-  document.getElementById("input-acc-3").value.trim(); 
+  document.getElementById("acc-essy").value.trim(); 
   localStorage.setItem(storageConfig.name.essy, essy);
 
   const arng =
-  document.getElementById("input-acc-4").value.trim(); 
+  document.getElementById("acc-arng").value.trim(); 
   const arngRange = arng.split(/[_-]/);
   localStorage.setItem(storageConfig.name.arng, arng);
   localStorage.setItem(storageConfig.name.arngRange, arngRange);
 
   const qas = 
-  document.getElementById("input-acc-5").value.trim();
+  document.getElementById("acc-qas").value.trim();
   const qasRange = qas.split(/[_-]/);
   localStorage.setItem(storageConfig.name.qas, qas);
   localStorage.setItem(storageConfig.name.qasRange, qasRange);
 
   const aaf =
-  document.getElementById("input-acc-6").value.trim(); 
+  document.getElementById("acc-aaf").value.trim(); 
   const aafRange = aaf.split(/[_-]/);
   localStorage.setItem(storageConfig.name.aaf, aaf);
   localStorage.setItem(storageConfig.name.aafRange, aafRange);
