@@ -23,10 +23,6 @@ import {evalBox} from "./ui/evalBox.js";
 evalBox();
 // call evalBox script
 
-/* // hs other import
-import {hsOther} from "./archive/hsOther.js";
-hsOther(); // call hsOther script */
-
 // date select import
 import {dates} from "./ui/dates.js";
 dates(); // call dates script

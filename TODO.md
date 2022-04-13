@@ -18,22 +18,18 @@
 * transfer / non-native speaker - add if they have taken any college credits in the past **[done]**
 * disclaimer that this is not an official document **[done]**
 * "dont know your gpa?" checkbox -> send you to SAT **[done]**
+* Change title and <h1> to Multiple Measures **[done]**
+* Branding - use the NCC palette
+	* Logo is blue and some sort of sage green and white **[done]**
+	* Sharper logo https://drive.google.com/file/d/1d94_gaBqS5s8a3uX_J2prtfitXUuhARH/view?usp=sharing **[done]**
+* Bootstrap/jQuery/FontAwesome local to avoid CORS notices **[done: probably just a bitbucket problem]**
+* Console empty **[working on]**
 * finalize responsiveness **[working on]**
+	* Must be tested on small devices (especially the evaluate workflow)
 * HTML reflects configuration
-* Change title and <h1> to Multiple Measures
 * Dynamic updates work
-* Mobile friendly
-	* Must be tested on small devices
-	* Especially the evaluate workflow
-	* Bootstrap/jQuery/FontAwesome local to avoid CORS notices
-* Console empty
 * Run accessibility and Lighthouse (Chrome)
 * Code cleanup
-* Branding - use the NCC palette
-	* Logo is blue and some sort of sage green
-	* And white
-	* Sharper logo https://drive.google.com/file/d/1d94_gaBqS5s8a3uX_J2prtfitXUuhARH/view?usp=sharing
- 
  
 
 #### logic
@@ -42,17 +38,22 @@
 * turn SAT Date into dropdown, and add in identical dropdown to Accuplacer (identical to HS year graduated) to determine more than 5 years ago (if you redirect them, add in a note about why you're redirecting them) **[done]**
 * high school select input changes dropdown content in hs math course dropdown — foreach (high school course equivalencies) **[done]**
 	* this is how mathOptionGPA fits in — courses will equal courses that make sense to NCC
+<<<<<<< HEAD
 * how do we know whether weighted or unweighted GPA is used? **[working on: ask advising]**
 	* we could just make them put it in, or otherwise skip to SAT
 * can we get rid of the Other option? Please?
 * Clear localStorage on load 
 * Consider reacting to on change, rather than Evaluate button **[leave alone]**
 * Consider real-time display update **[leave alone**]
+=======
+* how do we know whether weighted or unweighted GPA is used? **[done]**
+* get rid of the Other option **[done]**
+Clear localStorage on load
+* Consider reacting to on change, rather than Evaluate button
+* Consider real-time display update
+>>>>>>> 7e4251a970f657cb820d9a9e8a9a332b91e5c7da
 * Testing
 	* Create a spreadsheet for all inputs
 	* Handle empty data submissions
 	* Check handling of "undefined" answers
-* Code cleanup
-* Console empty
 * Check for extraneous storage
- 
