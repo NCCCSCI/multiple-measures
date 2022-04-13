@@ -38,18 +38,14 @@
 * turn SAT Date into dropdown, and add in identical dropdown to Accuplacer (identical to HS year graduated) to determine more than 5 years ago (if you redirect them, add in a note about why you're redirecting them) **[done]**
 * high school select input changes dropdown content in hs math course dropdown — foreach (high school course equivalencies) **[done]**
 	* this is how mathOptionGPA fits in — courses will equal courses that make sense to NCC
-<<<<<<< HEAD
 * how do we know whether weighted or unweighted GPA is used? **[working on: ask advising]**
 	* we could just make them put it in, or otherwise skip to SAT
 * can we get rid of the Other option? Please?
-* Clear localStorage on load 
+* Clear localStorage on load
 * Consider reacting to on change, rather than Evaluate button **[leave alone]**
 * Consider real-time display update **[leave alone**]
 * how do we know whether weighted or unweighted GPA is used? **[done]**
 * get rid of the Other option **[done]**
-Clear localStorage on load
-* Consider reacting to on change, rather than Evaluate button
-* Consider real-time display update
 * Testing
 	* Create a spreadsheet for all inputs
 	* Handle empty data submissions
