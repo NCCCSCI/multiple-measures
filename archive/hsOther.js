@@ -1,10 +1,10 @@
 function hsOther() {
 
-    let hsOptionSelect = document.getElementById("input-mm-2");
+    let hsOptionSelect = document.getElementById("mm-hsname");
     let otherOption = document.getElementById("Other");
     let gpaBlockPopup = document.getElementById("gpa-popup");
     let hsNamePopup = document.getElementById("hs-name");
-    let gpaInputBlock = document.getElementById("input-mm-4-block");
+    let gpaInputBlock = document.getElementById("mm-gpa-block");
 
     // gpa other popup box function
     hsOptionSelect.addEventListener('input', function (evt) {

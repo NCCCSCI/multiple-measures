@@ -17,13 +17,13 @@ import {
 } from "../config/UpperLevelMathPlacement.js";
 
 function scoreRanges() { // variable declaration
-    let satMath = document.getElementById("input-sat-2");
-    let satEng = document.getElementById("input-sat-3");
-    let accEngWtrg = document.getElementById("input-acc-2");
-    let accEngEssy = document.getElementById("input-acc-3");
-    let accMathArng = document.getElementById("input-acc-4");
-    let accMathQas = document.getElementById("input-acc-5");
-    let accMathAaf = document.getElementById("input-acc-6");
+    let satMath = document.getElementById("sat-math");
+    let satEng = document.getElementById("sat-eng");
+    let accEngWtrg = document.getElementById("acc-wrtg");
+    let accEngEssy = document.getElementById("acc-essy");
+    let accMathArng = document.getElementById("acc-arng");
+    let accMathQas = document.getElementById("acc-qas");
+    let accMathAaf = document.getElementById("acc-aaf");
 
     let selectOption;
 

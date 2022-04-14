@@ -16,17 +16,17 @@ function clearStorage3() {
 function sat(){
 
     const satDate =
-    document.getElementById("input-sat-1").value.trim(); 
+    document.getElementById("sat-date").value.trim(); 
     localStorage.setItem(storageConfig.name.satDate, satDate);
 
     // get sat math score input 
     const satMath =
-    document.getElementById("input-sat-2").value.trim();
+    document.getElementById("sat-math").value.trim();
     localStorage.setItem(storageConfig.name.satMath, satMath);
 
     // get sat reading and writing input 
     const satReading =
-    document.getElementById("input-sat-3").value.trim();
+    document.getElementById("sat-eng").value.trim();
     localStorage.setItem(storageConfig.name.satReading, satReading);
 
     // getting the sat thresholds

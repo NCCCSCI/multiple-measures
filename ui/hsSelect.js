@@ -11,10 +11,10 @@ import {
 function hsSelect() {
     // VARIABLE DECLARATIONS
     // hs select
-    let hsSelect = document.getElementById("input-mm-2");
-    // hs math course select: #input-mm-6
-    let mathSelect = document.getElementById("input-mm-6");
-    let radioButtons = document.querySelectorAll("#input-mm-4-block > div > div > .input-mm-4-rb");
+    let hsSelect = document.getElementById("mm-hsname");
+    // hs math course select: #mm-math
+    let mathSelect = document.getElementById("mm-math");
+    let radioButtons = document.querySelectorAll("#mm-gpa-block > div > div > .mm-gpa-rb");
     let gpaScaleOutput = document.getElementById("gpaScale");
 
     hsSelect.addEventListener('input', function (evt) {

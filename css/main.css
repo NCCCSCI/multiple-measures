@@ -33,15 +33,15 @@ button[id^="add-another-"] {
 }
 
 
-#input-mm-4-rb-block, #input-mm-4-rb-block div, #input-mm-4-block * {
+#mm-gpa-rb-block, #mm-gpa-rb-block div, #mm-gpa-block * {
     display: inline;
 }
 
-#input-mm-4-block .scale {
+#mm-gpa-block .scale {
     padding: 0 10px;
 }
 
-#input-mm-4-rb-block div {
+#mm-gpa-rb-block div {
     padding-left: 15px;
 }
 
