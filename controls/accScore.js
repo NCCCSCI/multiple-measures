@@ -37,28 +37,28 @@ function accuplacer()
   const arng =
   document.getElementById("input-acc-4").value.trim(); 
   const arngRange = arng.split(/[_-]/);
-  localStorage.setItem(storageConfig.name.arng, arng);
+  //localStorage.setItem(storageConfig.name.arng, arng);
   localStorage.setItem(storageConfig.name.arngRange, arngRange);
 
   const qas = 
   document.getElementById("input-acc-5").value.trim();
   const qasRange = qas.split(/[_-]/);
-  localStorage.setItem(storageConfig.name.qas, qas);
+  //localStorage.setItem(storageConfig.name.qas, qas);
   localStorage.setItem(storageConfig.name.qasRange, qasRange);
 
   const aaf =
   document.getElementById("input-acc-6").value.trim(); 
   const aafRange = aaf.split(/[_-]/);
-  localStorage.setItem(storageConfig.name.aaf, aaf);
+  //localStorage.setItem(storageConfig.name.aaf, aaf);
   localStorage.setItem(storageConfig.name.aafRange, aafRange);
 
   // grabbing the thresholds
   const thresholdWrtg = Object.keys(EnglishPlacementNative).reverse();
   const thresholdQas = Object.keys(MathPlacement).reverse();
   const thresholdAaf = Object.keys(UpperLevelMathPlacement).reverse();
-  localStorage.setItem(storageConfig.name.thresholdWrtg, thresholdWrtg);
-  localStorage.setItem(storageConfig.name.thresholdQas, thresholdQas);
-  localStorage.setItem(storageConfig.name.thresholdAaf, thresholdAaf);
+  //localStorage.setItem(storageConfig.name.thresholdWrtg, thresholdWrtg);
+  //localStorage.setItem(storageConfig.name.thresholdQas, thresholdQas);
+  //localStorage.setItem(storageConfig.name.thresholdAaf, thresholdAaf);
     
   // finding the first threshold score
   const wrtgPlacement = thresholdWrtg.find(thresholdWrtg => wrtg > thresholdWrtg); 
@@ -70,7 +70,8 @@ function accuplacer()
   
   // return writing placement
   if (wrtgPlacement !== "undefined") {
-    console.log (EnglishPlacementNative [wrtgPlacement][essy]);
+    console.log(EnglishPlacementNative [wrtgPlacement][essy]);
+     
   }
 
   // return math placement
