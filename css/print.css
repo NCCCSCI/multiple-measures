@@ -23,21 +23,31 @@ body *, .eval-box {
 	page-break-inside: avoid;
 }
 
-h1 {
-	font-size: 24px;
+h1{
+	font-size: 26px;
 }
 
 .input-block {
 	padding-left: 20px;
+	display: table;
+    width: 100%
 }
 
 .input-block p {
-	font-weight: bold;
-}
-
-.input-block, .student-creds * {
-	display: inline;
+	font-weight: none;
+	display: table-cell;
+    padding: 0 0 0 5px
+	
 }
 label{
-	display: none;
+	font-weight: bold;
+	font-size: 18px;
+	display: table-cell;
+    width: 1px;
+    white-space: nowrap
+}
+.img{
+	font-size: 50px;
+	text-align: center;
+
 }
