@@ -76,8 +76,8 @@ function highSchool() {
     }
 
     if (gpa == scale) {
-        const thresdholdGpa = Object.keys(HighSchoolConfig [schoolNameGpaScale]).reverse();
-        const scaleGpa = thresholdGpa.find(thresholdGpa => gpaText / thresholdGpa);
+        const thresholdGpa = Object.keys(HighSchoolConfig [schoolNameGpaScale]).reverse();
+        let scaleGpa = thresholdGpa .find(thresholdGpa  => gpaText / thresholdGpa);
         console.log(scaleGpa);
 
 

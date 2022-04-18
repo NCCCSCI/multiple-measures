@@ -38,16 +38,18 @@ function sat(){
     // finding the first threshold score
     const mathPlacement = thresholdMath.find(thresholdMath =>  satMath > thresholdMath); 
     const readingPlacement = thresholdReading.find( thresholdReading => satReading > thresholdReading); 
-    localStorage.setItem(storageConfig.name.mathPlacement, mathPlacement);
-    localStorage.setItem(storageConfig.name.readingPlacement, readingPlacement);
+    
+    
 
     if (mathPlacement !== "undefined") {
         // return math placement
+        localStorage.setItem(storageConfig.name.mathPlacement, mathPlacement);
         return (SATConfig.Mathematics[mathPlacement]);
     }
 
    if (readingPlacement !== "undefined") {
          // return reading placement
+         localStorage.setItem(storageConfig.name.readingPlacement, readingPlacement);
         return (SATConfig.Critical_Reading_and_Writing[readingPlacement]);
     }
 

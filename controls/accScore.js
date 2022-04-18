@@ -28,7 +28,6 @@ function accuplacer()
 
   const wrtg =
   document.getElementById("acc-wrtg").value.trim(); 
-  
 
   const essy =
   document.getElementById("acc-essy").value.trim(); 
@@ -38,7 +37,7 @@ function accuplacer()
   document.getElementById("acc-arng").value.trim(); 
   const arngRange = arng.split(/[_-]/);
   //localStorage.setItem(storageConfig.name.arng, arng);
-  localStorage.setItem(storageConfig.name.arngRange, arngRange);
+  
 
   const qas = 
   document.getElementById("acc-qas").value.trim();
@@ -50,7 +49,7 @@ function accuplacer()
   document.getElementById("acc-aaf").value.trim(); 
   const aafRange = aaf.split(/[_-]/);
   //localStorage.setItem(storageConfig.name.aaf, aaf);
-  localStorage.setItem(storageConfig.name.aafRange, aafRange);
+  
 
   // grabbing the thresholds
   const thresholdWrtg = Object.keys(EnglishPlacementNative).reverse();
@@ -78,12 +77,14 @@ function accuplacer()
   if (qasPlacement !== "undefined") {
     const thresholdArng = Object.keys(MathPlacement [qasPlacement]).reverse();
     const arngPlacement = thresholdArng.find(thresholdArng => arngRange[0] >= thresholdArng);
+    localStorage.setItem(storageConfig.name.arngRange, arngRange);
     return (MathPlacement [qasPlacement] [arngPlacement]);
   } 
   
     // return aaf math placement
     const thresholdAaf = Object.keys(UpperLevelMathPlacement [qasPlacement]).reverse();
     const aafPlacement = thresholdAaf.find(thresholdAaf => aafRange[0] >= thresholdAaf);
+    localStorage.setItem(storageConfig.name.aafRange, aafRange);
     return (UpperLevelMathPlacement [qasPlacement] [aafPlacement]);
   
 
