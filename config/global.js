@@ -10,7 +10,8 @@ const storageConfig = {
        // highschool section inputs
        hsName: PREFIX + 'hsName', 
        hsYear: PREFIX + 'hsYear', 
-       GPA: PREFIX + 'GPA', 
+       Ugpa: PREFIX + 'Ugpa', 
+       Wgpa: PREFIX + 'Wgpa', 
        hsEnglish: PREFIX + 'hsEnglish', 
        hsMath: PREFIX + 'hsMath', 
 
