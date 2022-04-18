@@ -40,14 +40,11 @@ function highSchool() {
     document.getElementById("mm-date").value.trim();
     localStorage.setItem(storageConfig.name.hsYear, hsYear);
 
-    const Ugpa=
-    document.getElementById("mm-gpa-rb-un").value.trim();
-    localStorage.setItem(storageConfig.name.Ugpa, Ugpa);
+    const gpa =
+    document.querySelector('[name = "mm-gpa-rb"]:checked').value;
+    localStorage.setItem(storageConfig.name.gpa,gpa);
+    console.log(gpa);
 
-    const Wgpa=
-    document.getElementById("mm-gpa-rb-w").value.trim();
-    localStorage.setItem(storageConfig.name.Wgpa, Wgpa);
-    
     const hsEnglish =
     document.getElementById("mm-eng").value.trim();
     localStorage.setItem(storageConfig.name.hsEnglish, hsEnglish);
@@ -68,8 +65,7 @@ function highSchool() {
     if (namePlacement !== "undefined") {
         const thresholdMath = Object.keys(HSCourseEqConfig [namePlacement]).reverse();
         const mathTaken = thresholdMath.find(thresholdMath => hsMath > thresholdMath);
-        //console.log (mathTaken);
-        console.log(HSCourseEqConfig [namePlacement] [mathTaken]);
+        return(HSCourseEqConfig [namePlacement] [mathTaken]);
      }
 
 

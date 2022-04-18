@@ -55,7 +55,7 @@ function accuplacer()
   // grabbing the thresholds
   const thresholdWrtg = Object.keys(EnglishPlacementNative).reverse();
   const thresholdQas = Object.keys(MathPlacement).reverse();
-  const thresholdAaf = Object.keys(UpperLevelMathPlacement).reverse();
+  //const thresholdAaf = Object.keys(UpperLevelMathPlacement).reverse();
   //localStorage.setItem(storageConfig.name.thresholdWrtg, thresholdWrtg);
   //localStorage.setItem(storageConfig.name.thresholdQas, thresholdQas);
   //localStorage.setItem(storageConfig.name.thresholdAaf, thresholdAaf);
@@ -63,28 +63,28 @@ function accuplacer()
   // finding the first threshold score
   const wrtgPlacement = thresholdWrtg.find(thresholdWrtg => wrtg > thresholdWrtg); 
   const qasPlacement = thresholdQas.find(thresholdQas => qasRange[0] >= thresholdQas);
-  const aafPlacement = thresholdAaf.find(thresholdAaf => aafRange[0] >= thresholdAaf);
+  //const aafPlacement = thresholdAaf.find(thresholdAaf => aafRange[0] >= thresholdAaf);
   localStorage.setItem(storageConfig.name.wrtgPlacement, wrtgPlacement);
   localStorage.setItem(storageConfig.name.qasPlacement, qasPlacement);
   localStorage.setItem(storageConfig.name.aafPlacement, aafPlacement);
   
   // return writing placement
   if (wrtgPlacement !== "undefined") {
-    console.log(EnglishPlacementNative [wrtgPlacement][essy]);
-     
+    return (EnglishPlacementNative [wrtgPlacement][essy]);
   }
 
   // return math placement
   if (qasPlacement !== "undefined") {
     const thresholdArng = Object.keys(MathPlacement [qasPlacement]).reverse();
     const arngPlacement = thresholdArng.find(thresholdArng => arngRange[0] >= thresholdArng);
-    console.log (MathPlacement [qasPlacement] [arngPlacement]);
+    return (MathPlacement [qasPlacement] [arngPlacement]);
+  } 
   
     // return aaf math placement
     const thresholdAaf = Object.keys(UpperLevelMathPlacement [qasPlacement]).reverse();
     const aafPlacement = thresholdAaf.find(thresholdAaf => aafRange[0] >= thresholdAaf);
-    console.log (UpperLevelMathPlacement [qasPlacement] [aafPlacement]);
-  }
+    return (UpperLevelMathPlacement [qasPlacement] [aafPlacement]);
+  
 
   //null if nothings found
   return null; 
