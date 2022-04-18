@@ -46,7 +46,7 @@ function highSchool() {
 
     const Wgpa=
     document.getElementById("mm-gpa-rb-w").value.trim();
-    localStorage.setItem(storageConfig.name.GPA, GPA);
+    localStorage.setItem(storageConfig.name.Wgpa, Wgpa);
     
     const hsEnglish =
     document.getElementById("mm-eng").value.trim();
@@ -62,6 +62,7 @@ function highSchool() {
  
     // getting name placement
     const namePlacement = thresholdName.find(thresholdName=> hsName == thresholdName);
+    const gpaPlacement = thresholdSchool.find(thresholdSchool=> hsName == thresholdSchool);
     
     // return the math class they should take based on which hs math they've taken placement
     if (namePlacement !== "undefined") {
@@ -70,6 +71,12 @@ function highSchool() {
         //console.log (mathTaken);
         console.log(HSCourseEqConfig [namePlacement] [mathTaken]);
      }
+
+
+
+
+
+
 
     
 
