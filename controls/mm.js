@@ -43,10 +43,13 @@ function highSchool() {
     document.getElementById("mm-date").value.trim();
     localStorage.setItem(storageConfig.name.hsYear, hsYear);
 
-    const gpa =
+    const gpaButton =
     document.querySelector('[name = "mm-gpa-rb"]:checked').value;
     localStorage.setItem(storageConfig.name.gpa,gpa);
-    
+
+    const gpaText=
+    document.getElementById(" mm-gpa").value.trim();
+    localStorage.setItem(storageConfig.name.gpaText,gpaText);
 
     const hsEnglish =
     document.getElementById("mm-eng").value.trim();
@@ -62,7 +65,7 @@ function highSchool() {
  
     // getting name placement
     const namePlacement = thresholdName.find(thresholdName=> hsName == thresholdName);
-    const schoolNameGpaScales = thresholdSchool.find(thresholdSchool=> hsName == thresholdSchool);
+    const schoolNameGpaScale = thresholdSchool.find(thresholdSchool=> hsName == thresholdSchool);
     
     // return the math class they should take based on which hs math they've taken placement
     if (namePlacement !== "undefined") {
@@ -71,16 +74,15 @@ function highSchool() {
         return(HSCourseEqConfig [namePlacement] [mathTaken]);
     }
 
-    /*
     if (gpa == scale) {
-        const thresdholdGpa = Object.keys(HSCourseEqConfig [gpaPlacement]).reverse();
-        const gpaClass
+        const thresdholdGpa = Object.keys(HighSchoolConfig [schoolNameGpaScale]).reverse();
+        const scaleGpa = thresholdGpa.find(thresholdGpa=> hsMath > thresholdGpa);
 
 
     }
 
 
-*/
+
 
 
 
