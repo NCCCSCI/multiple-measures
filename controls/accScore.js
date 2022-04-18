@@ -66,7 +66,7 @@ function accuplacer()
   //const aafPlacement = thresholdAaf.find(thresholdAaf => aafRange[0] >= thresholdAaf);
   localStorage.setItem(storageConfig.name.wrtgPlacement, wrtgPlacement);
   localStorage.setItem(storageConfig.name.qasPlacement, qasPlacement);
-  localStorage.setItem(storageConfig.name.aafPlacement, aafPlacement);
+  //localStorage.setItem(storageConfig.name.aafPlacement, aafPlacement);
   
   // return writing placement
   if (wrtgPlacement !== "undefined") {

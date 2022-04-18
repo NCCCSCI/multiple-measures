@@ -4,13 +4,16 @@ import { HighSchoolConfig } from '../config/mmhighschools.js';
 // bring in the configuration for highschool gpa scales
 import { HSCourseEqConfig  } from '../config/HighSchoolCourseEquivalencies.js';
 
-// importing highschool gpa class GPA from gps.js
-//import { GPA } from '../modules/gpa.js'
+// import math classes based off gpa
+import { MathConfig } from '../config/mmmath.js';
+
+// import english classes based off gpa
+import { EnglishConfig   } from '../config/mmenglish.js';
 
 // importing storage config
 import { storageConfig  } from '../config/global.js';
 
-
+// clearing storage
 function clearStorage2() {
     for (let k in storageConfig.name)
     {
@@ -43,7 +46,7 @@ function highSchool() {
     const gpa =
     document.querySelector('[name = "mm-gpa-rb"]:checked').value;
     localStorage.setItem(storageConfig.name.gpa,gpa);
-    console.log(gpa);
+    
 
     const hsEnglish =
     document.getElementById("mm-eng").value.trim();
@@ -59,17 +62,25 @@ function highSchool() {
  
     // getting name placement
     const namePlacement = thresholdName.find(thresholdName=> hsName == thresholdName);
-    const gpaPlacement = thresholdSchool.find(thresholdSchool=> hsName == thresholdSchool);
+    const schoolNameGpaScales = thresholdSchool.find(thresholdSchool=> hsName == thresholdSchool);
     
     // return the math class they should take based on which hs math they've taken placement
     if (namePlacement !== "undefined") {
         const thresholdMath = Object.keys(HSCourseEqConfig [namePlacement]).reverse();
         const mathTaken = thresholdMath.find(thresholdMath => hsMath > thresholdMath);
         return(HSCourseEqConfig [namePlacement] [mathTaken]);
-     }
+    }
+
+    /*
+    if (gpa == scale) {
+        const thresdholdGpa = Object.keys(HSCourseEqConfig [gpaPlacement]).reverse();
+        const gpaClass
 
 
+    }
 
+
+*/
 
 
 
