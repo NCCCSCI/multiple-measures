@@ -45,10 +45,11 @@ function highSchool() {
 
     const gpaButton =
     document.querySelector('[name = "mm-gpa-rb"]:checked').value;
-    localStorage.setItem(storageConfig.name.gpa,gpa);
+    localStorage.setItem(storageConfig.name.gpaButton,gpaButton);
+
 
     const gpaText=
-    document.getElementById(" mm-gpa").value.trim();
+    document.getElementById("mm-gpa").value.trim();
     localStorage.setItem(storageConfig.name.gpaText,gpaText);
 
     const hsEnglish =
@@ -76,7 +77,8 @@ function highSchool() {
 
     if (gpa == scale) {
         const thresdholdGpa = Object.keys(HighSchoolConfig [schoolNameGpaScale]).reverse();
-        const scaleGpa = thresholdGpa.find(thresholdGpa=> hsMath > thresholdGpa);
+        const scaleGpa = thresholdGpa.find(thresholdGpa => gpaText / thresholdGpa);
+        console.log(scaleGpa);
 
 
     }
@@ -105,7 +107,7 @@ return null;
 
 //function to test eval button
 function clickhandler () {
-   console.log(highSchool());
+   localStorage.getItem(highSchool());
 }
 
 //function to get button and alert when clicked

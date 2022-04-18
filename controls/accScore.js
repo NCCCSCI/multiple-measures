@@ -28,7 +28,7 @@ function accuplacer()
 
   const wrtg =
   document.getElementById("acc-wrtg").value.trim(); 
-  localStorage.setItem(storageConfig.name.wrtg, wrtg);
+  
 
   const essy =
   document.getElementById("acc-essy").value.trim(); 
@@ -70,6 +70,7 @@ function accuplacer()
   
   // return writing placement
   if (wrtgPlacement !== "undefined") {
+    localStorage.setItem(storageConfig.name.wrtg, EnglishPlacementNative [wrtgPlacement][essy]);
     return (EnglishPlacementNative [wrtgPlacement][essy]);
   }
 
@@ -92,7 +93,7 @@ function accuplacer()
 
 //function to test eval button
 function clickhandler () {
-  accuplacer();
+  localStorage.getItem(accuplacer());
 }
 
 //function to get button and alert when clicked
