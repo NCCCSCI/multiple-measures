@@ -49,6 +49,13 @@ document.getElementById("mm-math").textContent = hsMath;
 const satDate = localStorage.getItem(storageConfig.name.satDate).replace(/_+/g, ' ').replace("Select","Not entered");
 document.getElementById("sat-date").textContent = satDate;
 
+//Hiding SAT elements if skipped (not Taken)
+if(satDate == "Not Taken"){
+    document.getElementById("sat-math-label").style.display = 'none';
+    document.getElementById("sat-eng-label").style.display = 'none';
+}
+else{
+
 //SAT Math Score Input
 const satMath = localStorage.getItem(storageConfig.name.satMath).replace(/_+/g, ' ').replace("Select","Not entered");
 document.getElementById("sat-math").textContent = satMath;
@@ -56,12 +63,35 @@ document.getElementById("sat-math").textContent = satMath;
 //SAT Critical Reading and Writing Score Input
 const satReading = localStorage.getItem(storageConfig.name.satReading).replace(/_+/g, ' ').replace("Select","Not entered");
 document.getElementById("sat-eng").textContent = satReading;
+    }
 
 
 
 //Accuplacer Date Taken Input
 const accuDate = localStorage.getItem(storageConfig.name.accuDate).replace(/_+/g, ' ').replace("Select","Not entered");
 document.getElementById("acc-date").textContent = accuDate;
+
+//Hiding Accuplacer elements if skipped (Not Taken)
+if(accuDate == "Not Taken"){
+    document.getElementById("acc-wrtg-label").style.display = 'none';
+    document.getElementById("acc-wrtg").style.display = 'none';
+
+    document.getElementById("acc-essy-label").style.display = 'none';
+    document.getElementById("acc-essy").style.display = 'none';
+
+    document.getElementById("acc-arng-label").style.display = 'none';
+    document.getElementById("acc-arng").style.display = 'none';
+
+    document.getElementById("acc-qas-label").style.display = 'none';
+    document.getElementById("acc-qas").style.display = 'none';
+
+    document.getElementById("acc-aaf-label").style.display = 'none';
+    document.getElementById("acc-aaf").style.display = 'none';
+
+}
+else{
+
+
 
 //Accuplacer English Writing Conventions(WRTG) Score Input
 const wrtg = localStorage.getItem(storageConfig.name.wrtg).replace(/_+/g, ' ').replace("Select","Not entered");
@@ -82,4 +112,4 @@ document.getElementById("acc-qas").textContent = qas;
 //Accuplacer Math Score Advanced Algebra & Functions (AAF) Input
 const aaf = localStorage.getItem(storageConfig.name.aafRange).replace(","," - ").replace(/_+/g, ' ').replace("Select","Not entered");
 document.getElementById("acc-aaf").textContent = aaf;
-
+}
