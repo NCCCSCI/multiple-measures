@@ -69,7 +69,7 @@ function accuplacer()
   
   // return writing placement
   if (wrtgPlacement !== "undefined") {
-    localStorage.setItem(storageConfig.name.wrtg, EnglishPlacementNative [wrtgPlacement][essy]);
+    localStorage.setItem(storageConfig.name.wrtgPlacement, EnglishPlacementNative [wrtgPlacement][essy]);
     return (EnglishPlacementNative [wrtgPlacement][essy]);
   }
 
@@ -77,20 +77,25 @@ function accuplacer()
   if (qasPlacement !== "undefined") {
     const thresholdArng = Object.keys(MathPlacement [qasPlacement]).reverse();
     const arngPlacement = thresholdArng.find(thresholdArng => arngRange[0] >= thresholdArng);
-    localStorage.setItem(storageConfig.name.arngRange, arngRange);
+    localStorage.setItem(storageConfig.name.arngPlacement, MathPlacement [qasPlacement] [arngPlacement]);
     return (MathPlacement [qasPlacement] [arngPlacement]);
-  } 
-  
+  }
+
     // return aaf math placement
     const thresholdAaf = Object.keys(UpperLevelMathPlacement [qasPlacement]).reverse();
     const aafPlacement = thresholdAaf.find(thresholdAaf => aafRange[0] >= thresholdAaf);
-    localStorage.setItem(storageConfig.name.aafRange, aafRange);
+    localStorage.setItem(storageConfig.name.aafPlacement, UpperLevelMathPlacement [qasPlacement] [aafPlacement]);
     return (UpperLevelMathPlacement [qasPlacement] [aafPlacement]);
   
 
-  //null if nothings found
-  return null; 
+
+ //null if nothings found
+return null; 
+
 }
+
+
+
 
 //function to test eval button
 function clickhandler () {

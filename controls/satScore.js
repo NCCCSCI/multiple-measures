@@ -43,13 +43,13 @@ function sat(){
 
     if (mathPlacement !== "undefined") {
         // return math placement
-        localStorage.setItem(storageConfig.name.mathPlacement, mathPlacement);
+        localStorage.setItem(storageConfig.name.mathPlacement, SATConfig.Mathematics[mathPlacement]);
         return (SATConfig.Mathematics[mathPlacement]);
     }
 
    if (readingPlacement !== "undefined") {
          // return reading placement
-         localStorage.setItem(storageConfig.name.readingPlacement, readingPlacement);
+         localStorage.setItem(storageConfig.name.readingPlacement, SATConfig.Critical_Reading_and_Writing[readingPlacement]);
         return (SATConfig.Critical_Reading_and_Writing[readingPlacement]);
     }
 

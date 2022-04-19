@@ -62,27 +62,31 @@ function highSchool() {
 
     // getting the name thresold
     const thresholdName = Object.keys(HSCourseEqConfig ).reverse();
-    const thresholdSchool = Object.keys(HighSchoolConfig).reverse();
+    //const thresholdSchool = Object.keys(HighSchoolConfig).reverse();
  
     // getting name placement
-    const namePlacement = thresholdName.find(thresholdName=> hsName == thresholdName);
-    const schoolNameGpaScale = thresholdSchool.find(thresholdSchool=> hsName == thresholdSchool);
+    const namePlacement = thresholdName.find(thresholdName => hsName == thresholdName);
+  // const schoolNameGpaScale = thresholdSchool.find(thresholdSchool=> hsName == thresholdSchool);
     
     // return the math class they should take based on which hs math they've taken placement
     if (namePlacement !== "undefined") {
         const thresholdMath = Object.keys(HSCourseEqConfig [namePlacement]).reverse();
-        const mathTaken = thresholdMath.find(thresholdMath => hsMath > thresholdMath);
-        return(HSCourseEqConfig [namePlacement] [mathTaken]);
+        console.log(thresholdMath);
+        const mathTaken = thresholdMath.find(thresholdMath => hsMath == thresholdMath);
+        console.log(mathTaken);
+        localStorage.setItem(storageConfig.name.namePlacement, HSCourseEqConfig [namePlacement] [mathTaken]);
+        console.log(HSCourseEqConfig [namePlacement] [mathTaken]);
     }
 
-    if (gpa == scale) {
+    /*
+    if (gpaText == scale) {
         const thresholdGpa = Object.keys(HighSchoolConfig [schoolNameGpaScale]).reverse();
         let scaleGpa = thresholdGpa .find(thresholdGpa  => gpaText / thresholdGpa);
         console.log(scaleGpa);
 
 
     }
-
+*/
 
 
 

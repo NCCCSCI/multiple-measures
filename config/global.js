@@ -28,17 +28,18 @@ const storageConfig = {
        //thresholdAaf: PREFIX + 'thresholdAaf', 
        wrtgPlacement: PREFIX + 'wrtgPlacement', 
        qasPlacement: PREFIX + 'qasPlacement', 
+       arngPlacement: PREFIX + 'arngPlacement',
        aafPlacement: PREFIX + 'aafPlacement', 
-       arngRange: PREFIX + 'arngRange', 
-       qasRange: PREFIX + 'qasRange', 
-       aafRange: PREFIX + 'aafRange', 
+       //arngRange: PREFIX + 'arngRange', 
+       //qasRange: PREFIX + 'qasRange', 
+       //aafRange: PREFIX + 'aafRange', 
 
        // SAT section inputs
        satDate:PREFIX + 'satDate', 
        satMath: PREFIX + 'satMath',  
        satReading: PREFIX + 'satReading', 
-       thresholdMath: PREFIX + 'thresholdMath', 
-       thresholdReading: PREFIX + 'thresholdReading', 
+       //thresholdMath: PREFIX + 'thresholdMath', 
+       //thresholdReading: PREFIX + 'thresholdReading', 
        mathPlacement: PREFIX + 'mathPlacement', 
        readingPlacement: PREFIX + 'readingPlacement',
 
