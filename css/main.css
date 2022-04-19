@@ -4,52 +4,43 @@
 
 a {
     color: #42504a;
-    
 }
 
 .accordion,
 .eval-box {
-    margin-top: 15px;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 15px;
 }
 
 .accordion-button {
-    text-transform: uppercase;
     background-color: #E7F1FF;
     border: 1px solid #8F8F8F;
+    text-transform: uppercase;
 }
 
 body {
-    padding: 4vw;
     background-color: #AECFF9;
+    padding: 4vw;
 }
 
-.button,
-button[id^="add-another-"] {
-    padding: 5px;
+.button {
     border: 2px solid #999;
     border-radius: 3px;
     font-size: 0.9rem;
+    padding: 5px;
 }
 
-
-#mm-gpa-rb-block, #mm-gpa-rb-block div, #mm-gpa-block * {
-    display: inline;
+#courses * {
+    border: 1px dashed black;
+    font-weight: bold;
 }
-
-#mm-gpa-block .scale {
-    padding: 0 10px;
-}
-
-#mm-gpa-rb-block div {
-    padding-left: 15px;
-}
+/* for debugging */
 
 .eval-box {
-    display: block;
-    padding: 20px;
-    margin-bottom: 20px;
     background-color: white;
+    display: block;
+    margin-bottom: 20px;
+    padding: 20px;
 }
 
 #eval-btn {
@@ -105,6 +96,24 @@ select {
     margin-left: 10px;
 }
 
+#mm-gpa-rb-block, #mm-gpa-rb-block div, #mm-gpa-block * {
+    display: inline;
+}
+
+#mm-gpa-block .scale .mm-gpa {
+    margin: 0 10px;
+}
+
+#mm-gpa-rb-block div {
+    padding-left: 15px;
+}
+
+output {
+    display: block;
+    padding: 0.4vw;
+    text-align: center;
+}
+
 #page-heading-logo {
     padding-right: 1vw;
 }
@@ -136,5 +145,3 @@ select {
     color: gray;
     text-align: center;
 }
-
-
