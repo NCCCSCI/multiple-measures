@@ -28,7 +28,7 @@ function accuplacer()
 
   const wrtg =
   document.getElementById("acc-wrtg").value.trim(); 
-
+  localStorage.setItem(storageConfig.name.wrtg,wrtg);
   const essy =
   document.getElementById("acc-essy").value.trim(); 
   localStorage.setItem(storageConfig.name.essy, essy);
@@ -37,7 +37,7 @@ function accuplacer()
   document.getElementById("acc-arng").value.trim(); 
   const arngRange = arng.split(/[_-]/);
   //localStorage.setItem(storageConfig.name.arng, arng);
-  
+  localStorage.setItem(storageConfig.name.arngRange,arngRange);
 
   const qas = 
   document.getElementById("acc-qas").value.trim();
@@ -48,8 +48,8 @@ function accuplacer()
   const aaf =
   document.getElementById("acc-aaf").value.trim(); 
   const aafRange = aaf.split(/[_-]/);
-  //localStorage.setItem(storageConfig.name.aaf, aaf);
-  
+ 
+  localStorage.setItem(storageConfig.name.aafRange,aafRange);
 
   // grabbing the thresholds
   const thresholdWrtg = Object.keys(EnglishPlacementNative).reverse();
