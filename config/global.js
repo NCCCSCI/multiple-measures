@@ -14,7 +14,7 @@ const storageConfig = {
        gpaButton: PREFIX + 'gpaButton',
        hsEnglish: PREFIX + 'hsEnglish', 
        hsMath: PREFIX + 'hsMath', 
-       namePlacement: PREFIX + 'namePlacement',
+       mathTaken: PREFIX + 'mathTaken',
 
        //accuplacer section inputs
        accuDate: PREFIX + 'accuDate', 

@@ -47,7 +47,6 @@ function highSchool() {
     document.querySelector('[name = "mm-gpa-rb"]:checked').value;
     localStorage.setItem(storageConfig.name.gpaButton,gpaButton);
 
-
     const gpaText=
     document.getElementById("mm-gpa").value.trim();
     localStorage.setItem(storageConfig.name.gpaText,gpaText);
@@ -59,25 +58,8 @@ function highSchool() {
     const hsMath =
     document.getElementById("mm-math").value.trim();
     localStorage.setItem(storageConfig.name.hsMath, hsMath);
-     console.log(hsMath);   
+     
 
-    // getting the name thresold
-    const thresholdName = Object.keys(HSCourseEqConfig ).reverse();
-    //const thresholdSchool = Object.keys(HighSchoolConfig).reverse();
- 
-    // getting name placement
-    const namePlacement = thresholdName.find(thresholdName => hsName == thresholdName);
-  // const schoolNameGpaScale = thresholdSchool.find(thresholdSchool=> hsName == thresholdSchool);
-    
-    // return the math class they should take based on which hs math they've taken placement
-    if (namePlacement !== "undefined") {
-        const thresholdMath = Object.keys(HSCourseEqConfig [namePlacement]).reverse();
-        console.log(thresholdMath);
-        const mathTaken = thresholdMath.find(thresholdMath => hsMath >= thresholdMath);
-        console.log(mathTaken);
-        localStorage.setItem(storageConfig.name.namePlacement, HSCourseEqConfig [namePlacement] [mathTaken]);
-        console.log(HSCourseEqConfig [namePlacement] [mathTaken]);
-    }
 
     /*
     if (gpaText == scale) {
@@ -87,8 +69,8 @@ function highSchool() {
 
 
     }
-*/
 
+*/
 
 
 
