@@ -59,37 +59,19 @@ function highSchool() {
     document.getElementById("mm-math").value.trim();
     localStorage.setItem(storageConfig.name.hsMath, hsMath);
      
+     const thresholdGpa = Object.keys(HighSchoolConfig);
+     const highSchoolName= thresholdGpa.find(thresholdGpa => hsName === thresholdGpa); 
 
 
-    /*
-    if (gpaText == scale) {
-        const thresholdGpa = Object.keys(HighSchoolConfig [schoolNameGpaScale]).reverse();
-        let scaleGpa = thresholdGpa .find(thresholdGpa  => gpaText / thresholdGpa);
-        console.log(scaleGpa);
+    if (gpaButton === 'Scale') {
+        const scaleGpa = HighSchoolConfig[highSchoolName].Scale;
+        const gpa = gpaText /scaleGpa ;
+        console.log(gpa);
 
 
     }
 
-*/
 
-
-
-
-
-    
-
- 
-
-
-
-
-
-
-
-
-
-//null if nothings found
-return null;  
 }
 
 //function to test eval button
