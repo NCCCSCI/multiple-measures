@@ -8,15 +8,15 @@ function evalBox() {
 
     let evalBtn = document.getElementById("eval-btn");
     let allInputs = document.querySelectorAll(".accordion > input, select");
-    let courses = document.getElementsByClassName("evaluated-course");
-    let placements = [
-        'namePlacement',
+    let courses = document.querySelectorAll(".evaluated-course");
+    /* let placements = [
+        'hsMath',
         'mathPlacement',
         'readingPlacement',
         'wrtgPlacement',
         'qasPlacement',
         'aafPlacement'
-    ];
+    ]; */
 
     // evaluate button / evaluation box popup function
     evalBtn.addEventListener("click", function (evt) {
@@ -28,29 +28,32 @@ function evalBox() {
 
         // adding qualifying courses
         courses.forEach(course => {
-            placements.forEach(item => {
-                course.setAttribute("id", "evaluated-course-" + item);
-                switch (item) {
-                    case 'namePlacement':
-                        course.textContent = localStorage.getItem(storageConfig.name.namePlacement);
-                        break;
-                    case 'mathPlacement':
-                        course.textContent = localStorage.getItem(storageConfig.name.mathPlacement);
-                        break;
-                    case 'readingPlacement':
-                        course.textContent = localStorage.getItem(storageConfig.name.readingPlacement);
-                        break;
-                    case 'wrtgPlacement':
-                        course.textContent = localStorage.getItem(storageConfig.name.wrtgPlacement);
-                        break;
-                    case 'qasPlacement':
-                        course.textContent = localStorage.getItem(storageConfig.name.qasPlacement);
-                        break;
-                    case 'aafPlacement':
-                        course.textContent = localStorage.getItem(storageConfig.name.aafPlacement);
-                        break;
-                }
-            });
+            switch (course.classList.contains()) {
+                case 'mm':
+                    course.setAttribute("id", "evaluated-hsMath");
+                    course.textContent = localStorage.getItem(storageConfig.name.hsMath);
+                    break;
+                case 'satMath':
+                    course.setAttribute("id", "evaluated-mathPlacement");
+                    course.textContent = localStorage.getItem(storageConfig.name.mathPlacement);
+                    break;
+                case 'satEng':
+                    course.setAttribute("id", "evaluated-readingPlacement");
+                    course.textContent = localStorage.getItem(storageConfig.name.readingPlacement);
+                    break;
+                case 'accEng':
+                    course.setAttribute("id", "evaluated-wrtgPlacement");
+                    course.textContent = localStorage.getItem(storageConfig.name.wrtgPlacement);
+                    break;
+                case 'accMath':
+                    course.setAttribute("id", "evaluated-qasPlacement");
+                    course.textContent = localStorage.getItem(storageConfig.name.qasPlacement);
+                    break;
+                case 'accAaf':
+                    course.setAttribute("id", "evaluated-aafPlacement");
+                    course.textContent = localStorage.getItem(storageConfig.name.aafPlacement);
+                    break;
+            }
         });
     });
 
