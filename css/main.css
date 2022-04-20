@@ -32,9 +32,7 @@ body {
 
 #courses * {
     border: 1px dashed black;
-    font-weight: bold;
 }
-/* for debugging */
 
 .eval-box {
     background-color: white;
@@ -62,7 +60,9 @@ h1 {
     font-size: 2rem;
 }
 
-h5 {
+table, table * {
+    margin: auto;
+    padding: 0.5vw;
     text-align: center;
 }
 

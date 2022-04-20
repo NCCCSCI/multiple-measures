@@ -8,7 +8,7 @@ function evalBox() {
 
     let evalBtn = document.getElementById("eval-btn");
     let allInputs = document.querySelectorAll(".accordion > input, select");
-    let courses = document.getElementById("courses");
+    let courses = document.getElementsByClassName("evaluated-course");
     let placements = [
         'namePlacement',
         'mathPlacement',
@@ -18,31 +18,39 @@ function evalBox() {
         'aafPlacement'
     ];
 
-    // let gpaPlacement = storageConfig.name.gpa; // working on it
-    let satMathPlacement = localStorage.getItem(storageConfig.name.mathPlacement);
-    let satEngPlacement = localStorage.getItem(storageConfig.name.readingPlacement);
-    /* let accEngPlacement = localStorage.getItem(storageConfig.name.wtrgPlacement);
-    let accMathPlacement = localStorage.getItem(storageConfig.name.qasPlacement);
-    let accAdvMathPlacement = localStorage.getItem(storageConfig.name.aafPlacement); */
-
     // evaluate button / evaluation box popup function
     evalBtn.addEventListener("click", function (evt) {
         let evalBox = document.getElementById("eval-box");
         let evalBoxStatus = evalBox.getAttribute('class');
-
         if (evalBoxStatus === 'eval-box hidden') {
             evalBox.setAttribute('class', 'eval-box');
         }
 
         // adding qualifying courses
-        courses.innerHTML = '';
-        let idIndex = 1;
-        placements.forEach(item => {
-            let courseItem = document.createElement("output");
-            courseItem.setAttribute("id", "evaluated-course-" + idIndex);
-            courseItem.textContent = item;
-            courses.appendChild(courseItem);
-            idIndex++;
+        courses.forEach(course => {
+            placements.forEach(item => {
+                course.setAttribute("id", "evaluated-course-" + item);
+                switch (item) {
+                    case 'namePlacement':
+                        course.textContent = localStorage.getItem(storageConfig.name.namePlacement);
+                        break;
+                    case 'mathPlacement':
+                        course.textContent = localStorage.getItem(storageConfig.name.mathPlacement);
+                        break;
+                    case 'readingPlacement':
+                        course.textContent = localStorage.getItem(storageConfig.name.readingPlacement);
+                        break;
+                    case 'wrtgPlacement':
+                        course.textContent = localStorage.getItem(storageConfig.name.wrtgPlacement);
+                        break;
+                    case 'qasPlacement':
+                        course.textContent = localStorage.getItem(storageConfig.name.qasPlacement);
+                        break;
+                    case 'aafPlacement':
+                        course.textContent = localStorage.getItem(storageConfig.name.aafPlacement);
+                        break;
+                }
+            });
         });
     });
 
