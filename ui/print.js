@@ -29,7 +29,7 @@ document.getElementById("mm-hsname").textContent = hsName;
 const hsYear = localStorage.getItem(storageConfig.name.hsYear).replace(/_+/g, ' ').replace("Select","Not entered");
 document.getElementById("mm-date").textContent = hsYear;
 //GPA Input
-const GPA = localStorage.getItem(storageConfig.name.GPA);
+const GPA = localStorage.getItem(storageConfig.name.gpaText);
 if (GPA != 0){
 document.getElementById("mm-gpa").textContent = GPA;}
 else{
