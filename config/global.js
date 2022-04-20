@@ -30,9 +30,9 @@ const storageConfig = {
        qasPlacement: PREFIX + 'qasPlacement', 
        arngPlacement: PREFIX + 'arngPlacement',
        aafPlacement: PREFIX + 'aafPlacement', 
-       //arngRange: PREFIX + 'arngRange', 
-       //qasRange: PREFIX + 'qasRange', 
-       //aafRange: PREFIX + 'aafRange', 
+       arngRange: PREFIX + 'arngRange', 
+       qasRange: PREFIX + 'qasRange', 
+       aafRange: PREFIX + 'aafRange', 
 
        // SAT section inputs
        satDate:PREFIX + 'satDate', 
