@@ -59,6 +59,7 @@ function highSchool() {
     const hsMath =
     document.getElementById("mm-math").value.trim();
     localStorage.setItem(storageConfig.name.hsMath, hsMath);
+     console.log(hsMath);   
 
     // getting the name thresold
     const thresholdName = Object.keys(HSCourseEqConfig ).reverse();
@@ -72,7 +73,7 @@ function highSchool() {
     if (namePlacement !== "undefined") {
         const thresholdMath = Object.keys(HSCourseEqConfig [namePlacement]).reverse();
         console.log(thresholdMath);
-        const mathTaken = thresholdMath.find(thresholdMath => hsMath == thresholdMath);
+        const mathTaken = thresholdMath.find(thresholdMath => hsMath >= thresholdMath);
         console.log(mathTaken);
         localStorage.setItem(storageConfig.name.namePlacement, HSCourseEqConfig [namePlacement] [mathTaken]);
         console.log(HSCourseEqConfig [namePlacement] [mathTaken]);
