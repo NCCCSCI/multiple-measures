@@ -28,31 +28,30 @@ function evalBox() {
 
         // adding qualifying courses
         courses.forEach(course => {
-            switch (course.classList.contains()) {
-                case 'mm':
-                    course.setAttribute("id", "evaluated-hsMath");
-                    course.textContent = localStorage.getItem(storageConfig.name.hsMath);
-                    break;
-                case 'satMath':
-                    course.setAttribute("id", "evaluated-mathPlacement");
-                    course.textContent = localStorage.getItem(storageConfig.name.mathPlacement);
-                    break;
-                case 'satEng':
-                    course.setAttribute("id", "evaluated-readingPlacement");
-                    course.textContent = localStorage.getItem(storageConfig.name.readingPlacement);
-                    break;
-                case 'accEng':
-                    course.setAttribute("id", "evaluated-wrtgPlacement");
-                    course.textContent = localStorage.getItem(storageConfig.name.wrtgPlacement);
-                    break;
-                case 'accMath':
-                    course.setAttribute("id", "evaluated-qasPlacement");
+            const scoreClass = course.getAttribute('class');
+
+            if (scoreClass.includes('mm')) {
+                course.setAttribute("id", "evaluated-hsMath");
+                course.textContent = localStorage.getItem(storageConfig.name.hsMath);
+            } else if (scoreClass.includes('satMath')) {
+                course.setAttribute("id", "evaluated-mathPlacement");
+                course.textContent = localStorage.getItem(storageConfig.name.mathPlacement);
+            } else if (scoreClass.includes('satEng')) {
+                course.setAttribute("id", "evaluated-readingPlacement");
+                course.textContent = localStorage.getItem(storageConfig.name.readingPlacement);
+            } else if (scoreClass.includes('accEng')) {
+                course.setAttribute("id", "evaluated-wrtgPlacement");
+                course.textContent = localStorage.getItem(storageConfig.name.wrtgPlacement);
+            } else if (scoreClass.includes('accMath')) {
+                course.setAttribute("id", "evaluated-qasPlacement");
                     course.textContent = localStorage.getItem(storageConfig.name.qasPlacement);
-                    break;
-                case 'accAaf':
-                    course.setAttribute("id", "evaluated-aafPlacement");
+            } else {
+                course.setAttribute("id", "evaluated-aafPlacement");
                     course.textContent = localStorage.getItem(storageConfig.name.aafPlacement);
-                    break;
+            }
+
+            if (course.textContent === '') {
+                course.parentNode.classList.add('hidden');
             }
         });
     });
