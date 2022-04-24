@@ -1,9 +1,6 @@
 // bring in the configuration for highschool gpa scales
 import { HighSchoolConfig } from '../config/mmhighschools.js';
 
-// bring in the configuration for highschool gpa scales
-import { HSCourseEqConfig  } from '../config/HighSchoolCourseEquivalencies.js';
-
 // import math classes based off gpa
 import { MathConfig } from '../config/mmmath.js';
 
@@ -59,17 +56,55 @@ function highSchool() {
     document.getElementById("mm-math").value.trim();
     localStorage.setItem(storageConfig.name.hsMath, hsMath);
      
+    // Grabbing thresdholds for school name and recommend math/ english classes. 
      const thresholdGpa = Object.keys(HighSchoolConfig);
      const highSchoolName= thresholdGpa.find(thresholdGpa => hsName === thresholdGpa); 
+     const GpaMathThreshold = Object.keys(MathConfig);
+     const matchingMathClass = GpaMathThreshold.find(GpaMathThreshold => hsMath === GpaMathThreshold); 
+     const GpaEnglishThreshold = Object.keys(EnglishConfig);
+     const matchingEnglishClass = GpaEnglishThreshold.find(GpaEnglishThreshold => hsEnglish === GpaEnglishThreshold);
 
 
     if (gpaButton === 'Scale') {
         const scaleGpa = HighSchoolConfig[highSchoolName].Scale;
-        const gpa = gpaText /scaleGpa ;
-        console.log(gpa);
+        const sGpa = gpaText /scaleGpa ;
+        localStorage.setItem(storageConfig.name.sGpa, sGpa);
 
+        // comparing highschool scale gpa to the school name gpa and returning the class they should take 
+        const sGpaMathPlacement = Object.keys(MathConfig [matchingMathClass]).reverse();
+        const sRecommendMath = sGpaMathPlacement.find(sGpaMathPlacement  => sGpa >= sGpaMathPlacement );
+        localStorage.setItem(storageConfig.name.sRecommendMath, sRecommendMath);
+        console.log(sRecommendMath);
 
+        /*
+        const sGpaEnglishPlacement = Object.keys(EnglishConfig [matchingEnglishClass]).reverse();
+        const sRecommendEnglish = sGpaEnglishPlacement.find(sGpaEnglishPlacement => sGpa >= sGpaEnglishPlacement );
+        //localStorage.setItem(storageConfig.name.sRecommendEnglish, sRecommendEnglish);
+        console.log(sRecommendEnglish);
+        */
+
+    }       
+    else {
+        // comparing highschool weighed scale gpa to the school name gpa and returning the class they should take 
+        const wscaleGpa = HighSchoolConfig[highSchoolName].WScale;
+        const wGpa = gpaText / wscaleGpa ;
+        localStorage.setItem(storageConfig.name.wGpa, wGpa);
+        console.log(wGpa);
+
+        const wGpaMathPlacement = Object.keys(MathConfig [matchingMathClass ]).reverse();
+        const wRecommendMath = wGpaMathPlacement .find(wGpaMathPlacement  => wGpa >= wGpaMathPlacement );
+        localStorage.setItem(storageConfig.name.wRecommendMath, wRecommendMath);
+        console.log(wRecommendMath );
+
+        /*
+        const wGpaEnglishPlacement = Object.keys(EnglishConfig [matchingEnglishClass]).reverse();
+        const wRecommendEnglish = wGpaEnglishPlacement.find(wGpaEnglishPlacement => wGpa >= wGpaEnglishPlacement );
+        //localStorage.setItem(storageConfig.name.sRecommendEnglish, sRecommendEnglish);
+        console.log(wRecommendEnglish);
+        */
     }
+
+    
 
 
 }
