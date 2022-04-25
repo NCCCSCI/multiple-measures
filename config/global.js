@@ -33,8 +33,8 @@ const storageConfig = {
        thresholdAaf: PREFIX + 'thresholdAaf', 
        wrtgPlacement: PREFIX + 'EnglishPlacementNative [wrtgPlacement][essy]', 
        qasPlacement: PREFIX + 'qasPlacement', 
-       arngPlacement: PREFIX + 'arngPlacement',
-       aafPlacement: PREFIX + 'aafPlacement', 
+       arngPlacement: PREFIX + 'MathPlacement [qasPlacement] [arngPlacement]',
+       aafPlacement: PREFIX + 'UpperLevelMathPlacement [qasPlacement] [aafPlacement]', 
        arngRange: PREFIX + 'arngRange', 
        qasRange: PREFIX + 'qasRange', 
        aafRange: PREFIX + 'aafRange', 
@@ -45,8 +45,8 @@ const storageConfig = {
        satReading: PREFIX + 'satReading', 
        thresholdMath: PREFIX + 'thresholdMath', 
        thresholdReading: PREFIX + 'thresholdReading', 
-       mathPlacement: PREFIX + 'mathPlacement', 
-       readingPlacement: PREFIX + 'readingPlacement',
+       mathPlacement: PREFIX + 'SATConfig.Mathematics[mathPlacement]', 
+       readingPlacement: PREFIX + 'SATConfig.Critical_Reading_and_Writing[readingPlacement]',
 
     }
 }
