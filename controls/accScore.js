@@ -29,6 +29,7 @@ function accuplacer()
   const wrtg =
   document.getElementById("acc-wrtg").value.trim(); 
   localStorage.setItem(storageConfig.name.wrtg,wrtg);
+
   const essy =
   document.getElementById("acc-essy").value.trim(); 
   localStorage.setItem(storageConfig.name.essy, essy);
@@ -36,13 +37,13 @@ function accuplacer()
   const arng =
   document.getElementById("acc-arng").value.trim(); 
   const arngRange = arng.split(/[_-]/);
-  //localStorage.setItem(storageConfig.name.arng, arng);
+  localStorage.setItem(storageConfig.name.arng, arng);
   localStorage.setItem(storageConfig.name.arngRange,arngRange);
 
   const qas = 
   document.getElementById("acc-qas").value.trim();
   const qasRange = qas.split(/[_-]/);
-  //localStorage.setItem(storageConfig.name.qas, qas);
+  localStorage.setItem(storageConfig.name.qas, qas);
   localStorage.setItem(storageConfig.name.qasRange, qasRange);
 
   const aaf =
@@ -55,9 +56,9 @@ function accuplacer()
   const thresholdWrtg = Object.keys(EnglishPlacementNative).reverse();
   const thresholdQas = Object.keys(MathPlacement).reverse();
   //const thresholdAaf = Object.keys(UpperLevelMathPlacement).reverse();
-  //localStorage.setItem(storageConfig.name.thresholdWrtg, thresholdWrtg);
-  //localStorage.setItem(storageConfig.name.thresholdQas, thresholdQas);
-  //localStorage.setItem(storageConfig.name.thresholdAaf, thresholdAaf);
+  localStorage.setItem(storageConfig.name.thresholdWrtg, thresholdWrtg);
+  localStorage.setItem(storageConfig.name.thresholdQas, thresholdQas);
+  localStorage.setItem(storageConfig.name.thresholdAaf, thresholdAaf);
     
   // finding the first threshold score
   const wrtgPlacement = thresholdWrtg.find(thresholdWrtg => wrtg > thresholdWrtg); 
@@ -65,7 +66,7 @@ function accuplacer()
   //const aafPlacement = thresholdAaf.find(thresholdAaf => aafRange[0] >= thresholdAaf);
   localStorage.setItem(storageConfig.name.wrtgPlacement, wrtgPlacement);
   localStorage.setItem(storageConfig.name.qasPlacement, qasPlacement);
-  //localStorage.setItem(storageConfig.name.aafPlacement, aafPlacement);
+  localStorage.setItem(storageConfig.name.aafPlacement, aafPlacement);
   
   // return writing placement
   if (wrtgPlacement !== "undefined") {
