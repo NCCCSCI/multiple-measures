@@ -8,6 +8,8 @@ import {
     HighSchoolConfig
 } from "../config/mmhighschools.js";
 
+import{storageConfig} from "../config/global.js";
+
 function hsSelect() {
     // VARIABLE DECLARATIONS
     // hs select
@@ -44,10 +46,12 @@ function hsSelect() {
                             if (radioButton.value === "Scale") {
                                 if (scaleType === radioButton.value) {
                                     gpaScaleOutput.textContent = HighSchoolConfig[hs][scaleType];
+                                    localStorage.setItem(storageConfig.name.GPAScale,HighSchoolConfig[hs][scaleType]);
                                 }
                             } else {
                                 if (scaleType === radioButton.value) {
                                     gpaScaleOutput.textContent = HighSchoolConfig[hs][scaleType];
+                                    localStorage.setItem(storageConfig.name.GPAScale,HighSchoolConfig[hs][scaleType]);
                                 }
                             }
                         });
