@@ -76,12 +76,12 @@ function highSchool() {
         localStorage.setItem(storageConfig.name.sRecommendMath, sRecommendMath);
         console.log(sRecommendMath);
 
-        /*
+        
         const sGpaEnglishPlacement = Object.keys(EnglishConfig [matchingEnglishClass]).reverse();
         const sRecommendEnglish = sGpaEnglishPlacement.find(sGpaEnglishPlacement => sGpa >= sGpaEnglishPlacement );
         //localStorage.setItem(storageConfig.name.sRecommendEnglish, sRecommendEnglish);
         console.log(sRecommendEnglish);
-        */
+        
 
     }       
     else {
@@ -96,12 +96,12 @@ function highSchool() {
         localStorage.setItem(storageConfig.name.wRecommendMath, wRecommendMath);
         console.log(wRecommendMath );
 
-        /*
+        
         const wGpaEnglishPlacement = Object.keys(EnglishConfig [matchingEnglishClass]).reverse();
         const wRecommendEnglish = wGpaEnglishPlacement.find(wGpaEnglishPlacement => wGpa >= wGpaEnglishPlacement );
         //localStorage.setItem(storageConfig.name.sRecommendEnglish, sRecommendEnglish);
         console.log(wRecommendEnglish);
-        */
+        
     }
 
     

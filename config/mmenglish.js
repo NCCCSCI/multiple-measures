@@ -17,7 +17,7 @@
 // admissions does not usually specify upper limits, only lower ones.
 
 const EnglishConfig = {
-	English_Foundational_Fundamental: {
+	English_Foundational: {
         0: "Needs to Take English Accuplacer",
 		.49999: "ENGL101N with Co-Requisite Workshop",
 		.81299: "ENGL101N",
