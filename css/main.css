@@ -6,6 +6,10 @@ a {
     color: #42504a;
 }
 
+body {
+    font-family: sans-serif;
+}
+
 .accordion,
 .eval-box {
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
