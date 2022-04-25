@@ -30,9 +30,18 @@ function evalBox() {
         courses.forEach(course => {
             const scoreClass = course.getAttribute('class');
 
-            if (scoreClass.includes('mm')) {
-                course.setAttribute("id", "evaluated-hsMath");
-                course.textContent = localStorage.getItem(storageConfig.name.hsMath);
+            if (scoreClass.includes('mmUWMath')) {
+                course.setAttribute("id", "evaluated-mmUWMath");
+                course.textContent = localStorage.getItem(storageConfig.name.sRecommendMath);
+            } else if (scoreClass.includes('mmUWEng')) {
+                course.setAttribute("id", "evaluated-mmUWEng");
+                course.textContent = localStorage.getItem(storageConfig.name.sRecommendEnglish);
+            } else if (scoreClass.includes('mmWMath')) {
+                course.setAttribute("id", "evaluated-mmWMath");
+                course.textContent = localStorage.getItem(storageConfig.name.wRecommendMath);
+            } else if (scoreClass.includes('mmWEng')) {
+                course.setAttribute("id", "evaluated-mmWEng");
+                course.textContent = localStorage.getItem(storageConfig.name.wRecommendEnglish);
             } else if (scoreClass.includes('satMath')) {
                 course.setAttribute("id", "evaluated-mathPlacement");
                 course.textContent = localStorage.getItem(storageConfig.name.mathPlacement);
