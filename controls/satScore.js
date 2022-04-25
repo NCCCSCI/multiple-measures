@@ -36,7 +36,8 @@ function sat(){
 
     // finding the first threshold score
     const mathPlacement = thresholdMath.find(thresholdMath =>  satMath > thresholdMath); 
-    const readingPlacement = thresholdReading.find( thresholdReading => satReading > thresholdReading); 
+    const readingPlacement = thresholdReading.find( thresholdReading => satReading > thresholdReading);
+    console.log(readingPlacement); 
 
     if (mathPlacement !== "undefined") {
         // return math placement
@@ -47,7 +48,8 @@ function sat(){
    if (readingPlacement !== "undefined") {
          // return reading placement
          localStorage.setItem(storageConfig.name.readingPlacement, SATConfig.Critical_Reading_and_Writing[readingPlacement]);
-        return (SATConfig.Critical_Reading_and_Writing[readingPlacement]);
+        console.log(SATConfig.Critical_Reading_and_Writing[readingPlacement]);
+        
     }
 
     //null if nothings found
