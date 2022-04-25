@@ -93,7 +93,7 @@ function highSchool() {
 
             // comparing highschool weighted gpa to the school name gpa and returning the class they should take 
             const wGpaMathPlacement = Object.keys(MathConfig [matchingMathClass ]).reverse();
-            const wRecommendMath = wGpaMathPlacement .find(wGpaMathPlacement  => wGpa >= wGpaMathPlacement );
+            const wRecommendMath = wGpaMathPlacement.find(wGpaMathPlacement  => wGpa >= wGpaMathPlacement );
             localStorage.setItem(storageConfig.name.wRecommendMath, wRecommendMath);
             //console.log(wRecommendMath );
 
