@@ -30,8 +30,9 @@ const hsYear = localStorage.getItem(storageConfig.name.hsYear).replace(/_+/g, ' 
 document.getElementById("mm-date").textContent = hsYear;
 //GPA Input
 const GPA = localStorage.getItem(storageConfig.name.gpaText);
+const GPAScale = localStorage.getItem(storageConfig.name.GPAScale);
 if (GPA != 0){
-document.getElementById("mm-gpa").textContent = GPA;}
+document.getElementById("mm-gpa").textContent = GPA + "  out of  "+ GPAScale;}
 else{
 document.getElementById("mm-gpa").textContent = "Not entered";}
 
