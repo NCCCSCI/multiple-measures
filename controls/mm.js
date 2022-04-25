@@ -29,7 +29,7 @@ function highSchool() {
     
     const stID =
     document.getElementById("input-id").value.trim();
-    if(stID !== null){
+    if (stID !== null){
     localStorage.setItem(storageConfig.name.stID,stID);}
 
     const hsName =
@@ -67,7 +67,7 @@ function highSchool() {
 
     if (gpaButton === 'Scale') {
         const scaleGpa = HighSchoolConfig[highSchoolName].Scale;
-        const sGpa = gpaText /scaleGpa ;
+        const sGpa = gpaText / scaleGpa ;
         localStorage.setItem(storageConfig.name.sGpa, sGpa);
 
         // comparing highschool scale gpa to the school name gpa and returning the class they should take 

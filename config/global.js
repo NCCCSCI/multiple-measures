@@ -21,7 +21,6 @@ const storageConfig = {
        wRecommendMath: PREFIX + ' wRecommendMath', // recommended math class based off hs weighed gpa 
        wRecommendEnglish: PREFIX + ' wRecommendEnglish', // recommended english class based off hs weighed gpa 
        
-
        //accuplacer section inputs
        accuDate: PREFIX + 'accuDate', 
        wrtg: PREFIX + 'wrtg', 
@@ -48,12 +47,6 @@ const storageConfig = {
        //thresholdReading: PREFIX + 'thresholdReading', 
        mathPlacement: PREFIX + 'mathPlacement', 
        readingPlacement: PREFIX + 'readingPlacement',
-
-
-      
-    
-      
-       
 
     }
 }
