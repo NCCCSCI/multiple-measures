@@ -53,25 +53,9 @@ function hsSelect() {
                         });
                     });
                 }
-            
-
-
-                /* radioButtons.forEach(radioButton => {
-                    radioButton.addEventListener('click', function (evt) {
-                        if (radioButton.value === "unweighted") {
-                            console.log(radioButton.value);
-                            console.log(HighSchoolConfig[hs][course]);
-                        } else {
-                            console.log(radioButton.value);
-                        }
-                    });
-                }); */
             }
         }
     });
-
-    
-
 }
 
 /* 
