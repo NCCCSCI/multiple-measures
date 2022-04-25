@@ -4,7 +4,6 @@ import { SATConfig } from '../config/sat.js';
 // importing storage config
 import { storageConfig  } from '../config/global.js';
 
-
 function clearStorage3() {
     for (let k in storageConfig.name)
     {
@@ -38,8 +37,6 @@ function sat(){
     // finding the first threshold score
     const mathPlacement = thresholdMath.find(thresholdMath =>  satMath > thresholdMath); 
     const readingPlacement = thresholdReading.find( thresholdReading => satReading > thresholdReading); 
-    
-    
 
     if (mathPlacement !== "undefined") {
         // return math placement
