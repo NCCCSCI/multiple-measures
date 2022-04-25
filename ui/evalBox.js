@@ -52,8 +52,8 @@ function evalBox() {
                 course.setAttribute("id", "evaluated-wrtgPlacement");
                 course.textContent = localStorage.getItem(storageConfig.name.wrtgPlacement);
             } else if (scoreClass.includes('accMath')) {
-                course.setAttribute("id", "evaluated-qasPlacement");
-                    course.textContent = localStorage.getItem(storageConfig.name.qasPlacement);
+                course.setAttribute("id", "evaluated-arngPlacement");
+                    course.textContent = localStorage.getItem(storageConfig.name.arngPlacement);
             } else {
                 course.setAttribute("id", "evaluated-aafPlacement");
                     course.textContent = localStorage.getItem(storageConfig.name.aafPlacement);
