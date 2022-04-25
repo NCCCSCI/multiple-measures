@@ -64,44 +64,46 @@ function highSchool() {
      const GpaEnglishThreshold = Object.keys(EnglishConfig);
      const matchingEnglishClass = GpaEnglishThreshold.find(GpaEnglishThreshold => hsEnglish === GpaEnglishThreshold);
 
+    if (highSchoolName !== undefined)
+    {
+        if (gpaButton === 'Scale') {
+            const scaleGpa = HighSchoolConfig[highSchoolName].Scale;
+            const sGpa = gpaText / scaleGpa ;
+            localStorage.setItem(storageConfig.name.sGpa, sGpa);
 
-    if (gpaButton === 'Scale') {
-        const scaleGpa = HighSchoolConfig[highSchoolName].Scale;
-        const sGpa = gpaText / scaleGpa ;
-        localStorage.setItem(storageConfig.name.sGpa, sGpa);
-
-        // comparing highschool scale gpa to the school name gpa and returning the class they should take 
-        const sGpaMathPlacement = Object.keys(MathConfig [matchingMathClass]).reverse();
-        const sRecommendMath = sGpaMathPlacement.find(sGpaMathPlacement  => sGpa >= sGpaMathPlacement );
-        localStorage.setItem(storageConfig.name.sRecommendMath, sRecommendMath);
-        console.log(sRecommendMath);
+            // comparing highschool scale gpa to the school name gpa and returning the class they should take 
+            const sGpaMathPlacement = Object.keys(MathConfig [matchingMathClass]).reverse();
+            const sRecommendMath = sGpaMathPlacement.find(sGpaMathPlacement  => sGpa >= sGpaMathPlacement );
+            localStorage.setItem(storageConfig.name.sRecommendMath, sRecommendMath);
+            console.log(sRecommendMath);
 
         
-        const sGpaEnglishPlacement = Object.keys(EnglishConfig [matchingEnglishClass]).reverse();
-        const sRecommendEnglish = sGpaEnglishPlacement.find(sGpaEnglishPlacement => sGpa >= sGpaEnglishPlacement );
-        localStorage.setItem(storageConfig.name.sRecommendEnglish, sRecommendEnglish);
-        console.log(sRecommendEnglish); 
+            const sGpaEnglishPlacement = Object.keys(EnglishConfig [matchingEnglishClass]).reverse();
+            const sRecommendEnglish = sGpaEnglishPlacement.find(sGpaEnglishPlacement => sGpa >= sGpaEnglishPlacement );
+            localStorage.setItem(storageConfig.name.sRecommendEnglish, sRecommendEnglish);
+            console.log(sRecommendEnglish); 
 
-    }       
-    else {
-        // comparing highschool weighed scale gpa to the school name gpa and returning the class they should take 
-        const wscaleGpa = HighSchoolConfig[highSchoolName].WScale;
-        const wGpa = gpaText / wscaleGpa ;
-        localStorage.setItem(storageConfig.name.wGpa, wGpa);
-        //console.log(wGpa);
+       }       
+        else {
+            // comparing highschool weighed scale gpa to the school name gpa and returning the class they should take 
+            const wscaleGpa = HighSchoolConfig[highSchoolName].WScale;
+            const wGpa = gpaText / wscaleGpa ;
+            localStorage.setItem(storageConfig.name.wGpa, wGpa);
+            //console.log(wGpa);
 
-         // comparing highschool weighted gpa to the school name gpa and returning the class they should take 
-        const wGpaMathPlacement = Object.keys(MathConfig [matchingMathClass ]).reverse();
-        const wRecommendMath = wGpaMathPlacement .find(wGpaMathPlacement  => wGpa >= wGpaMathPlacement );
-        localStorage.setItem(storageConfig.name.wRecommendMath, wRecommendMath);
-        //console.log(wRecommendMath );
+            // comparing highschool weighted gpa to the school name gpa and returning the class they should take 
+            const wGpaMathPlacement = Object.keys(MathConfig [matchingMathClass ]).reverse();
+            const wRecommendMath = wGpaMathPlacement .find(wGpaMathPlacement  => wGpa >= wGpaMathPlacement );
+            localStorage.setItem(storageConfig.name.wRecommendMath, wRecommendMath);
+            //console.log(wRecommendMath );
 
-        const wGpaEnglishPlacement = Object.keys(EnglishConfig [matchingEnglishClass]).reverse();
-        const wRecommendEnglish = wGpaEnglishPlacement.find(wGpaEnglishPlacement => wGpa >= wGpaEnglishPlacement );
-        localStorage.setItem(storageConfig.name.sRecommendEnglish, sRecommendEnglish);
-        //console.log(wRecommendEnglish);   
+            const wGpaEnglishPlacement = Object.keys(EnglishConfig [matchingEnglishClass]).reverse();
+            const wRecommendEnglish = wGpaEnglishPlacement.find(wGpaEnglishPlacement => wGpa >= wGpaEnglishPlacement );
+            localStorage.setItem(storageConfig.name.sRecommendEnglish, sRecommendEnglish);
+            //console.log(wRecommendEnglish);   
+        }
     }
-    return null;
+    
 }
 
 //function to test eval button
