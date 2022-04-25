@@ -79,7 +79,7 @@ function highSchool() {
         
         const sGpaEnglishPlacement = Object.keys(EnglishConfig [matchingEnglishClass]).reverse();
         const sRecommendEnglish = sGpaEnglishPlacement.find(sGpaEnglishPlacement => sGpa >= sGpaEnglishPlacement );
-        //localStorage.setItem(storageConfig.name.sRecommendEnglish, sRecommendEnglish);
+        localStorage.setItem(storageConfig.name.sRecommendEnglish, sRecommendEnglish);
         console.log(sRecommendEnglish);
         
 
