@@ -80,18 +80,14 @@ function accuplacer()
     localStorage.setItem(storageConfig.name.arngPlacement, MathPlacement [qasPlacement] [arngPlacement]);
     return (MathPlacement [qasPlacement] [arngPlacement]);
   }
-
     // return aaf math placement
     const thresholdAaf = Object.keys(UpperLevelMathPlacement [qasPlacement]).reverse();
     const aafPlacement = thresholdAaf.find(thresholdAaf => aafRange[0] >= thresholdAaf);
     localStorage.setItem(storageConfig.name.aafPlacement, UpperLevelMathPlacement [qasPlacement] [aafPlacement]);
     return (UpperLevelMathPlacement [qasPlacement] [aafPlacement]);
   
-
-
  //null if nothings found
 return null; 
-
 }
 
 
