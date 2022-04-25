@@ -40,6 +40,8 @@ function hsSelect() {
 
         for (const hs in HighSchoolConfig) { // loop through top level of HighSchoolConfig object
             if (hsSelect.value === hs) {
+                gpaScaleOutput.textContent = HighSchoolConfig[hs]["Scale"];
+                localStorage.setItem(storageConfig.name.GPAScale,HighSchoolConfig[hs]["Scale"]);
                 for (const scaleType in HighSchoolConfig[hs]) { // loop through high school level of HighSchoolConfig object: read
                     radioButtons.forEach(radioButton => {
                         radioButton.addEventListener('click', function (evt) {
