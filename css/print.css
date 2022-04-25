@@ -13,6 +13,7 @@ a, body {
 
 body {
 	background: none;
+	font-family: sans-serif;
 }
 
 body *, .eval-box {
