@@ -16,10 +16,10 @@ const storageConfig = {
        hsMath: PREFIX + 'hsMath', 
        sGpa: PREFIX + 'sGpa',  // scaled hs gpa
        wGpa: PREFIX + 'wGpa', // weighed hs gpa
-       sRecommendMath: PREFIX + ' sRecommendMath', // recommended math class based off hs scaled gpa 
-       sRecommendEnglish: PREFIX + ' sRecommendEnglish', // recommended english class based off hs scaled gpa 
-       wRecommendMath: PREFIX + ' wRecommendMath', // recommended math class based off hs weighed gpa 
-       wRecommendEnglish: PREFIX + ' wRecommendEnglish', // recommended english class based off hs weighed gpa 
+       sRecommendMath: PREFIX + 'sRecommendMath', // recommended math class based off hs scaled gpa 
+       sRecommendEnglish: PREFIX + 'sRecommendEnglish', // recommended english class based off hs scaled gpa 
+       wRecommendMath: PREFIX + 'wRecommendMath', // recommended math class based off hs weighed gpa 
+       wRecommendEnglish: PREFIX + 'wRecommendEnglish', // recommended english class based off hs weighed gpa 
        
        //accuplacer section inputs
        accuDate: PREFIX + 'accuDate', 
@@ -31,7 +31,7 @@ const storageConfig = {
        thresholdWrtg: PREFIX + 'thresholdWrtg', 
        thresholdQas : PREFIX + 'thresholdQas ', 
        thresholdAaf: PREFIX + 'thresholdAaf', 
-       wrtgPlacement: PREFIX + 'wrtgPlacement', 
+       wrtgPlacement: PREFIX + 'EnglishPlacementNative [wrtgPlacement][essy]', 
        qasPlacement: PREFIX + 'qasPlacement', 
        arngPlacement: PREFIX + 'arngPlacement',
        aafPlacement: PREFIX + 'aafPlacement', 
