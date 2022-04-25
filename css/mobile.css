@@ -28,3 +28,7 @@
 .student-id {
     display: block;
 }
+
+.label {
+    display: none;
+}
