@@ -27,7 +27,6 @@ function mathOptionGPA() {
             // pre-calc, algebra ii - <3.0 -> places them into MATH 120 (no prompt)
         } else if ((gpaOptionSelectValue === "1.0-1.9") && (['Precalculus_Trigonometry', 'AlgebraII_Statistics'].includes(mathOptionSelectValue))) {
             mathPopup.setAttribute("class", "hidden");
-            console.log("Place into MATH 120");
         } else {
             mathPopup.setAttribute("class", "hidden");
         }

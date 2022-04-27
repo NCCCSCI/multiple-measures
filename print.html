@@ -108,26 +108,67 @@
                         <p class="acc-aaf" id="acc-aaf"></p>
                     </div>
                 </div>
-                <div class="eval-box" id="eval-box">
-                    <div class="based-on">
-                        <h5>Based on</h5>
-                        <!-- max of 2 scores -->
-                        <div id="scores">
-                            <output id="score"></output>
-                            <!-- Score Name 1: Score Range -->
-                        </div>
-                    </div>
+                <div
+                    class="eval-box" id="eval-box">
+                    <!-- Evaluation Box -->
                     <div class="qualifying-courses">
-                        <h5>Student may qualify for:</h5>
-                        <div id="courses">
-                            <output id="-evaluated-eng-course"></output>
-                            <!-- Qualifying English Course -->
-                            <output id="-evaluated-math-course"></output>
-                            <!-- Qualifying Math Course -->
-                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="label">Based On</th>
+                                    <th scope="col">Student may qualify for:</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="label">Unweighted Math</td>
+                                    <td class="evaluated-course mmUWMath"><p id="mmUWMath"></p></td>
+                                   
+                                </tr>
+                                <tr>
+                                    <td class="label">Unweighted English</td>
+                                    <td class="evaluated-course mmUWEng"><p id="mmUWEng"></p></td>
+                                </tr>
+                                <tr>
+                                    <td class="label">Weighted Math</td>
+                                    <td class="evaluated-course mmWMath"><p id="mmWMath"></p></td>
+                                </tr>
+                                <tr>
+                                    <td class="label">Weighted English</td>
+                                    <td class="evaluated-course mmWEng"><p id="mmWEng"></p></td>
+                                </tr>
+                                <tr>
+                                    <td class="label">SAT Math</td>
+                                    <td class="evaluated-course satMath"><p id="satMath"></p></td>
+                                </tr>
+                                <tr>
+                                    <td class="label">SAT English</td>
+                                    <td class="evaluated-course satEng"><p id="satEng"></p></td>
+                                </tr>
+                                <tr>
+                                    <td class="label">Accuplacer English</td>
+                                    <td class="evaluated-course accEng"><p id="accEng"></p></td>
+                                </tr>
+                                <tr>
+                                    <td class="label">Accuplacer Math</td>
+                                    <td class="evaluated-course accMath"><p id="accMath"></p></td>
+                                </tr>
+                                <tr>
+                                    <td class="label">Accuplacer Advanced Math</td>
+                                    <td class="evaluated-course accAaf"><p id="accAaf"></p></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <div>
                         <h6 id="unofficial-disclaimer">Disclaimer: This is an unofficial document for reference purposes only.</h6>
+                    </div>
+                    <div
+                        class="print-button no-print">
+                        <!-- Print Button -->
+                        <a href="print.html" target="_blank">
+                            <button type="button" class="button btn btn-light" id="print-btn" onclick="window.print();">Print</button>
+                        </a>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,3 @@
-
-
 const PREFIX = 'NCC_MM_';
 
 const storageConfig = {
@@ -16,6 +14,7 @@ const storageConfig = {
        hsMath: PREFIX + 'hsMath', 
        sGpa: PREFIX + 'sGpa',  // scaled hs gpa
        wGpa: PREFIX + 'wGpa', // weighed hs gpa
+       GPAType : PREFIX + 'GPAType', //Type of GPA
        GPAScale : PREFIX + 'GPAScale', //Scaled following HS config
        sRecommendMath: PREFIX + 'sRecommendMath', // recommended math class based off hs scaled gpa 
        sRecommendEnglish: PREFIX + 'sRecommendEnglish', // recommended english class based off hs scaled gpa 

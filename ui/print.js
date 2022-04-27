@@ -1,5 +1,3 @@
-//window.print();
-
 import {storageConfig} from "../config/global.js";
 
 
@@ -31,8 +29,10 @@ document.getElementById("mm-date").textContent = hsYear;
 //GPA Input
 const GPA = localStorage.getItem(storageConfig.name.gpaText);
 const GPAScale = localStorage.getItem(storageConfig.name.GPAScale);
+const GPAType = localStorage.getItem(storageConfig.name.GPAType);
+
 if (GPA != 0){
-document.getElementById("mm-gpa").textContent = GPA + "  out of  "+ GPAScale;}
+document.getElementById("mm-gpa").textContent = GPA + "  out of  "+ GPAScale + GPAType;}
 else{
 document.getElementById("mm-gpa").textContent = "Not entered";}
 
@@ -113,4 +113,34 @@ document.getElementById("acc-qas").textContent = qas;
 //Accuplacer Math Score Advanced Algebra & Functions (AAF) Input
 const aaf = localStorage.getItem(storageConfig.name.aafRange).replace(","," - ").replace(/_+/g, ' ').replace("Select","Not entered");
 document.getElementById("acc-aaf").textContent = aaf;
+
+
+//Evaluation Box
+const mmUWMath = localStorage.getItem(storageConfig.name.sRecommendMath);
+document.getElementById("mmUWMath").textContent = mmUWMath;
+
+const mmUWEng = localStorage.getItem(storageConfig.name.sRecommendEnglish);
+document.getElementById("mmUWEng").textContent = mmUWEng;
+
+const mmWMath = localStorage.getItem(storageConfig.name.wRecommendMath);
+document.getElementById("mmWMath").textContent = mmWMath;
+
+const mmWEng = localStorage.getItem(storageConfig.name.wRecommendEnglish);
+document.getElementById("mmWEng").textContent = mmWEng;
+
+const satMath = localStorage.getItem(storageConfig.name.mathPlacement);
+document.getElementById("satMath").textContent = satMath;
+
+const satEng = localStorage.getItem(storageConfig.name.readingPlacement);
+document.getElementById("satEng").textContent = satEng;
+
+const accEng = localStorage.getItem(storageConfig.name.wrtgPlacement);
+document.getElementById("accEng").textContent = accEng;
+
+const accMath = localStorage.getItem(storageConfig.name.arngPlacement);
+document.getElementById("accMath").textContent = accMath;
+
+const accAaf = localStorage.getItem(storageConfig.name.arngPlacement);
+document.getElementById("accAaf").textContent = accAaf;
+
 }
