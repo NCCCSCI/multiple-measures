@@ -70,6 +70,8 @@ function highSchool() {
             const scaleGpa = HighSchoolConfig[highSchoolName].Scale;
             const sGpa = gpaText / scaleGpa ;
             localStorage.setItem(storageConfig.name.sGpa, sGpa);
+            localStorage.setItem(storageConfig.name.GPAType,' (Unweighted)');
+           
 
             // comparing highschool scale gpa to the school name gpa and returning the class they should take 
             const sGpaMathPlacement = Object.keys(MathConfig [matchingMathClass]).reverse();
@@ -89,7 +91,8 @@ function highSchool() {
             const wscaleGpa = HighSchoolConfig[highSchoolName].WScale;
             const wGpa = gpaText / wscaleGpa ;
             localStorage.setItem(storageConfig.name.wGpa, wGpa);
-            //console.log(wGpa);
+            localStorage.setItem(storageConfig.name.GPAType,' (Weighted)');
+         
 
             // comparing highschool weighted gpa to the school name gpa and returning the class they should take 
             const wGpaMathPlacement = Object.keys(MathConfig [matchingMathClass ]).reverse();
@@ -119,4 +122,5 @@ function test2() {
 export {
     test2,clearStorage2
 }
+
 
