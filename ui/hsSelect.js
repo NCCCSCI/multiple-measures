@@ -8,7 +8,9 @@ import {
     HighSchoolConfig
 } from "../config/mmhighschools.js";
 
-import{storageConfig} from "../config/global.js";
+import {
+    storageConfig
+} from "../config/global.js";
 
 function hsSelect() {
     // VARIABLE DECLARATIONS
@@ -18,6 +20,11 @@ function hsSelect() {
     let mathSelect = document.getElementById("mm-math");
     let radioButtons = document.querySelectorAll("#mm-gpa-block > div > div > .mm-gpa-rb");
     let gpaScaleOutput = document.getElementById("gpaScale");
+
+    let mmUWMath = document.getElementById('mmUWMath');
+    let mmUWEng = document.getElementById('mmUWEng');
+    let mmWMath = document.getElementById('mmWMath');
+    let mmWEng = document.getElementById('mmWEng');
 
     hsSelect.addEventListener('input', function (evt) {
         mathSelect.innerHTML = '';
@@ -41,19 +48,27 @@ function hsSelect() {
         for (const hs in HighSchoolConfig) { // loop through top level of HighSchoolConfig object
             if (hsSelect.value === hs) {
                 gpaScaleOutput.textContent = HighSchoolConfig[hs]["Scale"];
-                localStorage.setItem(storageConfig.name.GPAScale,HighSchoolConfig[hs]["Scale"]);
+                localStorage.setItem(storageConfig.name.GPAScale, HighSchoolConfig[hs]["Scale"]);
                 for (const scaleType in HighSchoolConfig[hs]) { // loop through high school level of HighSchoolConfig object: read
                     radioButtons.forEach(radioButton => {
                         radioButton.addEventListener('click', function (evt) {
                             if (radioButton.value === "Scale") {
                                 if (scaleType === radioButton.value) {
                                     gpaScaleOutput.textContent = HighSchoolConfig[hs][scaleType];
-                                    localStorage.setItem(storageConfig.name.GPAScale,HighSchoolConfig[hs][scaleType]);
+                                    localStorage.setItem(storageConfig.name.GPAScale, HighSchoolConfig[hs][scaleType]);
+                                    mmWMath.classList.add('hidden');
+                                    mmWEng.classList.add('hidden');
+                                    mmUWMath.classList.remove('hidden');
+                                    mmUWEng.classList.remove('hidden');
                                 }
                             } else {
                                 if (scaleType === radioButton.value) {
                                     gpaScaleOutput.textContent = HighSchoolConfig[hs][scaleType];
-                                    localStorage.setItem(storageConfig.name.GPAScale,HighSchoolConfig[hs][scaleType]);
+                                    localStorage.setItem(storageConfig.name.GPAScale, HighSchoolConfig[hs][scaleType]);
+                                    mmUWMath.classList.add('hidden');
+                                    mmUWEng.classList.add('hidden');
+                                    mmWMath.classList.remove('hidden');
+                                    mmWEng.classList.remove('hidden');
                                 }
                             }
                         });
