@@ -42,18 +42,12 @@ function sat(){
     if (mathPlacement !== "undefined") {
         // return math placement
         localStorage.setItem(storageConfig.name.mathPlacement, SATConfig.Mathematics[mathPlacement]);
-        console.log (SATConfig.Mathematics[mathPlacement]);
     }
 
    if (readingPlacement !== "undefined") {
         // return reading placement
-        localStorage.setItem(storageConfig.name.readingPlacement, SATConfig.Critical_Reading_and_Writing[readingPlacement]);
-        console.log(SATConfig.Critical_Reading_and_Writing[readingPlacement]);
-        
+        localStorage.setItem(storageConfig.name.readingPlacement, SATConfig.Critical_Reading_and_Writing[readingPlacement]);        
     }
-
-    //null if nothings found
-    return null; 
 }
 
 //function to test eval button

@@ -75,13 +75,10 @@ function highSchool() {
             const sGpaMathPlacement = Object.keys(MathConfig [matchingMathClass]).reverse();
             const sRecommendMath = sGpaMathPlacement.find(sGpaMathPlacement  => sGpa >= sGpaMathPlacement );
             localStorage.setItem(storageConfig.name.sRecommendMath, sRecommendMath);
-            console.log(sRecommendMath);
-
         
             const sGpaEnglishPlacement = Object.keys(EnglishConfig [matchingEnglishClass]).reverse();
             const sRecommendEnglish = sGpaEnglishPlacement.find(sGpaEnglishPlacement => sGpa >= sGpaEnglishPlacement );
             localStorage.setItem(storageConfig.name.sRecommendEnglish, sRecommendEnglish);
-            console.log(sRecommendEnglish); 
 
        }       
         else {
@@ -89,18 +86,15 @@ function highSchool() {
             const wscaleGpa = HighSchoolConfig[highSchoolName].WScale;
             const wGpa = gpaText / wscaleGpa ;
             localStorage.setItem(storageConfig.name.wGpa, wGpa);
-            //console.log(wGpa);
 
             // comparing highschool weighted gpa to the school name gpa and returning the class they should take 
             const wGpaMathPlacement = Object.keys(MathConfig [matchingMathClass ]).reverse();
             const wRecommendMath = wGpaMathPlacement.find(wGpaMathPlacement  => wGpa >= wGpaMathPlacement );
             localStorage.setItem(storageConfig.name.wRecommendMath, wRecommendMath);
-            //console.log(wRecommendMath );
 
             const wGpaEnglishPlacement = Object.keys(EnglishConfig [matchingEnglishClass]).reverse();
             const wRecommendEnglish = wGpaEnglishPlacement.find(wGpaEnglishPlacement => wGpa >= wGpaEnglishPlacement );
-            localStorage.setItem(storageConfig.name.sRecommendEnglish, sRecommendEnglish);
-            //console.log(wRecommendEnglish);   
+            localStorage.setItem(storageConfig.name.sRecommendEnglish, sRecommendEnglish);  
         }
     }
     

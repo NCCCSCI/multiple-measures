@@ -71,7 +71,6 @@ function accuplacer()
   // return writing placement
   if (wrtgPlacement !== "undefined") {
     localStorage.setItem(storageConfig.name.wrtgPlacement, EnglishPlacementNative [wrtgPlacement][essy]);
-    //console.log(EnglishPlacementNative [wrtgPlacement][essy]);
   }
 
   // return math placement
@@ -79,7 +78,6 @@ function accuplacer()
     const thresholdArng = Object.keys(MathPlacement [qasPlacement]).reverse();
     const arngPlacement = thresholdArng.find(thresholdArng => arngRange[0] >= thresholdArng);
     localStorage.setItem(storageConfig.name.arngPlacement, MathPlacement [qasPlacement] [arngPlacement]);
-    //console.log(MathPlacement [qasPlacement] [arngPlacement]);
   }
   
     if (qasPlacement !== "undefined") {
@@ -87,15 +85,8 @@ function accuplacer()
     const thresholdAaf = Object.keys(UpperLevelMathPlacement [qasPlacement]).reverse();
     const aafPlacement = thresholdAaf.find(thresholdAaf => aafRange[0] >= thresholdAaf);
     localStorage.setItem(storageConfig.name.aafPlacement, UpperLevelMathPlacement [qasPlacement] [aafPlacement]);
-    //console.log(UpperLevelMathPlacement [qasPlacement] [aafPlacement]);
 }
-
- //null if nothings found
-return null; 
 }
-
-
-
 
 //function to test eval button
 function clickhandler () {
