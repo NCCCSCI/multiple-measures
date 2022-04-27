@@ -88,11 +88,8 @@ function highSchool() {
             const wscaleGpa = HighSchoolConfig[highSchoolName].WScale;
             const wGpa = gpaText / wscaleGpa ;
             localStorage.setItem(storageConfig.name.wGpa, wGpa);
-<<<<<<< HEAD
-=======
             localStorage.setItem(storageConfig.name.GPAType,' (Weighted)');
          
->>>>>>> 5ca4abcc7131ad36af3ed3104a998403e414ddc1
 
             // comparing highschool weighted gpa to the school name gpa and returning the class they should take 
             const wGpaMathPlacement = Object.keys(MathConfig [matchingMathClass ]).reverse();
@@ -101,7 +98,7 @@ function highSchool() {
 
             const wGpaEnglishPlacement = Object.keys(EnglishConfig [matchingEnglishClass]).reverse();
             const wRecommendEnglish = wGpaEnglishPlacement.find(wGpaEnglishPlacement => wGpa >= wGpaEnglishPlacement );
-            localStorage.setItem(storageConfig.name.sRecommendEnglish, sRecommendEnglish);  
+            localStorage.setItem(storageConfig.name.wRecommendEnglish, wRecommendEnglish);  
         }
     }
     
