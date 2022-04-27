@@ -144,3 +144,27 @@ const accAaf = localStorage.getItem(storageConfig.name.arngPlacement);
 document.getElementById("accAaf").textContent = accAaf;
 
 }
+
+
+//Conditionals for skipped parts
+if(satDate == "Not Taken"){
+    document.getElementById("satMath").textContent = "SAT Test Not taken";
+    document.getElementById("satEng").textContent = "SAT Test Not taken";
+}else{
+    if(satDate == "More Than 5 Years Ago"){
+    document.getElementById("satMath").textContent = "Outdated (Score more than 5 years older)";
+    document.getElementById("satEng").textContent = "Outdated (Score more than 5 years older)";
+}
+}
+
+if(accuDate == "Not Taken"){
+    document.getElementById("accEng").textContent = "Accuplacer Test Not taken";
+    document.getElementById("accMath").textContent = "Accuplacer Test Not taken";
+    document.getElementById("accAaf").textContent = "Accuplacer Test Not taken";
+}else{  if(accuDate == "More Than 5 Years Ago"){
+    document.getElementById("accEng").textContent = "Outdated (Score more than 5 years older)";
+    document.getElementById("accMath").textContent = "Outdated (Score more than 5 years older)";
+    document.getElementById("accAaf").textContent = "Outdated (Score more than 5 years older)";
+}
+
+}
