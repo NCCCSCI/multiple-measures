@@ -147,6 +147,8 @@ document.getElementById("accAaf").textContent = accAaf;
 
 
 //Conditionals for skipped parts
+
+//SAT
 if(satDate == "Not Taken"){
     document.getElementById("satMath").textContent = "SAT Test Not taken";
     document.getElementById("satEng").textContent = "SAT Test Not taken";
@@ -156,7 +158,7 @@ if(satDate == "Not Taken"){
     document.getElementById("satEng").textContent = "Outdated (Score more than 5 years older)";
 }
 }
-
+//Accuplacer
 if(accuDate == "Not Taken"){
     document.getElementById("accEng").textContent = "Accuplacer Test Not taken";
     document.getElementById("accMath").textContent = "Accuplacer Test Not taken";
