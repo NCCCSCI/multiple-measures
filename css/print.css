@@ -1,6 +1,7 @@
 @page {
 	size: letter;
 	margin: 0.5in;
+
 }
 
 a {
@@ -14,6 +15,7 @@ a, body {
 body {
 	background: none;
 	font-family: sans-serif;
+	
 }
 
 body *, .eval-box {
@@ -25,7 +27,8 @@ body *, .eval-box {
 }
 
 h1{
-	font-size: 26px;
+	font-size: 20px;
+	text-align: center;
 }
 
 .input-block {
@@ -33,7 +36,15 @@ h1{
 	display: table;
     width: 100%
 }
+.student-creds{
 
+	text-align: center;
+	padding-left: 20px;
+	padding-bottom: 20px;;
+	display: table;
+    width: 100%
+	
+}
 .input-block p {
 	font-weight: none;
 	display: table-cell;
@@ -52,3 +63,12 @@ label{
 	text-align: center;
 
 }
+
+
+.box{
+	display: flex;
+	align-items: stretch;
+	text-align: left;
+	padding: 5px;
+  }
+	  

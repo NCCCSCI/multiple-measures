@@ -170,3 +170,14 @@ if(accuDate == "Not Taken"){
 }
 
 }
+//GPA weighted or not
+if(GPAType == ' (Unweighted)'){
+    document.getElementById("mmWMath-row").style.display = 'none';
+    document.getElementById("mmWEng-row").style.display = 'none';}
+    else{
+
+if(GPAType == ' (Weighted)'){
+    document.getElementById("mmUWMath-row").style.display = 'none';
+    document.getElementById("mmUWEng-row").style.display = 'none';
+}}
+
