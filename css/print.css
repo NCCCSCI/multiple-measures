@@ -27,20 +27,20 @@ body *, .eval-box {
 }
 
 h1{
-	font-size: 20px;
+	font-size: 18px;
 	text-align: center;
 }
 
 .input-block {
-	padding-left: 20px;
+	padding-left: 18px;
 	display: table;
     width: 100%
 }
 .student-creds{
 
 	text-align: center;
-	padding-left: 20px;
-	padding-bottom: 20px;;
+	padding-left: 18px;
+	padding-bottom: 18px;;
 	display: table;
     width: 100%
 	
@@ -53,13 +53,13 @@ h1{
 }
 label{
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 16px;
 	display: table-cell;
     width: 1px;
     white-space: nowrap
 }
 .img{
-	font-size: 50px;
+	font-size: 40px;
 	text-align: center;
 
 }
