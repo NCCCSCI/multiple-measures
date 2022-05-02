@@ -116,31 +116,31 @@ document.getElementById("acc-aaf").textContent = aaf;
 
 
 //Evaluation Box
-const mmUWMath = localStorage.getItem(storageConfig.name.sRecommendMath);
+const mmUWMath = localStorage.getItem(storageConfig.name.sRecommendMath).replace("undefined","Not Calculated");
 document.getElementById("mmUWMath").textContent = mmUWMath;
 
-const mmUWEng = localStorage.getItem(storageConfig.name.sRecommendEnglish);
+const mmUWEng = localStorage.getItem(storageConfig.name.sRecommendEnglish).replace("undefined","Not Calculated");
 document.getElementById("mmUWEng").textContent = mmUWEng;
 
-const mmWMath = localStorage.getItem(storageConfig.name.wRecommendMath);
+const mmWMath = localStorage.getItem(storageConfig.name.wRecommendMath).replace("undefined","Not Calculated");
 document.getElementById("mmWMath").textContent = mmWMath;
 
-const mmWEng = localStorage.getItem(storageConfig.name.wRecommendEnglish);
+const mmWEng = localStorage.getItem(storageConfig.name.wRecommendEnglish).replace("undefined","Not Calculated");
 document.getElementById("mmWEng").textContent = mmWEng;
 
-const satMath = localStorage.getItem(storageConfig.name.mathPlacement);
+const satMath = localStorage.getItem(storageConfig.name.mathPlacement).replace("undefined","Not Calculated");
 document.getElementById("satMath").textContent = satMath;
 
-const satEng = localStorage.getItem(storageConfig.name.readingPlacement);
+const satEng = localStorage.getItem(storageConfig.name.readingPlacement).replace("undefined","Not Calculated");
 document.getElementById("satEng").textContent = satEng;
 
-const accEng = localStorage.getItem(storageConfig.name.wrtgPlacement);
+const accEng = localStorage.getItem(storageConfig.name.wrtgPlacement).replace("undefined","Not Calculated");
 document.getElementById("accEng").textContent = accEng;
 
-const accMath = localStorage.getItem(storageConfig.name.arngPlacement);
+const accMath = localStorage.getItem(storageConfig.name.arngPlacement).replace("undefined","Not Calculated");
 document.getElementById("accMath").textContent = accMath;
 
-const accAaf = localStorage.getItem(storageConfig.name.arngPlacement);
+const accAaf = localStorage.getItem(storageConfig.name.arngPlacement).replace("undefined","Not Calculated");
 document.getElementById("accAaf").textContent = accAaf;
 
 }
