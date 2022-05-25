@@ -13,25 +13,25 @@
  */
 
 // This is a better approach than looking for the first number that's greater
-// than the calculated percentage, because the documentation provided by 
+// than the calculated percentage, because the documentation provided by
 // admissions does not usually specify upper limits, only lower ones.
 
 const EnglishConfig = {
-	English_Foundational: {
+    English_Foundational: {
         0: "Needs to Take English Accuplacer",
-		.49999: "ENGL101N with Co-Requisite Workshop",
-		.81299: "ENGL101N",
+	.49999: "ENGL101N with Co-Requisite Workshop",
+	.81299: "ENGL101N"
     },
     Honors_or_College_Prep: {
         0: "Needs to Take English AccuPlacer",
-		.49999: "ENGL101N with Co-Requisite Workshop",
-		.74999: "ENGL101N",
+	.49999: "ENGL101N with Co-Requisite Workshop",
+	.74999: "ENGL101N"
     },
-	AP: {
-		0: "Needs to Take English AccuPlacer",
-		.49999: "ENGL101N with Co-Requisite Workshop",
-		.62499: "ENGL101N",
-	}
+    AP: {
+	0: "Needs to Take English AccuPlacer",
+	.49999: "ENGL101N with Co-Requisite Workshop",
+	.62499: "ENGL101N"
+    }
 }
 
 export { EnglishConfig };

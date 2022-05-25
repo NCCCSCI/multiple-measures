@@ -28,7 +28,7 @@
             <div
                 class="student-creds">
                 <!-- Student Name and ID, Intro Links -->
-                <div class="input-block">
+                <div class="input-block" id="student-identification">
                     <div class="student-name">
                         <label for="input-name" id="input-name-label">Full Name</label>
                         <input type="text" class="input-name" name="input-name" id="input-name" placeholder="Optional">
@@ -37,13 +37,15 @@
                         <label for="input-id" id="input-id-label">Student ID</label>
                         <input type="text" class="input-id" name="input-id" id="input-id" placeholder="Optional">
                     </div>
+                </div>
+                <div>
                     <div class="see-advising no-print">
-                        <p>If you are a transfer student, non-native English speaker, or have taken college credits, contact the
+                        <p>If you are a transfer student, or have taken college credits, contact the
                             <a href="https://nashuacc.edu/student-services/advising-center" title="NCC Advising Home">NCC Advising Center</a>.</p>
-                        <p>If you are in ESOL, proceed to
-                            <a href="#sat" data-bs-toggle="collapse" data-bs-target="#sat">SAT</a>.</p>
+                        <p>If you are a non-native speaker of English, ELL / ESOL, proceed to
+                            <a href="#accuplacer" data-bs-toggle="collapse" data-bs-target="#accuplacer">ACCUPLACER</a>.</p>
                         <p>If you have your HiSET or GED, proceed to
-                            <a href="#sat" data-bs-toggle="collapse" data-bs-target="#sat">SAT</a>.
+                            <a href="#sat" data-bs-toggle="collapse" data-bs-target="#sat">SAT</a> or <a href="#accuplacer" data-bs-toggle="collapse" data-bs-target="#accuplacer">ACCUPLACER</a>.
                         </p>
                     </div>
                 </div>
@@ -54,10 +56,10 @@
                 <div
                     class="accordion-item">
                     <!-- Multiple Measures Collapse -->
-                    <h2 class="accordion-header" id="multi-measures-heading">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#multi-measures" aria-expanded="true" aria-controls="multi-measures">Multiple Measures</button>
+                    <h2 class="accordion-header" id="high-school-heading">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#high-school " aria-expanded="true" aria-controls="high-school">High School Transcript</button>
                     </h2>
-                    <div id="multi-measures" class="accordion-collapse collapse show" aria-labelledby="multi-measures-heading" data-bs-parent="#page-accordion">
+                    <div id="high-school" class="accordion-collapse collapse show" aria-labelledby="high-school-heading" data-bs-parent="#page-accordion">
                         <div class="accordion-body">
                             <p class="no-print">If you do not know your GPA or graduated from high school more than 5 years ago, proceed to
                                 <a href="#sat" data-bs-toggle="collapse" data-bs-target="#sat">SAT</a>.</p>
@@ -100,14 +102,14 @@
                                     class="input-block" id="mm-gpa-rb-block">
                                     <!-- Cumulative GPA -->
                                     <div>
-                                        <label for="mm-gpa-rb-un">Unweighted</label>
-                                        <input type="radio" class="mm-gpa-rb" name="mm-gpa-rb" id="mm-gpa-rb-un" value="Scale" checked></div>
+                                        <label for="mm-gpa-rb-un"><input type="radio" class="mm-gpa-rb" name="mm-gpa-rb" id="mm-gpa-rb-un" value="Scale" checked> Unweighted</label>
+                                    </div>
                                     <div class="gpa-weight">
-                                        <label for="mm-gpa-rb-w">Weighted</label>
-                                        <input type="radio" class="mm-gpa-rb" name="mm-gpa-rb" id="mm-gpa-rb-w" value="WScale"></div>
+                                        <label for="mm-gpa-rb-w"><input type="radio" class="mm-gpa-rb" name="mm-gpa-rb" id="mm-gpa-rb-w" value="WScale"> Weighted</label>
+                                    </div>
                                 </div>
                                 <div class="scale">
-                                    <input type="number" min="0" max="100" step="0.1" class="mm-gpa" name="mm-gpa" id="mm-gpa">
+                                    <input type="number" min="0" step="0.1" class="mm-gpa" name="mm-gpa" id="mm-gpa" disabled>
                                     <p>out of</p>
                                     <output id="gpaScale"></output>
                                 </div>
@@ -260,7 +262,7 @@
                 <div
                     class="eval-box hidden" id="eval-box">
                     <!-- Evaluation Box -->
-                    <div class="qualifying-courses">
+                    <div id="qualifying-courses" class="hidden">
                         <table>
                             <thead>
                                 <tr>
@@ -271,56 +273,56 @@
                             <tbody>
                                 <tr id="mmUWMath">
                                     <td class="label">Unweighted Math</td>
-                                    <td class="evaluated-course mmUWMath"></td>
+                                    <td class="evaluated-course mmUWMath" data-id="sRecommendMath"></td>
                                 </tr>
                                 <tr id="mmUWEng">
                                     <td class="label">Unweighted English</td>
-                                    <td class="evaluated-course mmUWEng"></td>
+                                    <td class="evaluated-course mmUWEng" data-id="sRecommendEnglish"></td>
                                 </tr>
                                 <tr id="mmWMath">
                                     <td class="label">Weighted Math</td>
-                                    <td class="evaluated-course mmWMath"></td>
+                                    <td class="evaluated-course mmWMath" data-id="wRecommendMath"></td>
                                 </tr>
                                 <tr id="mmWEng">
                                     <td class="label">Weighted English</td>
-                                    <td class="evaluated-course mmWEng"></td>
+                                    <td class="evaluated-course mmWEng" data-id="wRecommendEnglish"></td>
                                 </tr>
                                 <tr>
                                     <td class="label">SAT Math</td>
-                                    <td class="evaluated-course satMath"></td>
+                                    <td class="evaluated-course satMath" data-id="mathPlacement"></td>
                                 </tr>
                                 <tr>
                                     <td class="label">SAT English</td>
-                                    <td class="evaluated-course satEng"></td>
+                                    <td class="evaluated-course satEng" data-id="readingPlacement"></td>
                                 </tr>
                                 <tr>
                                     <td class="label">Accuplacer English</td>
-                                    <td class="evaluated-course accEng"></td>
+                                    <td class="evaluated-course accEng" data-id="wrtgPlacement"></td>
                                 </tr>
                                 <tr>
                                     <td class="label">Accuplacer Math</td>
-                                    <td class="evaluated-course accMath"></td>
+                                    <td class="evaluated-course accMath" data-id="arngPlacement"></td>
                                 </tr>
                                 <tr>
                                     <td class="label">Accuplacer Advanced Math</td>
-                                    <td class="evaluated-course accAaf"></td>
+                                    <td class="evaluated-course accAaf" data-id="aafPlacement"></td>
                                 </tr>
                             </tbody>
                         </table>
+                        <div>
+                            <h6 id="unofficial-disclaimer">Disclaimer: This is an unofficial document for reference purposes only.</h6>
+                        </div>
+                        <div
+                            class="print-button no-print">
+                            <a href="print.html" class="button btn btn-light" target="_blank">Print</a>
+                        </div>
                     </div>
-                    <div>
-                        <h6 id="unofficial-disclaimer">Disclaimer: This is an unofficial document for reference purposes only.</h6>
-                    </div>
-                    <div
-                        class="print-button no-print">
-                        <!-- Print Button -->
-                        <a href="print.html" target="_blank">
-                            <button type="button" class="button btn btn-light" id="print-btn">Print</button>
-                        </a>
+                    <div id="no-data" class="hidden">
+                        <p>Please enter more information, describe your high school GPA and courses, SAT or Accuplacer scores. If
+                            you would like help, contact the <a href="https://nashuacc.edu/student-services/advising-center" title="NCC Advising Home">NCC Advising Center</a>.</p>
                     </div>
                 </div>
             </div>
-
         </main>
     </body>
 </html>

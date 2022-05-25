@@ -6,17 +6,9 @@
 
 // CONTROLS JAVASCRIPT
 
-import {test, clearStorage} from "./controls/accScore.js";
-test();
-clearStorage();
-
-import {test2, clearStorage2} from "./controls/mm.js";
-test2();
-clearStorage2();
-
-import {test3, clearStorage3} from "./controls/satScore.js";
-test3();
-clearStorage3();
+import {clearLocalStorage, initCommon} from "./controls/common.js";
+clearLocalStorage();
+initCommon();
 
 // /UI JAVASCRIPT
 

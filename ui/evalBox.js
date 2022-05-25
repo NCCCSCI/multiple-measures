@@ -1,81 +1,56 @@
 // opens evaluation box on "evaluate" button click
-
 import {
     storageConfig
 } from "../config/global.js";
 
+import { highSchool } from '../controls/hs.js';
+import { accuplacer } from '../controls/accScore.js';
+import { sat } from '../controls/satScore.js';
+
 function evalBox() {
 
-    let evalBtn = document.getElementById("eval-btn");
-    let allInputs = document.querySelectorAll(".accordion > input, select");
-    let courses = document.querySelectorAll(".evaluated-course");
-    /* let placements = [
-        'hsMath',
-        'mathPlacement',
-        'readingPlacement',
-        'wrtgPlacement',
-        'qasPlacement',
-        'aafPlacement'
-    ]; */
+    const evalBtn = document.getElementById("eval-btn");
 
     // evaluate button / evaluation box popup function
     evalBtn.addEventListener("click", function (evt) {
+
+        highSchool();
+        accuplacer();
+        sat();
+
         let evalBox = document.getElementById("eval-box");
-        let evalBoxStatus = evalBox.getAttribute('class');
-        if (evalBoxStatus === 'eval-box hidden') {
-            evalBox.setAttribute('class', 'eval-box');
-        }
+        evalBox.classList.remove("hidden");
 
-        // adding qualifying courses
-        courses.forEach(course => {
-            const scoreClass = course.getAttribute('class');
+        let outputs = evalBox.querySelectorAll("[data-id]");
+        let dataCount = 0;
 
-            if (scoreClass.includes('mmUWMath')) {
-                course.setAttribute("id", "evaluated-mmUWMath");
-                course.textContent = localStorage.getItem(storageConfig.name.sRecommendMath);
-            } else if (scoreClass.includes('mmUWEng')) {
-                course.setAttribute("id", "evaluated-mmUWEng");
-                course.textContent = localStorage.getItem(storageConfig.name.sRecommendEnglish);
-            } else if (scoreClass.includes('mmWMath')) {
-                course.setAttribute("id", "evaluated-mmWMath");
-                course.textContent = localStorage.getItem(storageConfig.name.wRecommendMath);
-            } else if (scoreClass.includes('mmWEng')) {
-                course.setAttribute("id", "evaluated-mmWEng");
-                course.textContent = localStorage.getItem(storageConfig.name.wRecommendEnglish);
-            } else if (scoreClass.includes('satMath')) {
-                course.setAttribute("id", "evaluated-mathPlacement");
-                course.textContent = localStorage.getItem(storageConfig.name.mathPlacement);
-            } else if (scoreClass.includes('satEng')) {
-                course.setAttribute("id", "evaluated-readingPlacement");
-                course.textContent = localStorage.getItem(storageConfig.name.readingPlacement);
-            } else if (scoreClass.includes('accEng')) {
-                course.setAttribute("id", "evaluated-wrtgPlacement");
-                course.textContent = localStorage.getItem(storageConfig.name.wrtgPlacement);
-            } else if (scoreClass.includes('accMath')) {
-                course.setAttribute("id", "evaluated-arngPlacement");
-                    course.textContent = localStorage.getItem(storageConfig.name.arngPlacement);
-            } else {
-                course.setAttribute("id", "evaluated-aafPlacement");
-                    course.textContent = localStorage.getItem(storageConfig.name.aafPlacement);
-            }
-
-            if (course.textContent === '') {
-                course.parentNode.classList.add('hidden');
+        // populate results output from localStorage
+        outputs.forEach(el => {
+            const dataId = el.getAttribute("data-id");
+            if (typeof storageConfig.name[dataId] !== "undefined") {
+                const dataValue = localStorage.getItem(storageConfig.name[dataId]);
+                if (dataValue !== null) {
+                    dataCount++;
+                    el.textContent = dataValue;
+                    el.closest("tr").classList.remove('hidden');
+                } else {
+                    el.textContent = '';
+                    el.closest("tr").classList.add('hidden');
+                }
             }
         });
+
+        if (dataCount > 0) {
+            document.getElementById("qualifying-courses").classList.remove("hidden");
+            document.getElementById("no-data").classList.add("hidden");
+        } else {
+            document.getElementById("qualifying-courses").classList.add("hidden");
+            document.getElementById("no-data").classList.remove("hidden");
+        }
     });
 
     // when any of the inputs change, hide the box again
-    allInputs.forEach(item => {
-        item.addEventListener("input", function (evt) {
-            let evalBox = document.getElementById("eval-box");
-            let evalBoxStatus = evalBox.getAttribute('class');
-
-            if (evalBoxStatus === 'eval-box') {
-                evalBox.setAttribute('class', 'eval-box hidden');
-            }
-        });
-    });
+    document.getElementById("page-accordion").addEventListener("input", e => document.getElementById("eval-box").classList.add("hidden"));
 }
 
 // export the function so it can be imported in main.js

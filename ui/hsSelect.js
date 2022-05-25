@@ -18,13 +18,10 @@ function hsSelect() {
     let hsSelect = document.getElementById("mm-hsname");
     // hs math course select: #mm-math
     let mathSelect = document.getElementById("mm-math");
-    let radioButtons = document.querySelectorAll("#mm-gpa-block > div > div > .mm-gpa-rb");
+    let radioButtons = document.querySelectorAll(".mm-gpa-rb");
     let gpaScaleOutput = document.getElementById("gpaScale");
 
-    let mmUWMath = document.getElementById('mmUWMath');
-    let mmUWEng = document.getElementById('mmUWEng');
-    let mmWMath = document.getElementById('mmWMath');
-    let mmWEng = document.getElementById('mmWEng');
+    const mmGPA = document.getElementById('mm-gpa');
 
     hsSelect.addEventListener('input', function (evt) {
         mathSelect.innerHTML = '';
@@ -45,42 +42,17 @@ function hsSelect() {
             }
         }
 
+        mmGPA.disabled = true;
+        mmGPA.value = null;
         for (const hs in HighSchoolConfig) { // loop through top level of HighSchoolConfig object
             if (hsSelect.value === hs) {
+                mmGPA.disabled = false;
                 for (const scaleType in HighSchoolConfig[hs]) { // loop through high school level of HighSchoolConfig object: read
                     radioButtons.forEach(radioButton => {
-                        if (radioButton.value === "Scale") {
-                            if (scaleType === radioButton.value) {
-                                gpaScaleOutput.textContent = HighSchoolConfig[hs][scaleType];
-                                localStorage.setItem(storageConfig.name.GPAScale, HighSchoolConfig[hs][scaleType]);
-                            }
-                        } else {
-                            if (scaleType === radioButton.value) {
-                                gpaScaleOutput.textContent = HighSchoolConfig[hs][scaleType];
-                                localStorage.setItem(storageConfig.name.GPAScale, HighSchoolConfig[hs][scaleType]);
-                            }
+                        if (scaleType === radioButton.value) {
+                            gpaScaleOutput.textContent = mmGPA.max = HighSchoolConfig[hs][scaleType];
+                            localStorage.setItem(storageConfig.name.GPAScale, HighSchoolConfig[hs][scaleType]);
                         }
-                        radioButton.addEventListener('click', function (evt) {
-                            if (radioButton.value === "Scale") {
-                                if (scaleType === radioButton.value) {
-                                    gpaScaleOutput.textContent = HighSchoolConfig[hs][scaleType];
-                                    localStorage.setItem(storageConfig.name.GPAScale, HighSchoolConfig[hs][scaleType]);
-                                    mmWMath.classList.add('hidden');
-                                    mmWEng.classList.add('hidden');
-                                    mmUWMath.classList.remove('hidden');
-                                    mmUWEng.classList.remove('hidden');
-                                }
-                            } else {
-                                if (scaleType === radioButton.value) {
-                                    gpaScaleOutput.textContent = HighSchoolConfig[hs][scaleType];
-                                    localStorage.setItem(storageConfig.name.GPAScale, HighSchoolConfig[hs][scaleType]);
-                                    mmUWMath.classList.add('hidden');
-                                    mmUWEng.classList.add('hidden');
-                                    mmWMath.classList.remove('hidden');
-                                    mmWEng.classList.remove('hidden');
-                                }
-                            }
-                        });
                     });
                 }
             }
@@ -88,7 +60,7 @@ function hsSelect() {
     });
 }
 
-/* 
+/*
 HSCourseEqConfig = {
     hs: {
         course: HSCourseEqConfig[hs][course],
