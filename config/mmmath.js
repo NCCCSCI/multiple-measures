@@ -34,8 +34,8 @@ const MathConfig = {
     },
     AlgebraI: {
         0: "Needs to Take Math AccuPlacer",
-        .63499: "MATH110 / MATH106 / MATH 103 with Co-Requisite",
-        .74999: "MATH110 / MATH106 / MATH103"
+        .63499: "MATH103 / MATH106 / MATH 110 with Co-Requisite",
+        .74999: "MATH103 / MATH106 / MATH110"
     }
 }
 

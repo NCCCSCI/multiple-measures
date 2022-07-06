@@ -16,6 +16,9 @@ import {
     UpperLevelMathPlacement
 } from "../config/UpperLevelMathPlacement.js";
 
+const LOW_END = ' or below';
+const HIGH_END = ' or above';
+
 function scoreRanges() { // variable declaration
     let satMath = document.getElementById("sat-math");
     let satEng = document.getElementById("sat-eng");
@@ -81,22 +84,19 @@ function scoreRanges() { // variable declaration
                 if (keys.indexOf(score) !== 0) {
                     if (nextItem === undefined) {
                         let option = document.createElement("option");
-                        option.value = addedScore + ' or Higher';
                         option.setAttribute('class', score);
-                        option.textContent = addedScore + ' or Higher';
+                        option.textContent = option.value = addedScore + HIGH_END;
                         satMath.appendChild(option);
                     } else {
                         let option = document.createElement("option");
-                        option.value = addedScore + '-' + nextItem;
                         option.setAttribute('class', score);
-                        option.textContent = addedScore + ' - ' + nextItem;
+                        option.textContent = option.value = addedScore + ' - ' + nextItem;
                         satMath.appendChild(option);
                     }
                 } else {
                     let option = document.createElement("option");
-                    option.value = nextItem + ' or Lower';
                     option.setAttribute('class', score);
-                    option.textContent = nextItem + ' or Lower';
+                    option.textContent = nextItem + LOW_END;
                     satMath.appendChild(option);
                 }
             }
@@ -109,22 +109,19 @@ function scoreRanges() { // variable declaration
                 if (keys.indexOf(score) !== 0) {
                     if (nextItem === undefined) {
                         let option = document.createElement("option");
-                        option.value = addedScore + ' or Higher';
                         option.setAttribute('class', score);
-                        option.textContent = addedScore + ' or Higher';
+                        option.textContent = option.value = addedScore + HIGH_END;
                         satEng.appendChild(option);
                     } else {
                         let option = document.createElement("option");
-                        option.value = addedScore + '-' + nextItem;
                         option.setAttribute('class', score);
-                        option.textContent = addedScore + ' - ' + nextItem;
+                        option.textContent = option.value = addedScore + ' - ' + nextItem;
                         satEng.appendChild(option);
                     }
                 } else {
                     let option = document.createElement("option");
-                    option.value = nextItem + ' or Lower';
                     option.setAttribute('class', score);
-                    option.textContent = nextItem + ' or Lower';
+                    option.textContent = option.value = nextItem + LOW_END;
                     satEng.appendChild(option);
                 }
             }
@@ -136,26 +133,23 @@ function scoreRanges() { // variable declaration
         let keys = Object.keys(EnglishPlacementNative);
         let nextIndex = keys.indexOf(wrtg) + 1;
         let nextItem = keys[nextIndex];
-        let addedScore = parseInt(wrtg) + 1;
+        let addedScore = parseInt(wrtg);
         if (keys.indexOf(wrtg) !== 0) {
             if (nextItem === undefined) {
                 let option = document.createElement("option");
-                option.value = addedScore + ' or Higher';
                 option.setAttribute('class', wrtg);
-                option.textContent = addedScore + ' or Higher';
+                option.textContent = option.value = addedScore + HIGH_END;
                 accEngWtrg.appendChild(option);
             } else {
                 let option = document.createElement("option");
-                option.value = addedScore + '-' + nextItem;
                 option.setAttribute('class', wrtg);
-                option.textContent = addedScore + ' - ' + nextItem;
+                option.textContent = option.value = addedScore + ' - ' + (nextItem - 1);
                 accEngWtrg.appendChild(option);
             }
         } else {
             let option = document.createElement("option");
-            option.value = nextItem + ' or Lower';
             option.setAttribute('class', wrtg);
-            option.textContent = nextItem + ' or Lower';
+            option.textContent = option.value = (nextItem - 1) + LOW_END;
             accEngWtrg.appendChild(option);
 
             // ESSY
@@ -174,26 +168,23 @@ function scoreRanges() { // variable declaration
         let keys = Object.keys(MathPlacement);
         let nextIndex = keys.indexOf(qas) + 1;
         let nextItem = keys[nextIndex];
-        let addedScore = parseInt(qas) + 1;
+        let addedScore = parseInt(qas);
         if (keys.indexOf(qas) !== 0) {
             if (nextItem === undefined) {
                 let option = document.createElement("option");
-                option.value = addedScore + ' or Higher';
                 option.setAttribute('class', qas);
-                option.textContent = addedScore + ' or Higher';
+                option.textContent = option.value = addedScore + HIGH_END;
                 accMathQas.appendChild(option);
             } else {
                 let option = document.createElement("option");
-                option.value = addedScore + '-' + nextItem;
                 option.setAttribute('class', qas);
-                option.textContent = addedScore + ' - ' + nextItem;
+                option.textContent = option.value = addedScore + ' - ' + (nextItem - 1);
                 accMathQas.appendChild(option);
             }
         } else {
             let option = document.createElement("option");
-            option.value = nextItem + ' or Lower';
             option.setAttribute('class', qas);
-            option.textContent = nextItem + ' or Lower';
+            option.textContent = option.value = (nextItem - 1) + LOW_END;
             accMathQas.appendChild(option);
 
             // ARNG
@@ -201,26 +192,23 @@ function scoreRanges() { // variable declaration
                 let keys = Object.keys(MathPlacement[qas]);
                 let nextIndex = keys.indexOf(arng) + 1;
                 let nextItem = keys[nextIndex];
-                let addedScore = parseInt(arng) + 1;
+                let addedScore = parseInt(arng);
                 if (keys.indexOf(arng) !== 0) {
                     if (nextItem === undefined) {
                         let option = document.createElement("option");
-                        option.value = addedScore + ' or Higher';
                         option.setAttribute('class', arng);
-                        option.textContent = addedScore + ' or Higher';
+                        option.textContent = option.value = addedScore + HIGH_END;
                         accMathArng.appendChild(option);
                     } else {
                         let option = document.createElement("option");
-                        option.value = addedScore + '-' + nextItem;
                         option.setAttribute('class', arng);
-                        option.textContent = addedScore + ' - ' + nextItem;
+                        option.textContent = option.value = addedScore + ' - ' + (nextItem - 1);
                         accMathArng.appendChild(option);
                     }
                 } else {
                     let option = document.createElement("option");
-                    option.value = nextItem + ' or Lower';
                     option.setAttribute('class', arng);
-                    option.textContent = nextItem + ' or Lower';
+                    option.textContent = option.value = (nextItem - 1) + LOW_END;
                     accMathArng.appendChild(option);
                 }
             }
@@ -230,40 +218,30 @@ function scoreRanges() { // variable declaration
                 let keys = Object.keys(UpperLevelMathPlacement[qas]);
                 let nextIndex = keys.indexOf(aaf) + 1;
                 let nextItem = keys[nextIndex];
-                let addedScore = parseInt(aaf) + 1;
+                let addedScore = parseInt(aaf);
                 if (keys.indexOf(aaf) !== 0) {
                     if (nextItem === undefined) {
                         let option = document.createElement("option");
-                        option.value = addedScore + ' or Higher';
                         option.setAttribute('class', aaf);
-                        option.textContent = addedScore + ' or Higher';
+                        option.textContent = option.value = addedScore + HIGH_END;
                         accMathAaf.appendChild(option);
                     } else {
                         let option = document.createElement("option");
-                        option.value = addedScore + '-' + nextItem;
                         option.setAttribute('class', aaf);
-                        option.textContent = addedScore + ' - ' + nextItem;
+                        option.textContent = option.value = addedScore + ' - ' + (nextItem - 1);
                         accMathAaf.appendChild(option);
                     }
                 } else {
                     let option = document.createElement("option");
-                    option.value = nextItem + ' or Lower';
+                    option.value = nextItem + LOW_END;
                     option.setAttribute('class', aaf);
-                    option.textContent = nextItem + ' or Lower';
+                    option.textContent = option.value = (nextItem - 1) + LOW_END;
                     accMathAaf.appendChild(option);
                 }
             }
         }
     }
 }
-
-/* 
-SATConfig = {
-    section: {
-        score: SATConfig[section][score],
-    }
-}
-*/
 
 // export the function so it can be imported in main.js
 export {

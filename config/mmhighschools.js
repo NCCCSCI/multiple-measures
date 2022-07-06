@@ -48,8 +48,8 @@ const HighSchoolConfig = {
         WScale: 5.4
     },
     Pelham: {
-        Scale: 5,
-        WScale: 4.33
+        Scale: 4.33,
+        WScale: 5
     },
     Salem: {
         Scale: 4,
