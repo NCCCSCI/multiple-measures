@@ -7,39 +7,41 @@
         <link rel="icon" type="image/png" href="images/Color_Logo_Thumbnail.png ">
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
-        <link href="css/mobile.css" rel="stylesheet" media="screen and (max-width:575px)">
-        <link href="css/tablet.css" rel="stylesheet" media="screen and (min-width:576px)">
-        <link href="css/laptop-desktop.css" rel="stylesheet" media="screen and (min-width:1199px)">
+        <link href="css/mobile.css" rel="stylesheet" media="screen and (max-width: 575px)">
+        <link href="css/tablet.css" rel="stylesheet" media="screen and (min-width: 576px)">
+        <link href="css/laptop-desktop.css" rel="stylesheet" media="screen and (min-width: 1199px)">
         <script src="bootstrap/js/bootstrap.min.js" defer></script>
         <script type="module" src="main.js" defer></script>
     </head>
 
     <body>
-        <header>
+        <header class="container-fluid">
             <nav class="navbar navbar-light bg-light">
-                <div class="container-fluid">
+                <div>
                     <a class="navbar-brand" href="#">
                         <img src="images/Color_Logo.png" alt="" height="30" class="d-inline-block align-text-center" id="page-heading-logo">Multiple Measures</a>
                 </div>
             </nav>
         </header>
 
-        <main>
+        <main class="container-fluid mb-5">
             <div
-                class="student-creds">
+                class="row student-creds">
                 <!-- Student Name and ID, Intro Links -->
-                <div class="input-block" id="student-identification">
-                    <div class="student-name">
-                        <label for="input-name" id="input-name-label">Full Name</label>
-                        <input type="text" class="input-name" name="input-name" id="input-name" placeholder="Optional">
-                    </div>
-                    <div class="student-id">
-                        <label for="input-id" id="input-id-label">Student ID</label>
-                        <input type="text" class="input-id" name="input-id" id="input-id" placeholder="Optional">
+                <div class="col">
+                    <div id="student-identification">
+                        <div class="input-block">
+                            <label for="input-name">Full Name</label>
+                            <input type="text" class="input-name" name="input-name" id="input-name" placeholder="Optional">
+                        </div>
+                        <div class="input-block">
+                            <label for="input-id">Student ID</label>
+                            <input type="text" class="input-id" name="input-id" id="input-id" placeholder="Optional">
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <div class="see-advising no-print">
+                <div class="col-md-8">
+                    <div class="d-print-none">
                         <p>If you are a transfer student, or have taken college credits, contact the
                             <a href="https://nashuacc.edu/student-services/advising-center" title="NCC Advising Home">NCC Advising Center</a>.</p>
                         <p>If you are a non-native speaker of English, ELL / ESOL, proceed to
@@ -50,219 +52,222 @@
                     </div>
                 </div>
             </div>
-            <div
-                class="accordion" id="page-accordion">
-                <!-- Accordion -->
-                <div
-                    class="accordion-item">
-                    <!-- Multiple Measures Collapse -->
-                    <h2 class="accordion-header" id="high-school-heading">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#high-school " aria-expanded="true" aria-controls="high-school">High School Transcript</button>
-                    </h2>
-                    <div id="high-school" class="accordion-collapse collapse show" aria-labelledby="high-school-heading" data-bs-parent="#page-accordion">
-                        <div class="accordion-body">
-                            <p class="no-print">If you do not know your GPA or graduated from high school more than 5 years ago, proceed to
-                                <a href="#sat" data-bs-toggle="collapse" data-bs-target="#sat">SAT</a>.</p>
-                            <div
-                                class="input-block ">
-                                <!-- High School Input -->
-                                <label for="mm-hsname">
-                                    Name of High School</label>
-                                <select class="mm-hsname" name="mm-hsname" id="mm-hsname">
-                                    <option value="Select">[Select a High School]</option>
-                                    <option value="Alvirne" id="Alvirne">Alvirne</option>
-                                    <option value="Campbell" id="Campbell">Campbell</option>
-                                    <option value="ConVal" id="ConVal">ConVal</option>
-                                    <option value="Hollis_Brookline" id="Hollis_Brookline">Hollis/Brookline</option>
-                                    <option value="Mascenic" id="Mascenic">Mascenic</option>
-                                    <option value="Merrimack" id="Merrimack">Merrimack</option>
-                                    <option value="Milford" id="Milford">Milford</option>
-                                    <option value="Nashua_North" id="Nashua_North">Nashua North</option>
-                                    <option value="Nashua_South" id="Nashua_South">Nashua South</option>
-                                    <option value="Pelham" id="Pelham">Pelham</option>
-                                    <option value="Salem" id="Salem">Salem</option>
-                                    <option value="Wilton_Lyndenborough" id="Wilton_Lyndenborough">Wilton/Lyndenborough</option>
-                                </select>
-                            </div>
-                            <div
-                                class="input-block mm">
-                                <!-- Year Graduated -->
-                                <label for="mm-date">Year Graduated</label>
-                                <select class="date mm-date" name="mm-date" id="mm-date">
-                                    <option value="Select">[Select a Year]</option>
-                                    <option value="3_or_Fewer_Years_Ago">3 or Fewer Years Ago</option>
-                                    <option value="4-5_Years_Ago" class="only-eval-eng-mm">4-5 Years Ago</option>
-                                </select>
-                            </div>
-                            <div
-                                class="input-block" id="mm-gpa-block">
-                                <!-- Cumulative GPA -->
-                                <label for="mm-gpa">Cumulative GPA</label>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card my-1">
+                        <div class="card-body">
+                            <!-- Multiple Measures Collapse -->
+                            <h4 class="card-title" id="high-school-heading">
+                                <button class="w-100" type="button" data-bs-toggle="collapse" data-bs-target="#high-school " aria-expanded="true" aria-controls="high-school">High School Transcript</button>
+                            </h4>
+                            <div id="high-school" class="collapse show" aria-labelledby="high-school-heading">
+                                <p class="d-print-none">If you do not know your GPA or graduated from high school more than 5 years ago, proceed to
+                                    <a href="#sat" data-bs-toggle="collapse" data-bs-target="#sat">SAT</a>.</p>
                                 <div
-                                    class="input-block" id="mm-gpa-rb-block">
+                                    class="input-block ">
+                                    <!-- High School Input -->
+                                    <label for="mm-hsname">
+                                        Name of High School</label>
+                                    <select class="mm-hsname" name="mm-hsname" id="mm-hsname">
+                                        <option value="Select">[Select a High School]</option>
+                                        <option value="Alvirne" id="Alvirne">Alvirne</option>
+                                        <option value="Campbell" id="Campbell">Campbell</option>
+                                        <option value="ConVal" id="ConVal">ConVal</option>
+                                        <option value="Hollis_Brookline" id="Hollis_Brookline">Hollis/Brookline</option>
+                                        <option value="Mascenic" id="Mascenic">Mascenic</option>
+                                        <option value="Merrimack" id="Merrimack">Merrimack</option>
+                                        <option value="Milford" id="Milford">Milford</option>
+                                        <option value="Nashua_North" id="Nashua_North">Nashua North</option>
+                                        <option value="Nashua_South" id="Nashua_South">Nashua South</option>
+                                        <option value="Pelham" id="Pelham">Pelham</option>
+                                        <option value="Salem" id="Salem">Salem</option>
+                                        <option value="Wilton_Lyndenborough" id="Wilton_Lyndenborough">Wilton/Lyndenborough</option>
+                                    </select>
+                                </div>
+                                <div
+                                    class="input-block">
+                                    <!-- Year Graduated -->
+                                    <label for="mm-date">Year Graduated</label>
+                                    <select class="date mm-date" name="mm-date" id="mm-date">
+                                        <option value="Select">[Select a Year]</option>
+                                        <option value="3_or_Fewer_Years_Ago">3 or Fewer Years Ago</option>
+                                        <option value="4-5_Years_Ago" class="only-eval-eng-mm">4-5 Years Ago</option>
+                                    </select>
+                                </div>
+                                <div id="mm-gpa-block">
                                     <!-- Cumulative GPA -->
-                                    <div>
-                                        <label for="mm-gpa-rb-un"><input type="radio" class="mm-gpa-rb" name="mm-gpa-rb" id="mm-gpa-rb-un" value="Scale" checked> Unweighted</label>
-                                    </div>
-                                    <div class="gpa-weight">
-                                        <label for="mm-gpa-rb-w"><input type="radio" class="mm-gpa-rb" name="mm-gpa-rb" id="mm-gpa-rb-w" value="WScale"> Weighted</label>
+                                    <label class="d-block" for="mm-gpa">Cumulative GPA</label>
+                                    <div class="row m-2">
+                                        <div class="col-sm-6 col-lg-5 input-block" id="mm-gpa-rb-block">
+                                            <!-- Cumulative GPA -->
+                                            <label><input type="radio" class="mm-gpa-rb" name="mm-gpa-rb" id="mm-gpa-rb-un" value="Scale" checked> Unweighted</label>
+                                            <label><input type="radio" class="mm-gpa-rb" name="mm-gpa-rb" id="mm-gpa-rb-w" value="WScale"> Weighted</label>
+                                        </div>
+                                        <div class="col-sm-6 col-lg-7 input-block scale">
+                                            <input type="number" min="0" step="0.1" class="mm-gpa w-50" name="mm-gpa" id="mm-gpa" disabled>
+                                            out of
+                                            <output id="gpaScale">---</output>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="scale">
-                                    <input type="number" min="0" step="0.1" class="mm-gpa" name="mm-gpa" id="mm-gpa" disabled>
-                                    <p>out of</p>
-                                    <output id="gpaScale"></output>
+                                <div
+                                    class="input-block">
+                                    <!-- Last English Course Taken -->
+                                    <label for="mm-eng">Highest English Course Passed</label>
+                                    <select class="mm-eng" name="mm-eng" id="mm-eng">
+                                        <option value="Select">[Select a Course]</option>
+                                        <option value="English_Foundational">English Foundational</option>
+                                        <option value="Honors_or_College_Prep">Honors/College Prep</option>
+                                        <option value="AP">AP</option>
+                                    </select>
                                 </div>
-                            </div>
-                            <div
-                                class="input-block">
-                                <!-- Last English Course Taken -->
-                                <label for="mm-eng">Highest English Course Passed</label>
-                                <select class="mm-eng" name="mm-eng" id="mm-eng">
-                                    <option value="Select">[Select a Course]</option>
-                                    <option value="English_Foundational">English Foundational</option>
-                                    <option value="Honors_or_College_Prep">Honors/College Prep</option>
-                                    <option value="AP">AP</option>
-                                </select>
-                            </div>
-                            <div
-                                class="input-block math-mm">
-                                <!-- Last Math Course Taken -->
-                                <label for="mm-math">Highest Math Course Taken: C or Better</label>
-                                <select class="mm-math" name="mm-math" id="mm-math">
-                                    <option value="Select">[Select a Course]</option>
-                                </select>
-                            </div>
-                            <div class="hidden input-block" id="math-eval-popup">
-                                <span>High School Math Course will not be evaluated.</span>
-                            </div>
-                            <div
-                                class="hidden" id="math-popup">
-                                <!-- Other (High School Name / GPA) Pop Up Box -->
-                                <span>Please select a previous math course.</span>
+                                <div
+                                    class="input-block math-mm">
+                                    <!-- Last Math Course Taken -->
+                                    <label for="mm-math">Highest Math Course Taken: C or Better</label>
+                                    <select class="mm-math" name="mm-math" id="mm-math">
+                                        <option value="Select">[Select a Course]</option>
+                                    </select>
+                                </div>
+                                <div class="hidden input-block" id="math-eval-popup">
+                                    <span>High School Math Course will not be evaluated.</span>
+                                </div>
+                                <div
+                                    class="hidden" id="math-popup">
+                                    <!-- Other (High School Name / GPA) Pop Up Box -->
+                                    <span>Please select a previous math course.</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div
-                    class="accordion-item">
-                    <!-- SAT Collapse -->
-                    <h2 class="accordion-header" id="sat-heading">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sat" aria-expanded="false" aria-controls="sat">SAT</button>
-                    </h2>
-                    <div id="sat" class="accordion-collapse collapse" aria-labelledby="sat-heading" data-bs-parent="#page-accordion">
-                        <div class="accordion-body">
-                            <div class="help no-print">
-                                <p id="score-input-help">*For each score input, please input your best score.</p>
-                            </div>
-                            <div class="input-block sat">
-                                <!-- Date -->
-                                <!-- SAT is >5 years for everything -->
+                <div class="col-lg-4">
+                    <div class="card my-1">
+                        <div class="card-body">
+                            <!-- SAT Collapse -->
+                            <h4 class="card-title" id="sat-heading">
+                                <button class="w-100" type="button" data-bs-toggle="collapse" data-bs-target="#sat" aria-expanded="false" aria-controls="sat">SAT</button>
+                            </h4>
+                            <div id="sat" aria-labelledby="sat-heading">
+                                <div class="help d-print-none">
+                                    <p id="score-input-help">*For each score input, please input your best score.</p>
+                                </div>
+                                <div class="input-block sat">
+                                    <!-- Date -->
+                                    <!-- SAT is >5 years for everything -->
                                     <label for="sat-date"> Date Taken</label>
-                                <select class="date sat-date" name="sat-date" id="sat-date">
-                                    <option value="Select">[Select a Year]</option>
-                                    <option value="Not_Taken" class="acc-redirect">Not Taken</option>
-                                    <option value="5_or_Fewer_Years_Ago">5 or Fewer Years Ago</option>
-                                    <option value="More_Than_5_Years_Ago" class="acc-redirect">More Than 5 Years Ago</option>
-                                </select>
-                                <p class="sat-help-popup hidden" id="sat-help-popup">SAT Scores are too outdated.</p>
-                                <p class="sat-help-popup hidden" id="sat-help-not-taken-popup">SAT Scores are Not Applicable.</p>
-                            </div>
-                            <div
-                                class="input-block score-input">
-                                <!-- SAT Math Score -->
-                                <label for="sat-math">SAT Math Score</label>
-                                <select class="sat-math" name="sat-math" id="sat-math"></select>
-                            </div>
-                            <div
-                                class="input-block score-input">
-                                <!-- SAT Critical Reading and Writing Score -->
-                                <label for="sat-eng">SAT Critical Reading and Writing Score</label>
-                                <select class="sat-eng" name="sat-eng" id="sat-eng"></select>
+                                    <select class="date sat-date" name="sat-date" id="sat-date">
+                                        <option value="Select">[Select a Year]</option>
+                                        <option value="Not_Taken" class="acc-redirect">Not Taken</option>
+                                        <option value="5_or_Fewer_Years_Ago">5 or Fewer Years Ago</option>
+                                        <option value="More_Than_5_Years_Ago" class="acc-redirect">More Than 5 Years Ago</option>
+                                    </select>
+                                    <p class="sat-help-popup hidden" id="sat-help-popup">SAT Scores are too outdated.</p>
+                                    <p class="sat-help-popup hidden" id="sat-help-not-taken-popup">SAT Scores are Not Applicable.</p>
+                                </div>
+                                <div
+                                    class="input-block score-input">
+                                    <!-- SAT Math Score -->
+                                    <label for="sat-math">Math</label><br>
+                                    <select class="sat-math" name="sat-math" id="sat-math"></select>
+                                </div>
+                                <div
+                                    class="input-block score-input">
+                                    <!-- SAT Critical Reading and Writing Score -->
+                                    <label for="sat-eng">Critical Reading and Writing</label><br>
+                                    <select class="sat-eng" name="sat-eng" id="sat-eng"></select>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div
-                    class="accordion-item">
-                    <!-- Accuplacer Collapse -->
-                    <h2 class="accordion-header" id="accuplacer-heading">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accuplacer" aria-expanded="false" aria-controls="accuplacer">Accuplacer</button>
-                    </h2>
-                    <div id="accuplacer" class="accordion-collapse collapse" aria-labelledby="accuplacer-heading" data-bs-parent="#page-accordion">
-                        <div class="accordion-body">
-                            <div class="help no-print">
-                                <p id="score-input-help">*For each score input, please input your best score.</p>
-                            </div>
-                            <div class="input-block acc">
-                                <!-- Date -->
-                                <!-- AccuPlacer is 3 for math, 5 for eng -->
+                <div class="col-lg-4">
+                    <div class="card my-1">
+                        <div class="card-body">
+                            <!-- Accuplacer Collapse -->
+                            <h4 class="card-title" id="accuplacer-heading">
+                                <button class="w-100" type="button" data-bs-toggle="collapse" data-bs-target="#accuplacer" aria-expanded="false" aria-controls="accuplacer">Accuplacer</button>
+                            </h4>
+                            <div id="accuplacer" aria-labelledby="accuplacer-heading">
+
+                                <div class="help no-print">
+                                    <p id="score-input-help">*For each score input, please input your best score.</p>
+                                </div>
+                                <div class="input-block acc">
+                                    <!-- Date -->
+                                    <!-- AccuPlacer is 3 for math, 5 for eng -->
                                     <label for="acc-date"> Date Taken</label>
-                                <select class="date acc-date" name="acc-date" id="acc-date">
-                                    <option value="Select">[Select a Year]</option>
-                                    <option value="Not_Taken">Not Taken</option>
-                                    <option value="3_or_Fewer_Years_Ago">3 or Fewer Years Ago</option>
-                                    <option value="4-5_Years_Ago">4-5 Years Ago</option>
-                                    <option value="More_Than_5_Years_Ago">More Than 5 Years Ago</option>
-                                </select>
-                                <p class="acc-help-popup hidden" id="acc-help-popup">Scores are too outdated; contact the
-                                    <a href="https://nashuacc.edu/student-services/advising-center" title="NCC Advising Home">NCC Advising Center</a>
-                                    to schedule your AccuPlacer.</p>
-                                <p class="acc-help-popup hidden" id="acc-help-not-taken-popup">Contact the
-                                    <a href="https://nashuacc.edu/student-services/advising-center" title="NCC Advising Home">NCC Advising Center</a>
-                                    to schedule your AccuPlacer.</p>
-                                <p class="acc-help-popup hidden" id="acc-help-4-5-popup">AccuPlacer Math Scores will not be evaluated.</p>
-                            </div>
-                            <div
-                                class="input-block score-input">
-                                <!-- English Score: Writing Conventions (WRTG) -->
-                                <label for="acc-wrtg">English Score: WRTG</label>
-                                <select class="acc-wrtg" name="acc-wrtg" id="acc-wrtg"></select>
-                            </div>
-                            <div
-                                class="input-block score-input">
-                                <!-- English Score: Writeplacer (ESSY) -->
-                                <label for="acc-essy">English Score: ESSY</label>
-                                <select class="acc-essy" name="acc-essy" id="acc-essy"></select>
-                            </div>
-                            <div
-                                class="input-block score-input math-acc">
-                                <!-- Math Score: Arithmetic (ARNG) -->
-                                <label for="acc-arng">Math Score: ARNG</label>
-                                <select class="acc-arng" name="acc-arng" id="acc-arng"></select>
-                            </div>
-                            <div
-                                class="input-block score-input math-acc">
-                                <!-- Math Score: QR-Algebra-Stats (QAS) -->
-                                <label for="acc-qas">Math Score: QAS</label>
-                                <select class="acc-qas" name="acc-qas" id="acc-qas"></select>
-                            </div>
-                            <div
-                                class="input-block score-input math-acc">
-                                <!-- Math Score: Advanced Algebra & Functions (AAF) -->
-                                <label for="acc-aaf">Math Score: AAF</label>
-                                <select class="acc-aaf" name="acc-aaf" id="acc-aaf"></select>
+                                    <select class="date acc-date" name="acc-date" id="acc-date">
+                                        <option value="Select">[Select a Year]</option>
+                                        <option value="Not_Taken">Not Taken</option>
+                                        <option value="3_or_Fewer_Years_Ago">3 or Fewer Years Ago</option>
+                                        <option value="4-5_Years_Ago">4-5 Years Ago</option>
+                                        <option value="More_Than_5_Years_Ago">More Than 5 Years Ago</option>
+                                    </select>
+                                    <p class="acc-help-popup hidden" id="acc-help-popup">Scores are too outdated; contact the
+                                        <a href="https://nashuacc.edu/student-services/advising-center" title="NCC Advising Home">NCC Advising Center</a>
+                                        to schedule your AccuPlacer.</p>
+                                    <p class="acc-help-popup hidden" id="acc-help-not-taken-popup">Contact the
+                                        <a href="https://nashuacc.edu/student-services/advising-center" title="NCC Advising Home">NCC Advising Center</a>
+                                        to schedule your AccuPlacer.</p>
+                                    <p class="acc-help-popup hidden" id="acc-help-4-5-popup">AccuPlacer Math Scores will not be evaluated.</p>
+                                </div>
+                                <div
+                                    class="input-block score-input">
+                                    <!-- English Score: Writing Conventions (WRTG) -->
+                                    <label for="acc-wrtg">English WRTG</label>
+                                    <select class="acc-wrtg" name="acc-wrtg" id="acc-wrtg"></select>
+                                </div>
+                                <div
+                                    class="input-block score-input">
+                                    <!-- English Score: Writeplacer (ESSY) -->
+                                    <label for="acc-essy">English ESSY</label>
+                                    <select class="acc-essy" name="acc-essy" id="acc-essy"></select>
+                                </div>
+                                <div
+                                    class="input-block score-input math-acc">
+                                    <!-- Math Score: Arithmetic (ARNG) -->
+                                    <label for="acc-arng">Math ARNG</label>
+                                    <select class="acc-arng" name="acc-arng" id="acc-arng"></select>
+                                </div>
+                                <div
+                                    class="input-block score-input math-acc">
+                                    <!-- Math Score: QR-Algebra-Stats (QAS) -->
+                                    <label for="acc-qas">Math QAS</label>
+                                    <select class="acc-qas" name="acc-qas" id="acc-qas"></select>
+                                </div>
+                                <div
+                                    class="input-block score-input math-acc">
+                                    <!-- Math Score: Advanced Algebra & Functions (AAF) -->
+                                    <label for="acc-aaf">Math AAF</label>
+                                    <select class="acc-aaf" name="acc-aaf" id="acc-aaf"></select>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div
-                class="eval-button-box" id="eval-button-box">
-                <!-- Evaluate Button and Evaluation Box -->
-                <div
-                    class="eval-button no-print">
-                    <!-- Evaluate Button -->
-                    <button class="button btn btn-light" id="eval-btn">Evaluate</button>
+        </main>
+        <footer class="container-fluid py-2 position-fixed bottom-0 bg-light w-100">
+            <div class="row">
+                <div class="col">
+                    <strong>English</strong>&nbsp;<output id="englPlacementOutput" class="d-inline">----</output>
                 </div>
-
-                <div
-                    class="eval-box hidden" id="eval-box">
-                    <!-- Evaluation Box -->
-                    <div id="qualifying-courses" class="hidden">
+                <div class="col">
+                    <strong>Math</strong>&nbsp;<output id="mathPlacementOutput" class="d-inline">----</output>
+                </div>
+                <div class="d-none d-sm-inline-block col">
+                    <button id="btnDetails" class="btn btn-primary my-2 float-end" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDetails" aria-expanded="false" aria-controls="collapseDetails">
+                        Details
+                    </button>
+                </div>
+            </div>
+            <div class="collapse" id="collapseDetails">
+                <div class="card card-body">
+                    <div id="qualifying-courses">
                         <table>
                             <thead>
                                 <tr>
@@ -313,7 +318,7 @@
                             <h6 id="unofficial-disclaimer">Disclaimer: This is an unofficial document for reference purposes only.</h6>
                         </div>
                         <div
-                            class="print-button no-print">
+                            class="print-button d-print-none">
                             <a href="print.html" class="button btn btn-light" target="_blank">Print</a>
                         </div>
                     </div>
@@ -323,6 +328,6 @@
                     </div>
                 </div>
             </div>
-        </main>
+        </footer>
     </body>
 </html>

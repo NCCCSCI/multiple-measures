@@ -12,11 +12,6 @@ initCommon();
 
 // /UI JAVASCRIPT
 
-// eval box import
-import {evalBox} from "./ui/evalBox.js";
-evalBox();
-// call evalBox script
-
 // date select import
 import {dates} from "./ui/dates.js";
 dates(); // call dates script
@@ -28,3 +23,15 @@ hsSelect(); // call hsSelect script
 // scoreRanges import
 import {scoreRanges} from "./ui/scoreRanges.js";
 scoreRanges(); // call scoreRanges script
+
+import {initHighSchool} from "./controls/hs.js";
+initHighSchool();
+
+import {initSAT} from "./controls/satScore.js";
+initSAT();
+
+import {initAccuplacer} from "./controls/accScore.js";
+initAccuplacer();
+
+import {initEvalBox} from "./ui/evalBox.js";
+initEvalBox();

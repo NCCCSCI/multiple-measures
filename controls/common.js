@@ -1,5 +1,8 @@
 import { storageConfig  } from '../config/global.js';
 
+const englPlacementOutput = document.getElementById("englPlacementOutput");
+const mathPlacementOutput = document.getElementById("mathPlacementOutput");
+
 function clearLocalStorage() {
     for (const v of Object.values(storageConfig.name))
     {
@@ -25,5 +28,6 @@ function initCommon() {
 }
 
 export {
+    englPlacementOutput, mathPlacementOutput,
     clearLocalStorage, initCommon
 }

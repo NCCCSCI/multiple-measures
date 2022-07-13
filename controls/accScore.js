@@ -10,8 +10,13 @@ import { UpperLevelMathPlacement } from '../config/UpperLevelMathPlacement.js';
 // importing storage config
 import { storageConfig  } from '../config/global.js';
 
+import { englPlacementOutput, mathPlacementOutput } from './common.js';
+
+import { updateDetails } from '../ui/evalBox.js';
+
 function accuplacer()
 {
+    englPlacementOutput.textContent = mathPlacementOutput.textContent = '---';
     // grabbing all accuplacer inputs and storing them into local storage
     const accuDate = document.getElementById("acc-date").value.trim();
     if (accuDate !== 'Select') {
@@ -32,6 +37,7 @@ function accuplacer()
         if (wrtgPlacement !== undefined) {
             const essy = document.getElementById("acc-essy").value.trim();
             if (typeof EnglishPlacementNative[wrtgPlacement][essy] !== "undefined") {
+                englPlacementOutput.textContent = EnglishPlacementNative[wrtgPlacement][essy];
                 localStorage.setItem(storageConfig.name.essy, essy);
                 localStorage.setItem(storageConfig.name.wrtgPlacement, EnglishPlacementNative[wrtgPlacement][essy]);
             }
@@ -68,6 +74,7 @@ function accuplacer()
                 if (qasPlacement !== undefined) {
                     localStorage.setItem(storageConfig.name.thresholdQas, thresholdQas);
                     if (typeof MathPlacement[arngPlacement][qasPlacement] !== "undefined") {
+                        mathPlacementOutput.textContent = MathPlacement[arngPlacement][qasPlacement];
                         localStorage.setItem(storageConfig.name.arngPlacement, MathPlacement[arngPlacement][qasPlacement]);
                         const aaf = document.getElementById("acc-aaf").value.trim();
                         if (aaf !== 'Select') {
@@ -80,6 +87,7 @@ function accuplacer()
                                 const thresholdAaf = Object.keys(UpperLevelMathPlacement[qasPlacement]).reverse();
                                 const aafPlacement = thresholdAaf.find(thresholdAaf => aafRange[0] >= thresholdAaf);
                                 if (aafPlacement !== undefined) {
+                                    mathPlacementOutput.textContent = UpperLevelMathPlacement[qasPlacement][aafPlacement];
                                     localStorage.setItem(storageConfig.name.aafPlacement, UpperLevelMathPlacement[qasPlacement][aafPlacement]);
                                 }
                             }
@@ -89,11 +97,17 @@ function accuplacer()
             }
         }
     }
+    updateDetails();
 }
 
 // live update support
 function initAccuplacer() {
-    document.getElementById("accuplacer").addEventListener("change", accuplacer);
+    const accCollapsible = document.getElementById('accuplacer');
+    accCollapsible.addEventListener("change", accuplacer);
+    accCollapsible.addEventListener('shown.bs.collapse', function () {
+        mathPlacementOutput.textContent = localStorage.getItem(storageConfig.name.aafPlacement) ?? localStorage.getItem(storageConfig.name.arngPlacement);
+        englPlacementOutput.textContent = localStorage.getItem(storageConfig.name.wrtgPlacement);
+    });
 }
 
 export {

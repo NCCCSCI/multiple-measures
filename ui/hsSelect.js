@@ -12,8 +12,11 @@ import {
 storageConfig
         } from "../config/global.js";
 
+const mmDate = document.getElementById('mm-date');
 const mmGPA = document.getElementById('mm-gpa');
 const gpaScaleOutput = document.getElementById("gpaScale");
+const mathSelect = document.getElementById("mm-math");
+const englSelect = document.getElementById("mm-eng");
 
 function updateGpa(hs,scaleType = 'Scale' ) {
     mmGPA.disabled = true;
@@ -26,16 +29,21 @@ function updateGpa(hs,scaleType = 'Scale' ) {
     }
 }
 
+function clearDateAndCourses() {
+    mmDate.value = 'Select';
+    mathSelect.value = 'Select';
+    englSelect.value = 'Select';
+}
+
 function hsSelect() {
     // VARIABLE DECLARATIONS
     // hs select
     const hsSelect = document.getElementById("mm-hsname");
 
     //  make a function the updates GPA stuff when either the high school changes or the radio buttons change
-    hsSelect.addEventListener('input', function (evt) {
+    hsSelect.addEventListener('change', function (evt) {
         const target = evt.target;
         const hs = target.value;
-        const mathSelect = document.getElementById("mm-math");
 
         mathSelect.innerHTML = '';
 
@@ -55,6 +63,7 @@ function hsSelect() {
             }
         }
         updateGpa(hs);
+        clearDateAndCourses();
     });
 
     document.getElementById("mm-gpa-rb-block").addEventListener("change", function (evt) {

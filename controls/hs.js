@@ -10,8 +10,27 @@ import { EnglishConfig   } from '../config/mmenglish.js';
 // importing storage config
 import { storageConfig  } from '../config/global.js';
 
+import { englPlacementOutput, mathPlacementOutput } from './common.js';
+
+import { updateDetails } from '../ui/evalBox.js';
+
 //function that gets the highschool inputs
 function highSchool() {
+
+    englPlacementOutput.textContent = mathPlacementOutput.textContent = '---';
+    ['sGPA',
+        'wGPA',
+        'GPAType',
+        'sRecommendMath',
+        'wRecommendMath',
+        'sRecommendEnglish',
+        'wRecommendEnglish',
+        'arngPlacement',
+        'aafPlacement',
+        'arngRange',
+        'qasRange',
+        'aafRange'].forEach(n => localStorage.removeItem(storageConfig.name[n]));
+
     const hsName =
             document.getElementById('mm-hsname').value.trim();
     localStorage.setItem(storageConfig.name.hsName, hsName);
@@ -57,6 +76,7 @@ function highSchool() {
             if (typeof matchingMathClass !== "undefined") {
                 const sGpaMathPlacement = Object.keys(MathConfig [matchingMathClass]).reverse();
                 const sRecommendMath = sGpaMathPlacement.find(sGpaMathPlacement => sGpa >= sGpaMathPlacement);
+                mathPlacementOutput.textContent = MathConfig[matchingMathClass][sRecommendMath];
                 localStorage.setItem(storageConfig.name.sRecommendMath, MathConfig[matchingMathClass][sRecommendMath]);
                 localStorage.removeItem(storageConfig.name.wRecommendMath);
             }
@@ -64,6 +84,7 @@ function highSchool() {
             if (typeof matchingEnglishClass !== "undefined") {
                 const sGpaEnglishPlacement = Object.keys(EnglishConfig[matchingEnglishClass]).reverse();
                 const sRecommendEnglish = sGpaEnglishPlacement.find(sGpaEnglishPlacement => sGpa >= sGpaEnglishPlacement);
+                englPlacementOutput.textContent = EnglishConfig[matchingEnglishClass][sRecommendEnglish];
                 localStorage.setItem(storageConfig.name.sRecommendEnglish, EnglishConfig[matchingEnglishClass][sRecommendEnglish]);
                 localStorage.removeItem(storageConfig.name.wRecommendEnglish);
             }
@@ -80,6 +101,7 @@ function highSchool() {
             if (typeof matchingMathClass !== "undefined") {
                 const wGpaMathPlacement = Object.keys(MathConfig [matchingMathClass ]).reverse();
                 const wRecommendMath = wGpaMathPlacement.find(wGpaMathPlacement => wGpa >= wGpaMathPlacement);
+                mathPlacementOutput.textContent = MathConfig[matchingMathClass][wRecommendMath];
                 localStorage.setItem(storageConfig.name.wRecommendMath, MathConfig[matchingMathClass][wRecommendMath]);
                 localStorage.removeItem(storageConfig.name.sRecommendMath);
             }
@@ -87,17 +109,24 @@ function highSchool() {
             if (typeof matchingEnglishClass !== "undefined") {
                 const wGpaEnglishPlacement = Object.keys(EnglishConfig [matchingEnglishClass]).reverse();
                 const wRecommendEnglish = wGpaEnglishPlacement.find(wGpaEnglishPlacement => wGpa >= wGpaEnglishPlacement);
+                englPlacementOutput.textContent = EnglishConfig[matchingEnglishClass][wRecommendEnglish];
                 localStorage.setItem(storageConfig.name.wRecommendEnglish, EnglishConfig[matchingEnglishClass][wRecommendEnglish]);
                 localStorage.removeItem(storageConfig.name.sRecommendEnglish);
             }
         }
     }
+    updateDetails();
 
 }
 
 //function to get button and alert when clicked
 function initHighSchool() {
-    document.getElementById("high-school").addEventListener("change", highSchool);
+    const hsCollapsible = document.getElementById('high-school');
+    hsCollapsible.addEventListener("change", highSchool);
+    hsCollapsible.addEventListener('shown.bs.collapse', function () {
+        mathPlacementOutput.textContent = localStorage.getItem(storageConfig.name.sRecommendMath) ?? localStorage.getItem(storageConfig.name.wRecommendMath);
+        englPlacementOutput.textContent = localStorage.getItem(storageConfig.name.sRecommendEnglish) ?? localStorage.getItem(storageConfig.name.wRecommendEnglish);
+    });
 }
 
 export {

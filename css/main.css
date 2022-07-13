@@ -1,5 +1,5 @@
 :root {
-    font-size: 15px;
+    font-size: 16px;
 }
 
 a {
@@ -7,24 +7,13 @@ a {
 }
 
 body {
-    font-family: sans-serif;
+    background-color: #AECFF9;
 }
 
-.accordion,
-.eval-box {
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
-    margin-top: 15px;
-}
-
-.accordion-button {
+.card-title button {
     background-color: #E7F1FF;
     border: 1px solid #8F8F8F;
     text-transform: uppercase;
-}
-
-body {
-    background-color: #AECFF9;
-    padding: 4vw;
 }
 
 .button {
@@ -45,11 +34,6 @@ body {
     padding: 20px;
 }
 
-#eval-btn {
-    margin: 25px;
-}
-
-.eval-button,
 .print-button {
     text-align: center;
 }
@@ -67,12 +51,18 @@ h1 {
 table, table * {
     margin: auto;
     padding: 0.5vw;
-    text-align: center;
+}
+
+.label {
+    text-align: right;
 }
 
 header {
     background-color: #FEFEFE;
     box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+.card {
+    height: 100%;
 }
 
 .help {
@@ -91,28 +81,7 @@ header {
     padding: 10px 0px;
 }
 
-#input-id-label {
-    padding-left: 50px;
-}
-
-input,
-select {
-    margin-left: 10px;
-}
-
-#mm-gpa-rb-block, #mm-gpa-rb-block div, #mm-gpa-block * {
-    display: inline;
-}
-
-#mm-gpa-block .scale .mm-gpa {
-    margin: 0 10px;
-}
-
-#mm-gpa-rb-block div {
-    padding-left: 15px;
-}
-
-output {
+footer output {
     display: block;
     padding: 0.4vw;
     text-align: center;
@@ -132,17 +101,8 @@ output {
     color: gray;
 }
 
-.see-advising {
-    padding-top: 20px;
-}
-
 .student-creds {
     padding-top: 20px;
-}
-
-.student-id,
-.student-name {
-    display: inline;
 }
 
 #unofficial-disclaimer {
