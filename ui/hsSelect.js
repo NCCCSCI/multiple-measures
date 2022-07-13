@@ -17,6 +17,7 @@ const mmGPA = document.getElementById('mm-gpa');
 const gpaScaleOutput = document.getElementById("gpaScale");
 const mathSelect = document.getElementById("mm-math");
 const englSelect = document.getElementById("mm-eng");
+const rbScale = document.getElementById("mm-gpa-rb-un");
 
 function updateGpa(hs,scaleType = 'Scale' ) {
     mmGPA.disabled = true;
@@ -33,6 +34,7 @@ function clearDateAndCourses() {
     mmDate.value = 'Select';
     mathSelect.value = 'Select';
     englSelect.value = 'Select';
+    rbScale.checked = true;
 }
 
 function hsSelect() {
