@@ -20,17 +20,17 @@ const EnglishConfig = {
     English_Foundational: {
         0: "Needs to Take English Accuplacer",
 	.49999: "ENGL101N with Co-Requisite Workshop",
-	.81299: "ENGL101N"
+	.6875: "ENGL101N"
     },
     Honors_or_College_Prep: {
         0: "Needs to Take English AccuPlacer",
 	.49999: "ENGL101N with Co-Requisite Workshop",
-	.74999: "ENGL101N"
+	.625: "ENGL101N"
     },
     AP: {
 	0: "Needs to Take English AccuPlacer",
 	.49999: "ENGL101N with Co-Requisite Workshop",
-	.62499: "ENGL101N"
+	.5625: "ENGL101N"
     }
 }
 
